@@ -1,16 +1,25 @@
-@media (max-width: 1024px) {
-body {font-size:4.0vw;}}  
-  
-@media (min-width: 1024px) {
-body {font-size:1.5vw;}}
 
-body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;}
-h1 {font-size: 280%;font-weight:300;margin-top:0.3em; margin-bottom:0.3em;}
-h2 {font-size: 130%;font-weight:300;margin-top:0.5em; margin-bottom:1.4em;}
-p {font-size: 120%; font-weight:300;}
-p a {color:#fff; text-decoration:none;font-weight:600;}
-.content {padding-left:2em;}
-.profileimage {margin-top:3em;max-width:300px; max-height:300px; width:25vw; height:25vw;}
+
+
+/** Sizing specific stuff **/
+
+@media (max-width: 967px) {
+body {font-size:20px;}
+.profileimage {max-width:150px; max-height:150px;}
+}  
+  
+@media (min-width: 967px) {
+body {font-size:30px;}
+.profileimage {max-width:300px; max-height:300px; width:15vw; height:15vw;}
+}
+
+body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
+h1 {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
+h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
+p {font-size: 80%; font-weight:300;}
+p a {color:#fff; text-decoration:none;font-weight:300;}
+.content {}
+.profileimage {margin-top:6vh;margin-bottom:3vh; }
 } 
   
 
