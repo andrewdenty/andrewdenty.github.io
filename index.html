@@ -5,7 +5,7 @@
   <title>Andrew Denty</title> 
   <meta name="author" content="Andrew Denty">  
   <meta name="description" content="Andrew Denty">
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <!--<meta name=viewport content="width=device-width, initial-scale=1">-->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700' rel='stylesheet' type='text/css'>  
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   
@@ -44,7 +44,7 @@
 
 		$(function() {
 
-			causeRepaintsOn = $("body");
+			causeRepaintsOn = $("h1, h2, p, .profileimage");
 
 			$(window).resize(function() {
 				causeRepaintsOn.css("z-index", 1);
