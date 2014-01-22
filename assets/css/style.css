@@ -13,11 +13,14 @@ body {font-size:30px;}
 .profileimage {max-width:300px; max-height:300px; width:15vw; height:15vw;}
 }
 
+/** Other Stuff **/
+
 body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
 h1 {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
+a {color:#fff; text-decoration:none;}
 p {font-size: 80%; font-weight:300;}
-p a {color:#fff; text-decoration:none;font-weight:300;}
+p a {font-weight:300;}
 .content {}
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
 } 
