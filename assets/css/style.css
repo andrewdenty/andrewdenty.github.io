@@ -23,10 +23,14 @@ p {font-size: 80%; font-weight:300;}
 p a {font-weight:300;}
 .content {}
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
-} 
-  
+
+.spacer {height:2vh}
+
+/** experiments page **/
+
+.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#90DEF1; padding:3px;margin:-3px 3px -3px 0;}
 
     
     
-    
+    #fff;
     
