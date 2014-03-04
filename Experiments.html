@@ -12,7 +12,16 @@
 
 
 </head>
-
+<!--David's awesome script to highlight live code -->
+<script>
+var oldDocumentWrite = document.write.bind(document);
+document.write = function(value) {
+    newValue = '<span class="livecode">' + value + '</span>';
+    return oldDocumentWrite(newValue);
+};
+</script>
+    
+    
 <body>
     <div class="content">
         <h1>Experiments in Code</h1>
@@ -51,7 +60,11 @@
         <p>
         A function takes an input, does something with it and then returns an output.</p>
         
-        <p> Example: <span class="code">var myName = "Andrew Denty"; document.write(myName)</span> creates a variable named "myName" and the function  "document.write" displays "<script> var myName = "Andrew Denty"; document.write(myName);</script>"
+        <p> Example: <span class="code">var myName = "Andrew Denty"; document.write(myName)</span> creates a variable named "myName" and the function  "document.write" displays "<script> var myName = "Andrew Denty"; document.write(myName);</script>"</p>
+        <p>It is also possible to call multiple variables with one function. Simply seperate the variables with commas. For example <span class="code">var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</span>displays     
+        "<script> var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</script>". Notice the use of the string in the middle to add a space between thew first and last name.
+        
+        
         </p>
                  <div class="spacer"></div> 
                 <h2>A program to animate my name</h2>

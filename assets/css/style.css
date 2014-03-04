@@ -21,6 +21,7 @@ h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 a {color:#fff; text-decoration:none;}
 p {font-size: 80%; font-weight:300;}
 p a {font-weight:300;}
+
 .content {}
 .experiments {text-align: left;}
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
@@ -29,5 +30,6 @@ p a {font-weight:300;}
 
 /** experiments page **/
 
-.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#90DEF1; padding:3px;margin:-3px 3px -3px 3px;}
+.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#63D1EB; padding:3px;margin:-3px 3px -3px 3px;}
 
+.livecode {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#d2ac2d; padding:3px;margin:-3px 3px -3px 3px;}
