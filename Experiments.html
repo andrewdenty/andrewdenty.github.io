@@ -14,62 +14,90 @@
 </head>
 <!--David's awesome script to highlight live code -->
 <script>
-var oldDocumentWrite = document.write.bind(document);
-document.write = function(value) {
-    newValue = '<span class="livecode">' + value + '</span>';
-    return oldDocumentWrite(newValue);
-};
+    var oldDocumentWrite = document.write;
+    document.write = function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift('<span class="livecode">')
+        args.push('</span>')
+        return oldDocumentWrite.apply(document, args);
+    };
 </script>
-    
-    
+
+
 <body>
     <div class="content">
         <h1>Experiments in Code</h1>
-        
+
         <p>The purpose of this page is for me to experiment with code.
             <br/>I wasn't planning for anyone to see this, but what's the worst that can happen?</p>
-        
+
         <div class="spacer"></div>
-        
+
         <h2>Simple calculations in Javacript</h2>
         <p>32 * 63 =
             <script>
                 document.write( 32 * 63 )
-            </script>.  The important thing is to write
+            </script>. The important thing is to write
             <span class="code">document.write</span>and then your calculation in
             <span class="code">( )</span>. David Simner claim's this would fail a code review. He won't be reviewing my work.
         </p>
-        
+
         <div class="spacer"></div>
-        
-        <p>It's easy to count the length of a string. For example  "I'm coding like a champ" is <script>document.write( "I'm coding like a champ" .length)</script> characters long. This is the code: <span class="code">document.write( "I'm coding like a champ" .length)</span></p>
+
+        <p>It's easy to count the length of a string. For example "I'm coding like a champ" is
+            <script>
+                document.write( "I'm coding like a champ" .length)
+            </script>characters long. This is the code:
+            <span class="code">document.write( "I'm coding like a champ" .length)</span>
+        </p>
         <div class="spacer"></div>
-        <p>You can also do clever things with Boolean expressions. For example <span class="code">document.write( 23 > 10 )</span>will return<script> document.write( 23 > 10 )</script> </p>
-        
+        <p>You can also do clever things with Boolean expressions. For example
+            <span class="code">document.write( 23 > 10 )</span>will return
+            <script>
+                document.write( 23 > 10 )
+            </script>
+        </p>
+
         <div class="spacer"></div>
-        
-        <p>It's possible to count the length of a string and compare it to other numbers or strings. For example <span class="code">document.write( "I'm coding like a champ" .length > 10);</span> will return "<script>document.write( "I'm coding like a champ" .length > 10);</script>"</p>
-        
-         <div class="spacer"></div>        
+
+        <p>It's possible to count the length of a string and compare it to other numbers or strings. For example
+            <span class="code">document.write( "I'm coding like a champ" .length > 10);</span>will return "
+            <script>
+                document.write( "I'm coding like a champ" .length > 10);
+            </script>"</p>
+
+        <div class="spacer"></div>
         <h2>Variables and Functions</h2>
-        
+
         <p>Variables are a way of saving values (i.e. strings, numbers and booleans) A variable stores a value and gives it a specific case sensitive name.</p>
-        
-      <p>Example: <span class="code">var myName = "Andrew Denty";</span> creates a variable named "myName" which stores the string "Andrew Denty".      </p>
+
+        <p>Example:
+            <span class="code">var myName = "Andrew Denty";</span>creates a variable named "myName" which stores the string "Andrew Denty".</p>
 
         <p>
-        A function takes an input, does something with it and then returns an output.</p>
-        
-        <p> Example: <span class="code">var myName = "Andrew Denty"; document.write(myName)</span> creates a variable named "myName" and the function  "document.write" displays "<script> var myName = "Andrew Denty"; document.write(myName);</script>"</p>
-        <p>It is also possible to call multiple variables with one function. Simply seperate the variables with commas. For example <span class="code">var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</span>displays     
-        "<script> var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</script>". Notice the use of the string in the middle to add a space between thew first and last name.
-        
-        
+            A function takes an input, does something with it and then returns an output.</p>
+
+        <p>Example:
+            <span class="code">var myName = "Andrew Denty"; document.write(myName)</span>creates a variable named "myName" and the function "document.write" displays "
+            <script>
+                var myName = "Andrew Denty"; document.write(myName);
+            </script>"</p>
+        <p>It is also possible to call multiple variables with one function. Simply seperate the variables with commas. For example
+            <span class="code">var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</span>displays "
+            <script>
+                var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ", LastName);
+            </script>". Notice the use of the string in the middle to add a space between thew first and last name.
+
+
         </p>
-                 <div class="spacer"></div> 
-                <h2>A program to animate my name</h2>
+        <div class="spacer"></div>
+        <h2>If/else statements</h2>
+        <p></p>
         
-        
+        <div class="spacer"></div>
+        <h2>A program to animate my name</h2>
+
+
     </div>
 
 
