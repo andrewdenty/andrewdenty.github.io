@@ -25,7 +25,7 @@
 
 
 <body>
-    <div class="content">
+    <div class="content experiments">
         <h1>Experiments in Code</h1>
 
         <p>The purpose of this page is for me to experiment with code.
@@ -75,7 +75,7 @@
             <span class="code">var myName = "Andrew Denty";</span>creates a variable named "myName" which stores the string "Andrew Denty".</p>
 
         <p>
-            A function takes an input, does something with it and then returns an output.</p>
+            A function takes an input, does something with it and then returns an output. Functions are proceeded by <span class="code">( )</span>which means call the function.</p>
 
         <p>Example:
             <span class="code">var myName = "Andrew Denty"; document.write(myName)</span>creates a variable named "myName" and the function "document.write" displays "
@@ -90,34 +90,72 @@
 
 
         </p>
-      
+
         <div class="spacer"></div>
         <h2>Arrays</h2>
-        <p>Arrays store lists of data. They are surrounded by <span class="code">[]</span>.For example <span class="code">var fullName = ["Andrew", "James", "Denty"]</span> Here I've 
-        
-        <script>
-        var FirstName = "Andrew" ;
-        var MiddleName = "James";
-        var LastName = "Denty";
-            
-        var FullName = [FirstName, MiddleName, LastName];
-        
-        document.write (FullName);
-        document.write (("" + FullName.join('')) .length);
-        document.write (("" + FullName) .length);
-        </script>
-        
-        
-        
-        </p></p>
-        
+        <p>Arrays store lists of data. They are surrounded by
+            <span class="code">[]</span>.For example
+            <span class="code">var fullName = ["Andrew", "James", "Denty"]</span>That's a really simple array which will appear as
+            <script>
+                var FirstName = "Andrew" ;
+                        var MiddleName = "James";
+                        var LastName = "Denty";
+                            
+                        var FullName = [FirstName, MiddleName, LastName];
+                        
+                        document.write (FullName);
+            </script>when I write
+            <span class="code">document.write (FullName)</span>.</p>
+
+        <p>In order to make my name format properly I need to add the
+            <span class="code">.join</span>function when I call the array.
+            <span class="code">document.write (FullName.join(' '));</span>results in
+            <script>
+                var FirstName = "Andrew" ;
+                        var MiddleName = "James";
+                        var LastName = "Denty";
+                            
+                        var FullName = [FirstName, MiddleName, LastName];
+                
+                        document.write (FullName.join(' '));
+            </script>. Notice the use of
+            <span class="code">(' ')</span>to insert spaces between each variable in the array.</p>
+
+        <p>It is possible to count the length of arrays. Different syntax is required to count different things:</p>
+        <ul>
+<li>To count the number of variables in the array
+    <span class="code">document.write (FullName.length)</span>
+    <script>document.write (FullName.length);</script>
+</li>
+<li>To count the total characters in the variable (including the automatically inserted commas)
+    <span class="code">document.write (("" + FullName) .length);</span>
+    <script>document.write (("" + FullName) .length);</script>
+</li>
+<li>To count the total
+    <span class="code">document.write (("" + FullName.join('')) .length);</span>
+    <script>document.write (("" + FullName.join('')) .length);</script>
+</li>
+</ul>
+
+        </p>
+        </p>
+
         <div class="spacer"></div>
         <h2>If/else statements</h2>
-        <p></p>
-        
-        <div class="spacer"></div>
-        <h2>A program to animate my name</h2>
+        <p>If/else statements are used to decide whether a piece of code should be run and are generally structured like this:</p>
+        <p><span class="code">if(boolean) {<br/>
+    variableName = "something";<br/>
+}<br/>
 
+else {<br/>
+    variableName = "somethingElse";<br/>
+}<br/>
+</span></p>
+
+        <div class="spacer"></div>
+        <h2>Notes from my text adventure</h2>
+        <p><a href="javascript:confirm('Yep, this confirm function is truely magical');" >Clicking here will do something magical.</a></p>
+    <p>The code is really simple. It's just a anchor tag which contains some JavaScript: <span class="code">&lta href="javascript:confirm('Yep, this confirm function is truely magical');" &gtClicking here will do something magical.&lt/a&gt</span></p>
 
     </div>
 
