@@ -19,7 +19,7 @@ body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;
 h1 {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 a {color:#fff; text-decoration:none;}
-p {font-size: 80%; font-weight:300;}
+p {font-size: 80%; font-weight:300;line-height:160%;}
 p a {font-weight:300;}
 
 .content {}
@@ -30,8 +30,8 @@ p a {font-weight:300;}
 
 /** experiments page **/
 
-.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#63D1EB; padding:2px;margin:-3px 3px -3px 3px;}
+.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#63D1EB;}
 
-.livecode {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#FFEE40;color:#2f2f2f; padding:2px;margin:-3px 3px -3px 3px;}
+.livecode {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#FFEE40;color:#2f2f2f; }
 
-
+.livecode, .code {padding:2px;margin:-3px 3px -3px 3px;}
