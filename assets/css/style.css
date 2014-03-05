@@ -30,11 +30,11 @@ p a {font-weight:300;}
 
 /** experiments page **/
 
-.code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#63D1EB;}
+.code {background:#63D1EB;}
 
-.livecode {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;background:#FFEE40;color:#2f2f2f; }
+.livecode {background:#FFEE40;color:#2f2f2f; }
 
-.livecode, .code {padding:2px;margin:-3px 3px -3px 3px;}
+.livecode, .code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;padding:2px;margin:-3px 3px -3px 3px;}
 
 .experiments {text-align: left;}
 .experiments a {text-decoration: underline;}
