@@ -27,17 +27,26 @@
 <body>
     <div class="content experiments">
         <h1>Andrew's Text Game</h1>
-
+<img class="profileimage" src="assets/img/8bitimage.gif" alt="Retro because">
 <script>
         // Check if the user is ready to play!
 confirm("I'm ready to play");
+//what's your name?
+var username = prompt("Hello! What is your name?");
+var greeting = function (name) {
+    document.write("Great to see you," + " " + name);
+}; 
 
+greeting(username);
+
+    
 //age check:
 var age = "";
 var age = prompt("What's your age?");
 if (age < 13)
 {
 document.write ("fuck off, you're too young!");  
+throw Error('sorry, too young');
 }
 
 else

@@ -128,12 +128,12 @@
     <script>document.write (FullName.length);</script>
 </li>
 <li>To count the total characters in the variable (including the automatically inserted commas)
-    <span class="code">document.write (("" + FullName) .length);</span>
-    <script>document.write (("" + FullName) .length);</script>
+    <span class="code">document.write (("" + FullName).length);</span>
+    <script>document.write (("" + FullName).length);</script>
 </li>
 <li>To count the total
     <span class="code">document.write (("" + FullName.join('')) .length);</span>
-    <script>document.write (("" + FullName.join('')) .length);</script>
+    <script>document.write (("" + FullName.join('')) .length);</script> 
 </li>
 </ul>
 
@@ -162,13 +162,13 @@ else {<br/>
 
         <div class="spacer"></div>
         <h2>How to create functions</h2>
-        <p>You can assign functions to variables.</p> 
+        <p>A function takes in inputs, does something with them, and produces an output. You can assign functions to variables.</p> 
         <p><span class="code">var divideByThree = function (number) {
     var val = number / 3;
     console.log(val);
 };
 </span></p>
-<p>This example creates a variable named "divideByThree", specifies that it is a function and "number" is the thing to be specified when this function is used. Then squiggly brackets are used to speficy which instructions are part of the function. In this case we create the variable "val" and speficy that it is "number" (the input of the function) divided by 3. The final step of the function is to print "val". </p>
+<p>This example creates a variable named "divideByThree", specifies that it is a function and "number" is the parameter to be specified when this function is used. Then squiggly brackets are used to speficy which instructions are part of the function. In this case we create the variable "val" and speficy that it is "number" (the input of the function) divided by 3. The final step of the function is to print "val". </p>
   <div class="spacer"></div>   
 </div>
 
