@@ -37,3 +37,6 @@ code {font-size:80%;}
 /** Page Header **/
 .page-header{background-color:#22bee3;border:none;color:#fff;margin-top: 
     0px;margin-bottom: 10px;padding-bottom: 15px;}
+
+/** Petrol Calculator**/
+.petrolcalc {text-align: center;}

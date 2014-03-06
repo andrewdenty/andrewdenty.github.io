@@ -25,16 +25,25 @@
 
 
 <body>
+<div class="page-header">
+    <div class="container">
+
+        <h1>Petrol Cost Calculator</h1>
+
+        <p>This is a simple calculator which calculates the cost of buying Petrol. It is not yet possible to change the litre price of petrol, this is coming in V2!</p>
+    </div>
+    </div>
     <div class="container experiments">
-        <h1>Andrew's Petrol Cost Calculator</h1>
         
-<img class="profileimage" src="assets/img/petrol-calculator-icon.gif">
-<div class="spacer"></div>  
-        
-        
-        
-        How many litres do you want to buy? <input id="petrol-litres" type="text">
+<div class="panel panel-default petrolcalc">
+  <div class="panel-body">
+    <img src="assets/img/petrol-calculator-icon.gif" width="150px">
+
+  
+    <div class="spacer"></div>
+    <p>How many litres do you want to buy?</p> <input id="petrol-litres" type="text">
 <button onclick="go()">Calculate total cost</button>
+          <div class="spacer"></div>
         <script>
 
     function petrolCost(petrolQuantity) //calculation//
@@ -53,18 +62,14 @@
         
         </script>
         
-    <p> <span class="livecode" id="cost-display">The total cost will appear here</span></p>
+    <p> <code class="livecode" id="cost-display">The total cost will appear here</code></p>
  
-            <div class="spacer"></div>
-        <h2>Explanation:</h2>
-        
-        
-        
-        
-        <p>This is a simple calculator which calculates the cost of buying Petrol. It is not yet possible to change the litre price of petrol, this is coming in V2! </p>
-        <p>There's a simple form which takes an input the number of litres <span class="code">petrol-litres</span> and on click runs the function <span class="code">go()</span>. </p>
-<p>This is the form code: <span class="code">&ltinput&gt id="petrol-litres" type="text"&gt
-&ltbutton onclick="go()"&gtCalculate total cost&lt/button&gt</span> </p>
+  </div>
+</div>
+  <h2>Explanation:</h2>
+         <p>There's a simple form which takes an input the number of litres <code>petrol-litres</code> and on click runs the function <code>go()</code>. </p>
+<p>This is the form code: <code>&ltinput&gt id="petrol-litres" type="text"&gt
+&ltbutton onclick="go()"&gtCalculate total cost&lt/button&gt</code> </p>
 <p>
     When the program is started, it starts half way down at the "go" function.
     <ol>
@@ -79,34 +84,23 @@
         
 <p>        This is the code itself: <br/>    
 
-<span class="code">
-function petrolCost(petrolQuantity) //calculation//<br/>
-    {<br/>
-        var amountPayable = petrolQuantity * 1.3;<br/>
-        return amountPayable; //return is the answer from the function to the caller//<br/>
-    }<br/>
+<pre>
+function petrolCost(petrolQuantity) //calculation//
+{        
+    var amountPayable = petrolQuantity * 1.3;
+    return amountPayable; //return is the answer from the function to the caller//
+}
             
-    function go() //presentation of results/// <br/>
-    {<br/>
-        var noLitres = document.getElementById("petrol-litres").value;<br/>
-        var cost = petrolCost(noLitres);  //this is the 'caller'//<br/>
-        document.getElementById("cost-display").innerHTML = 'The cost is: £' + cost<br/>
-        
-    }   <br/> 
-    
-    
-    
-    
-    </span>        
+function go() //presentation of results/// 
+{
+    var noLitres = document.getElementById("petrol-litres").value;
+    var cost = petrolCost(noLitres);  //this is the 'caller'//
+    document.getElementById("cost-display").innerHTML = 'The cost is: £' + cost    
+}   
+</pre>       
         
-        
-        
-        </p>        
-        
-    
-    
-    
-    
+ </p>        
+
     </div>
 
 
