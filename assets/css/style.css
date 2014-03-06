@@ -1,26 +1,26 @@
-
+/** Generally this CSS is super generic stuff which overrides Bootstrap. Not the custom stuff for the homepage**//
 
 
 /** Sizing specific stuff **/
 
 @media (max-width: 967px) {
-body {font-size:20px;}
 .profileimage {max-width:150px; max-height:150px;}
 }  
   
 @media (min-width: 967px) {
-body {font-size:30px;}
 .profileimage {max-width:300px; max-height:300px; width:15vw; height:15vw;}
 }
 
 /** Other Stuff **/
 
-body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
-h1 {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
-h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
-a {color:#fff; text-decoration:none;}
-p, ul, ol {font-size: 80%; font-weight:300;line-height:160%;}
-p a {font-weight:300;}
+body {font-family: 'Source Sans Pro', sans-serif;font-size: 18px;}
+h2, h3 {color:#22bee3}
+h2 {border-bottom: solid 1px; border-color: #eee;line-height: 150%;}
+    
+    
+p, ul, ol {font-weight:400;}
+a {color: #22bee3;}
+
 
 .content {}
 
@@ -30,11 +30,10 @@ p a {font-weight:300;}
 
 /** experiments page **/
 
-.code {background:#63D1EB;}
+code {font-size:80%;}
 
 .livecode {background:#FFEE40;color:#2f2f2f; }
 
-.livecode, .code {font-family: Menlo,Monaco,Consolas,"Courier New",monospace; font-size: 90%;padding:2px;margin:-3px 3px -3px 3px;}
-
-.experiments {text-align: left;}
-.experiments a {text-decoration: underline;}
+/** Page Header **/
+.page-header{background-color:#22bee3;border:none;color:#fff;margin-top: 
+    0px;margin-bottom: 10px;padding-bottom: 15px;}

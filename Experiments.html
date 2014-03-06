@@ -8,7 +8,9 @@
     <meta name="description" content="Experiments in Code">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
 
 </head>
@@ -17,73 +19,78 @@
     var oldDocumentWrite = document.write;
     document.write = function() {
         var args = Array.prototype.slice.call(arguments);
-        args.unshift('<span class="livecode">')
-        args.push('</span>')
+        args.unshift('<code class="livecode">')
+        args.push('</code>')
         return oldDocumentWrite.apply(document, args);
     };
 </script>
 
 
 <body>
-    <div class="content experiments">
-        <h1>Experiments in Code</h1>
+<div class="page-header">
+    <div class="container">
+                  
+    <h1>Experiments in Code</h1>
 
         <p>The purpose of this page is for me to experiment with code.
             <br/>I wasn't planning for anyone to see this, but what's the worst that can happen?</p>
+</div> 
+    </div>
 
-        <div class="spacer"></div>
-
+    <div class="container experiments">
+       
         <h2>Simple calculations in Javacript</h2>
         <p>32 * 63 =
             <script>
                 document.write( 32 * 63 )
             </script>. The important thing is to write
-            <span class="code">document.write</span>and then your calculation in
-            <span class="code">( )</span>. David Simner claim's this would fail a code review. He won't be reviewing my work.
+            <code>document.write</code>and then your calculation in
+            <code>( )</code>. David Simner claim's this would fail a code review. He won't be reviewing my work.
         </p>
 
-        <div class="spacer"></div>
+
 
         <p>It's easy to count the length of a string. For example "I'm coding like a champ" is
             <script>
                 document.write( "I'm coding like a champ" .length)
             </script>characters long. This is the code:
-            <span class="code">document.write( "I'm coding like a champ" .length)</span>
+            <code>document.write( "I'm coding like a champ" .length)</code>
         </p>
-        <div class="spacer"></div>
+
         <p>You can also do clever things with Boolean expressions. For example
-            <span class="code">document.write( 23 > 10 )</span>will return
+            <code>document.write( 23 > 10 )</code>will return
             <script>
                 document.write( 23 > 10 )
             </script>
         </p>
 
-        <div class="spacer"></div>
+
 
         <p>It's possible to count the length of a string and compare it to other numbers or strings. For example
-            <span class="code">document.write( "I'm coding like a champ" .length > 10);</span>will return "
+            <code>document.write( "I'm coding like a champ" .length > 10);</code>will return "
             <script>
                 document.write( "I'm coding like a champ" .length > 10);
             </script>"</p>
 
-        <div class="spacer"></div>
+
         <h2>Variables and Functions</h2>
 
         <p>Variables are a way of saving values (i.e. strings, numbers and booleans) A variable stores a value and gives it a specific case sensitive name.</p>
 
         <p>Example:
-            <span class="code">var myName = "Andrew Denty";</span>creates a variable named "myName" which stores the string "Andrew Denty".</p>
+            <code>var myName = "Andrew Denty";</code>creates a variable named "myName" which stores the string "Andrew Denty".</p>
 
         <p>
-            A function takes an input, does something with it and then returns an output. Functions are proceeded by <span class="code">( )</span>which means call the function.</p>
+            A function takes an input, does something with it and then returns an output. Functions are proceeded by
+            <code>( )</code>which means call the function.</p>
 
         <p>Example:
-            <span class="code">var myName = "Andrew Denty"; document.write(myName)</span>creates a variable named "myName" and the function "document.write" displays "
+            <code>var myName = "Andrew Denty"; document.write(myName)</code>creates a variable named "myName" and the function "document.write" displays "
             <script>
                 var myName = "Andrew Denty"; document.write(myName);
             </script>"</p>
         <p>It is also possible to call multiple variables with one function. Simply seperate the variables with commas. For example
-            <span class="code">var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</span>displays "
+            <code>var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ",LastName);</code>displays "
             <script>
                 var FirstName = "Andrew"; var LastName = "James"; document.write(FirstName, " ", LastName);
             </script>". Notice the use of the string in the middle to add a space between thew first and last name.
@@ -91,11 +98,11 @@
 
         </p>
 
-        <div class="spacer"></div>
+
         <h2>Arrays</h2>
         <p>Arrays store lists of data. They are surrounded by
-            <span class="code">[]</span>.For example
-            <span class="code">var fullName = ["Andrew", "James", "Denty"]</span>That's a really simple array which will appear as
+            <code>[]</code>.For example
+            <code>var fullName = ["Andrew", "James", "Denty"]</code>That's a really simple array which will appear as
             <script>
                 var FirstName = "Andrew" ;
                         var MiddleName = "James";
@@ -105,11 +112,11 @@
                         
                         document.write (FullName);
             </script>when I write
-            <span class="code">document.write (FullName)</span>.</p>
+            <code>document.write (FullName)</code>.</p>
 
         <p>In order to make my name format properly I need to add the
-            <span class="code">.join</span>function when I call the array.
-            <span class="code">document.write (FullName.join(' '));</span>results in
+            <code>.join</code>function when I call the array.
+            <code>document.write (FullName.join(' '));</code>results in
             <script>
                 var FirstName = "Andrew" ;
                         var MiddleName = "James";
@@ -119,63 +126,72 @@
                 
                         document.write (FullName.join(' '));
             </script>. Notice the use of
-            <span class="code">(' ')</span>to insert spaces between each variable in the array.</p>
+            <code>(' ')</code>to insert spaces between each variable in the array.</p>
 
         <p>It is possible to count the length of arrays. Different syntax is required to count different things:</p>
         <ul>
-<li>To count the number of variables in the array
-    <span class="code">document.write (FullName.length)</span>
-    <script>document.write (FullName.length);</script>
-</li>
-<li>To count the total characters in the variable (including the automatically inserted commas)
-    <span class="code">document.write (("" + FullName).length);</span>
-    <script>document.write (("" + FullName).length);</script>
-</li>
-<li>To count the total
-    <span class="code">document.write (("" + FullName.join('')) .length);</span>
-    <script>document.write (("" + FullName.join('')) .length);</script> 
-</li>
-</ul>
+            <li>To count the number of variables in the array
+                <code>document.write (FullName.length)</code>
+                <script>
+                    document.write (FullName.length);
+                </script>
+            </li>
+            <li>To count the total characters in the variable (including the automatically inserted commas)
+                <code>document.write (("" + FullName).length);</code>
+                <script>
+                    document.write (("" + FullName).length);
+                </script>
+            </li>
+            <li>To count the total
+                <code>document.write (("" + FullName.join('')) .length);</code>
+                <script>
+                    document.write (("" + FullName.join('')) .length);
+                </script>
+            </li>
+        </ul>
 
         </p>
         </p>
 
-        <div class="spacer"></div>
+
         <h2>If/else statements</h2>
         <p>If/else statements are used to decide whether a piece of code should be run and are generally structured like this:</p>
-        <p><span class="code">if(boolean) {<br/>
-    variableName = "something";<br/>
-}<br/>
+        <pre>
+            if(boolean) { variableName = "something"; } else { variableName = "somethingElse"; }
+        </pre>
 
-else {<br/>
-    variableName = "somethingElse";<br/>
-}<br/>
-</span></p>
 
-        <div class="spacer"></div>
         <h2>Notes from my text adventure:</h2>
-        <p><a href="javascript:confirm('Yep, this confirm function is truely magical');" >Clicking here will do something magical.</a></p>
-    <p>The code is really simple. It's just a anchor tag which contains some JavaScript: <span class="code">&lta href="javascript:confirm('Yep, this confirm function is truely magical');" &gtClicking here will do something magical.&lt/a&gt</span></p>
-<p><a href="textgame.html">Now play the game!</a></p>
-<p>The game introduces the prompt function and sets variables based on user input. These variables are then passed into if/else statements.This game is an example on <a href="http://www.codeacademy.com" target="_blank"> Code Academy</a>. 
-                                                        </p>
+        <p>
+            <a href="javascript:confirm('Yep, this confirm function is truely magical');">Clicking here will do something magical.</a>
+        </p>
+        <p>The code is really simple. It's just a anchor tag which contains some JavaScript:
+            <code>&lta href="javascript:confirm('Yep, this confirm function is truely magical');" &gtClicking here will do something magical.&lt/a&gt</code>
+        </p>
+        <p>
+            <a href="textgame.html">Now play the game!</a>
+        </p>
+        <p>The game introduces the prompt function and sets variables based on user input. These variables are then passed into if/else statements.This game is an example on
+            <a href="http://www.codeacademy.com" target="_blank">Code Academy</a>.
+        </p>
 
-        <div class="spacer"></div>
+
         <h2>How to create functions</h2>
-        <p>A function takes in inputs, does something with them, and produces an output. You can assign functions to variables.</p> 
-        <p><span class="code">var divideByThree = function (number) {
-    var val = number / 3;
-    console.log(val);
-};
-</span></p>
-<p>This example creates a variable named "divideByThree", specifies that it is a function and "number" is the parameter to be specified when this function is used. Then squiggly brackets are used to speficy which instructions are part of the function. In this case we create the variable "val" and speficy that it is "number" (the input of the function) divided by 3. The final step of the function is to print "val". </p>
-  <div class="spacer"></div>  
-    
-        <h2>Don't Repeat Yourself Principle (D.R.Y)</h2>    
+        <p>A function takes in inputs, does something with them, and produces an output. You can assign functions to variables.</p>
+        <p>
+            <code>var divideByThree = function (number) { var val = number / 3; console.log(val); };
+            </code>
+        </p>
+        <p>This example creates a variable named "divideByThree", specifies that it is a function and "number" is the parameter to be specified when this function is used. Then squiggly brackets are used to speficy which instructions are part of the function. In this case we create the variable "val" and speficy that it is "number" (the input of the function) divided by 3. The final step of the function is to print "val".</p>
+
+
+        <h2>Don't Repeat Yourself Principle (D.R.Y)</h2>
         <p>Basically, in order to write good code, don't repeat yourself. Use functions to avoid repeating yourself whenever possible...</p>
-    <p>Here's an example. Luckily I don't have to drive to work, but imagine I did, I'd need to fill my car with Petrol, and each time I'd need to fill it with a varying amount. To avoid working out how much it costs to fill my car on a regular basis I can just write a function which will calculate this for me. We'll ignore the obvious issue that the price of petrol fluctuates, and that the petrol pump displays the cost as I pump!</p>
-<p><a href="Petrolcalculator.html">Petrol Calulator example</a></p>
-</div>
+        <p>Here's an example. Luckily I don't have to drive to work, but imagine I did, I'd need to fill my car with Petrol, and each time I'd need to fill it with a varying amount. To avoid working out how much it costs to fill my car on a regular basis I can just write a function which will calculate this for me. We'll ignore the obvious issue that the price of petrol fluctuates, and that the petrol pump displays the cost as I pump!</p>
+        <p>
+            <a href="Petrolcalculator.html">Petrol Calulator example</a>
+        </p>
+    </div>
 
 
     <script>
