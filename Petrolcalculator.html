@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Experiments in Code</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description" content="Experiments in Code">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<!--David's awesome script to highlight live code -->
+<script>
+    var oldDocumentWrite = document.write;
+    document.write = function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift('<p>')
+        args.push('</p>')
+        return oldDocumentWrite.apply(document, args);
+    };
+</script>
+
+
+<body>
+    <div class="content experiments">
+        <h1>Andrew's Petrol Cost Calculator</h1>
+        
+<img class="profileimage" src="assets/img/petrol-calculator-icon.gif">
+<div class="spacer"></div>  
+        
+        
+        
+        How many litres do you want to buy? <input id="petrol-litres" type="text">
+<button onclick="go()">Calculate total cost</button>
+        <script>
+
+    function petrolCost(petrolQuantity) //calculation//
+    {
+        var amountPayable = petrolQuantity * 1.3;
+        return amountPayable; //return is the answer from the function to the caller//
+    }
+            
+    function go() //presentation of results/// 
+    {
+        var noLitres = document.getElementById("petrol-litres").value;
+        var cost = petrolCost(noLitres);  //this is the 'caller'//
+        document.getElementById("cost-display").innerHTML = 'The cost is: £' + cost
+        
+    }
+        
+        </script>
+        
+    <p> <span class="livecode" id="cost-display">The total cost will appear here</span></p>
+ 
+            <div class="spacer"></div>
+        <h2>Explaination:</h2>
+        
+        
+        
+        
+        <p>This is a simple calculator which calculates the cost of buying Petrol. It is not yet possible to change the litre price of petrol, this is coming in V2! </p>
+        <p>There's a simple form which takes an input the number of litres <span class="code">petrol-litres</span> and on click runs the function <span class="code">go()</span>. </p>
+<p>This is the form code: <span class="code">&ltinput&gt id="petrol-litres" type="text"&gt
+&ltbutton onclick="go()"&gtCalculate total cost&lt/button&gt</span> </p>
+<p>
+    When the program is started, it starts half way down at the "go" function.
+    <ol>
+        <li>The "go" function is concerned with the presentation of the results.</li>
+        <li>The first thing the "go" function does is speficy that the variable "noLitres" is the petrol-litres value which was entered into the form.</li>
+        <li>Next the "go" function specifies that the variable "cost" is equal to the function "petrolCost with the parameter "noLitres". This prompts the program to head back to the top of the script and run the "petrolCost" function.</li>
+        <li>The "petrolCost" function speficies the amountPayable is equal to the calculation (quantity * price). This is the calculation bit. </li>
+        <li>The next line returns the "amountPayable" variable to the last line of the code (within the "go" function") and displays the result.</li>
+        <li>The final line of code uses the "getElementByID" function to replace the contents of a div on the page with the result.</li>
+
+    </ol>
+        
+<p>        This is the code itself: <br/>    
+
+<span class="code">
+function petrolCost(petrolQuantity) //calculation//<br/>
+    {<br/>
+        var amountPayable = petrolQuantity * 1.3;<br/>
+        return amountPayable; //return is the answer from the function to the caller//<br/>
+    }<br/>
+            
+    function go() //presentation of results/// <br/>
+    {<br/>
+        var noLitres = document.getElementById("petrol-litres").value;<br/>
+        var cost = petrolCost(noLitres);  //this is the 'caller'//<br/>
+        document.getElementById("cost-display").innerHTML = 'The cost is: £' + cost<br/>
+        
+    }   <br/> 
+    
+    
+    
+    
+    </span>        
+        
+        
+        
+        </p>        
+        
+    
+    
+    
+    
+    </div>
+
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-47136738-1', 'andrewdenty.com');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        // Chrome 26 needs this
+        // Safari 6 needs this
+    
+        // Firefox 19 doesn't need it
+        // IE 10 doesn't need it
+    
+    		$(function() {
+    
+    			causeRepaintsOn = $("body");
+    
+    			$(window).resize(function() {
+    				causeRepaintsOn.css("z-index", 1);
+    			});
+    
+    		});
+    </script>
+</body>
+
+</html>
