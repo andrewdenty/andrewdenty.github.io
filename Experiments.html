@@ -178,10 +178,14 @@
 
         <h2>How to create functions</h2>
         <p>A function takes in inputs, does something with them, and produces an output. You can assign functions to variables.</p>
-        <p>
-            <code>var divideByThree = function (number) { var val = number / 3; console.log(val); };
-            </code>
-        </p>
+        <p><img src="assets/img/defining-a-function.png" alt="illustration of how a function is constructed" width="571px" height="120px"></p>
+            <pre>
+var divideByThree = function (number) 
+{ 
+var val = number / 3; 
+console.log(val); 
+};            </pre>
+        
         <p>This example creates a variable named "divideByThree", specifies that it is a function and "number" is the parameter to be specified when this function is used. Then squiggly brackets are used to speficy which instructions are part of the function. In this case we create the variable "val" and speficy that it is "number" (the input of the function) divided by 3. The final step of the function is to print "val".</p>
 
 
@@ -194,6 +198,9 @@
 
 <h2>Return Keyword</h2>
 <p>The return keyword gives the programmer back the value that comes out of the function. So the function runs, and when the return keyword is used, the function will immediately stop running and return the value.  </p>
+
+<h2>Modulo</h2>
+<p> what is it? t gives you the remainder when one number is divided by another. eg. 13 % 3 is 1</p>
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
