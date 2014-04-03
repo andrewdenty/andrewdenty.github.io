@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tearable Cloth</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/homepage.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/cloth.css" />
+</head>
+
+<body>
+
+    <canvas id="c" class="round animate profileimage"></canvas>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        document.getElementById('close').onmousedown = function(e) {
+            e.preventDefault();
+            document.getElementById('info').style.display = 'none';
+            return false;
+        };
+    </script>
+    
+    <script type="text/javascript" src="assets/Cloth.js"></script>
+</body>
+
+</html>
