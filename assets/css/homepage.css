@@ -21,6 +21,7 @@ h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 a {color:#fff; text-decoration:none;}
 p, ul, ol  {font-size: 80%; font-weight:300;line-height:160%;}
 p a {font-weight:300;}
+a:hover {color:#FFEE40; transition: color 600ms ease-out;}
 
 
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
