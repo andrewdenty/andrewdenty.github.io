@@ -15,8 +15,8 @@ body {font-size:30px;}
 
 /** Other Stuff **/
 
-body {font-family: "aktiv-grotesk-std",'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
-h1  {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
+body {font-family: 'aktiv-grotesk-std','Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
+h1  {font-size: 220%;font-weight:200;margin-top:1vh; margin-bottom:1vh;}
 h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
 a {color:#fff; text-decoration:none;}
 p, ul, ol  {font-size: 80%; font-weight:300;line-height:160%;}
