@@ -14,17 +14,6 @@
 
 
 </head>
-<!--David's awesome script to highlight live code -->
-<script>
-    var oldDocumentWrite = document.write;
-    document.write = function () {
-        var args = Array.prototype.slice.call(arguments);
-        args.unshift('<code class="livecode">')
-        args.push('</code>')
-        return oldDocumentWrite.apply(document, args);
-    };
-</script>
-
 
 <body>
     <div class="page-header">
@@ -40,10 +29,10 @@
     <div class="container experiments">
 
         <h2>Project one</h2>
-        <p>Content would presumerably go here...
+        <p>Content would presumably go here...
         </p>
         <h2>Project two</h2>
-        <p>Content would presumerably go here...
+        <p>Content would presumably go here...
         </p>
     </div>
 </body>
