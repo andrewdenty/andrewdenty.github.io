@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description" content="Portfolio">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+</head>
+<!--David's awesome script to highlight live code -->
+<script>
+    var oldDocumentWrite = document.write;
+    document.write = function () {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift('<code class="livecode">')
+        args.push('</code>')
+        return oldDocumentWrite.apply(document, args);
+    };
+</script>
+
+
+<body>
+    <div class="page-header">
+        <div class="container">
+
+            <h1>Portfolio</h1>
+
+            <p>This is a small selection of my past projects
+                <br/>I wasn't planning for anyone to see this, but what's the worst that can happen?</p>
+        </div>
+    </div>
+
+    <div class="container experiments">
+
+        <h2>Project one</h2>
+        <p>Content would presumerably go here...
+        </p>
+        <h2>Project two</h2>
+        <p>Content would presumerably go here...
+        </p>
+    </div>
+</body>
+
+</html>
