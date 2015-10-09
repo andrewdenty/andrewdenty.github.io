@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: 
+Disallow: /projects.html
+Disallow: /3t-software-labs.html
