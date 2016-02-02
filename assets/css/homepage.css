@@ -4,27 +4,28 @@
 /** Sizing specific stuff **/
 
 @media (max-width: 967px) {
-body {font-size:20px;}
-.profileimage {max-width:150px; max-height:150px;}
+body {font-size:28px;}
+.profileimage {max-width:170px; max-height:170px;}
 }  
   
 @media (min-width: 967px) {
-body {font-size:30px;}
-.profileimage {max-width:300px; max-height:300px; width:15vw; height:15vw;}
+body {font-size:32px;}
+.profileimage {max-width:250px; max-height:250px; width:15vw; height:15vw;}
 }
 
 /** Other Stuff **/
 
-body {font-family: 'Source Sans Pro', sans-serif; color:#fff;background:#22bee3;text-align:center}
-h1  {font-size: 220%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
-h2 {font-size: 100%;font-weight:300;margin-top:1vh; margin-bottom:1vh;}
-a {color:#fff; text-decoration:none;}
-p, ul, ol  {font-size: 80%; font-weight:300;line-height:160%;}
-p a {font-weight:300;}
-a:hover {color:#FFEE40; transition: color 600ms ease-out;}
+body {font-family: "proxima nova", sans-serif; font-weight: 400; color:#fff;background:#22bee3;text-align:center}
+h1  {font-size:159%;font-weight:600;margin-top:7vh; margin-bottom:1.2vh;}
+h2 { font-size: 67%;font-weight:400;margin-top:1vh; margin-bottom:7vh;}
+a {color:#fff; text-decoration:none;border-bottom: 1px dotted #fff;}
+p, ul, ol  {font-size: 67%;line-height:160%;}
+a:hover {color:#FFEE40;border-bottom: 2px solid #FFEE40; transition: 900ms ease-in;}
 
 
-.profileimage {margin-top:6vh;margin-bottom:3vh; }
+/**profile image**/
+.profileimage {margin-top:9vh;margin-bottom:3vh;margin-left: auto;margin-right: auto; width:300px; height: 300px; border-radius:50%;background-image: url("/assets/img/andrew-denty-profile.jpg");background-size: contain; }
+.profileimage:hover {background-image: url("/assets/img/andrew-denty-headshot.jpg");transition: 200ms ease-in}
 
 .spacer {height:2vh}
 
@@ -88,13 +89,4 @@ a:hover {color:#FFEE40; transition: color 600ms ease-out;}
 }
 
 
-
-
-
-/** profile picture rounding**/
-
-.round {
-    border-radius: 50%;
-
-}
 
