@@ -13,8 +13,8 @@
 
 /** Other Stuff **/
 
-body {font-family: 'Source Sans Pro', sans-serif;font-size: 18px;}
-h2, h3 {color:#22bee3}
+body {font-family: 'proxima-nova', sans-serif;font-size: 18px;font-weight:400;}
+h2, h3 {color:#22bee3; font-weight:600;}
 h2 {border-bottom: solid 1px; border-color: #eee;line-height: 150%;}
     
     
