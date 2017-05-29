@@ -14,11 +14,12 @@
 /** Other Stuff **/
 
 body {font-family: 'proxima-nova', sans-serif;font-size: 18px;font-weight:400;}
-h2, h3 {color:#22bee3; font-weight:600;}
-h2 {border-bottom: solid 1px; border-color: #eee;line-height: 150%;}
+h3 {line-height: 2em;}
+h2 {line-height: 2em;}
     
     
-p, ul, ol {font-weight:400;}
+h1 {font-weight:400;}
+p, ul, ol {font-weight:400;line-height: 1.8em;max-width:850px;margin-bottom: 30px;}
 a {color: #22bee3;}
 a:hover {color: #c7254e;}
 .page-header h1 a{color: #fff}
@@ -29,7 +30,10 @@ a
 
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
 
-.spacer {height:2vh}
+.spacer {height:50px}
+
+.shadow {box-shadow: 0px 0px 20px #dcdcdc;}
+
 
 /** experiments page **/
 
@@ -39,7 +43,12 @@ code {font-size:80%;}
 
 /** Page Header **/
 .page-header{background-color:#22bee3;border:none;color:#fff;margin-top: 
-    0px;margin-bottom: 10px;padding-bottom: 15px;}
+    0px;margin-bottom: 10px;padding-top:40px; padding-bottom: 15px;}
+
+.page-header .page-intro {max-width:850px;padding-top:15px; padding-bottom:40px;} 
+
+.page-header h3 {padding-top: 30px;} 
+
 
 /** Petrol Calculator**/
 .petrolcalc {text-align: center;}
