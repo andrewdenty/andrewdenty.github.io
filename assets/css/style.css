@@ -19,7 +19,7 @@ h2 {line-height: 2em;margin-top:60px;font-weight:600;}
     
     
 h1 {font-weight:400;}
-p, ul, ol {font-weight:400;line-height: 1.8em;max-width:850px;margin-bottom: 30px;}
+p, ul, ol {font-weight:400;line-height: 1.8em;max-width:800px;margin-bottom: 30px;}
 a {color: #22bee3;}
 a:hover {color: #c7254e;}
 .page-header h1 a{color: #fff}
@@ -45,7 +45,7 @@ code {font-size:80%;}
 .page-header{background-color:#22bee3;border:none;color:#fff;margin-top: 
     0px;margin-bottom: 10px;padding-top:40px; padding-bottom: 15px;}
 
-.page-header .page-intro {max-width:850px;padding-top:15px; padding-bottom:15px;} 
+.page-header .page-intro {max-width:800px;padding-top:15px; padding-bottom:15px;} 
  
 
 
