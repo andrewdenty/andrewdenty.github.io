@@ -30,37 +30,86 @@
         <div class="container">
 
             <h1><span style="font-weight:800;"><a href="index.html">AD</a></span> > <a href="projects.html">Portfolio</a></h1>
-            <h2>Redgate in the box with Visual Studio <small>(2017)</small></h2>
+            <h2>Redgate in the box with Visual Studio</h2>
             <p class="page-intro">In March 2017 Redgate partnered to with Microsoft to include three Redgate products in the box with Visual Studio. The aim was to expand Visual Studio’s database development functionality and widen Redgate’s reach by providing a number of free tools to Visual Studio Enterprise users.</p>
-    </div>
-    </div>
-
-    <div class="container">
-
-        <h3>Problem</h3>
-        <p>I was tasked with building a joined-up Redgate experience within Visual Studio.</p>
-        <ul>
-        <li>Project under a very challenging timeline</li>
-        <li>Integrate the Redgate licensing model into Visual Studio</li>
-        <li>Design experiences which give new users a good initial impression of Redgate’s products – for example by allowing users to use the products without immediately having to sign in.</li>
-        <li>Work across four different product teams who were building the component parts.</li>
-        </ul>
-    </div>
-    <div class="spacer"></div>
-    <div style="background:#f4f4f4">
-        <div class="container">
-            <h3>Process</h3>
-
-            
+            <p>I was tasked with designing a joined-up Redgate experience within Visual Studio.</p>
+            <div class="row">
+                <div class="col-md-7"><img src="assets/img/in-the-box-overview.png" class="img-responsive" ></div>
+                <div class="col-md-5"></div>
+            </div>
             <div class="spacer"></div>
         </div>
     </div>
-
     <div class="container">
-        <h3>Outcome </h3>
-        <p></p>
+        <img src="assets/img/in-the-box-journey.png" class="img-responsive" alt="Redesigning the ReadyRoll set up experience">
+        <div class="spacer"></div>
+        <p>I was tasked with designing a joined-up Redgate experience within Visual Studio. This consisted of designing:
+        </p>
+        <ol>
+            <li>A new on-boarding experience for the three Redgate products being included with Visual Studio
+            </li>
+            <li>A unified log-in and licensing experience
+            </li>
+            <li>Upgrade/upsell experiences for SQL Prompt and ReadyRoll
+            </li>
+        </ol>
 
+
+        <p class="small text-center">A mockup mapping some of the interactions designed specifically for Redgate Data Tools.</p>
+        <h3>Project challenges</h3>
+        <ul>
+            <li>This was the first time Redgate and Microsoft had worked together on a joint release and in order to ship alongside Visual Studio, I had to work to a very ambitious deadline
+            </li>
+            <li>Including multiple tools within Visual Studio required me to work simultaneously across four product teams
+            </li>
+            <li>The designs needed to support Redgate’s commercial objectives, while taking on board Microsoft’s guidance, and generally be good citizen within Visual Studio
+            </li>
+            <li>Lastly, in order to give new users a good initial impression of Redgate’s products, designs needed to integrate the Redgate’s licensing model into Visual Studio without interrupting the user workflow
+            </li>
+        </ul>
     </div>
+    <div class="light-grey">
+        <div class="container">
+        <h3>Diverse UIs in a constrained environment</h3>
+        <p>The various Redgate products within Visual Studio have differing postures. For example, SQL Prompt has no dedicated UI, whereas ReadyRoll is predominantly confined to a single docked window. </p>
+        <p>This presented a significant challenge when designing persistent interfaces to encourage new users to log in, update, or manage their licences. An obvious workaround would have been to use modal dialogs, however this would impede new users from using Visual Studio, or Redgate’s products.Therefore, I opted to design unique experiences for each tool which were sympathetic to the tasks users were likely to be undertaking.
+        </p>
+            <div class="spacer"></div>
+        <div class="row">
+            <div class="col-md-3"><img src="assets/img/posture-example-prompt.png" class="img-responsive" alt="SQL Prompt log in experience"></div>
+            <div class="col-md-9"><img src="assets/img/posture-example-readyroll.png" class="img-responsive" alt="ReadyRoll log in experience"><p class="small">The different approaches taken to encourage new users to log in to SQL Prompt and ReadyRoll.</p></div>
+        </div>
+        <div class="spacer"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>On-going improvements</h3>
+        <p>In order to ensure we were providing the best on-boarding experience for our new users we ran in product multivariate tests. All three designs above allow users to accept the license terms and conditions, however the variant on the left dynamically updates to demonstrate SQL Prompt’s functionality to new users. The variant on the right was designed to take a simpler approach using a product and support Visual Studio’s themes functionality.
+        </p>
+        <img src="assets/img/in-the-box-abc-test.png" class="img-responsive" alt="A multivariate experiment designed to optimise the getting started rates.">
+    </div>
+    <div style="background:#f4f4f4">
+        <div class="container">
+<h3>Research methods</h3>
+ <p>Due to the sensitive nature of this project, external usability testing could only begin after the initial Release Candidate. As a proxy, I conducted several, lightweight internal usability sessions and sought extensive feedback other User Experience Designers at Redgate. I also worked closely with the development teams to ensure that any data we were collecting from the products would help us measure and improve the usability.
+</p>
+<p>Once we released, I scheduled a large number of remote usability sessions with a mix of existing Redgate users, and new users who had installed Visual Studio 2017. I also attended Microsoft Build 2017 in order to conduct usability research and gather feedback about the usability of Redgate Data Tools.
+</p>
+            <p>At Build I piloted a technique called ‘<a href="http://uxpajournal.org/extremely-rapid-usability-testing/" target="_blank">extremely rapid usability testing</a>’. This involved running many short usability sessions with conference attendees. This was advantageous as it allowed me to run a large number of sessions in a short period of time and reach developers who had no prior experience of Redgate’s tools.
+</p>
+        <p>This research proved really useful, as it helped identify many usability tweaks as well as make recommendations for future features.
+</p>
+    
+                <div class="row">
+            <div class="col-md-6"><img src="assets/img/build-2017-attendees.jpg" class="img-responsive" alt="Redesigning the ReadyRoll set up experience"></div>
+            <div class="col-md-6"><img src="assets/img/build2017-redgate-booth.jpg" class="img-responsive" alt="Redesigning the ReadyRoll set up experience"></div>
+        </div>
+    
+
+        </div>
+    </div>
+
+
 </body>
 
 </html>

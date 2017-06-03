@@ -6,8 +6,8 @@
     <defs></defs>
     <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Visual-Studio-in-the-box">
-            <rect id="Rectangle-5" fill="#865FC5" x="0" y="0" width="585" height="658"></rect>
-            <rect id="Rectangle-5" fill="#CC0000" x="585" y="1" width="585" height="658"></rect>
+            <rect id="Rectangle-5" fill="#865FC5" x="-38" y="-33" width="683" height="721"></rect>
+            <rect id="Rectangle-5" fill="#CC0000" x="585" y="-33" width="623" height="721"></rect>
             <g id="Visual_Studio_2017_logo_and_wordmark" transform="translate(178.000000, 214.000000)" fill-rule="nonzero" fill="#FFFFFF">
                 <path d="M172.4885,0 L172.4885,197.54125 L0,171.91925 L172.4885,230 L229.98275,206.08 L229.98275,23.92 L172.4885,0 Z M59.271,110.653 L112.09625,162.91475 L143.72125,149.45975 L143.72125,46.99475 L112.09625,33.53975 L59.271,85.80725 L27.462,61.82975 L14.35775,66.217 L14.35775,130.24325 L27.462,134.6305 L59.271,110.653 Z M112.09625,70.83425 L112.09625,125.63175 L75.7505,98.233 L112.09625,70.83425 Z M27.462,79.18325 L46.713,98.22725 L27.462,117.277 L27.462,79.18325 Z" id="iconBg"></path>
             </g>
