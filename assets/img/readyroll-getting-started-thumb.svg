@@ -4,28 +4,24 @@
     <title>ReadyRoll Getting started graphic Copy</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="55.9588594%" gradientTransform="translate(0.500000,0.500000),scale(0.562393,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#EBEBEB" offset="100%"></stop>
-        </radialGradient>
-        <path d="M775.464913,64.9576637 L775.464913,8.47903035 C775.464913,4.06201171 771.887041,0.484383332 767.473513,0.484383332 L7.99139999,0.484383332 C3.58642138,0.484383332 0,4.06370872 0,8.47903035 L0,192.489736 C0,196.906755 3.57787165,200.484383 7.99139999,200.484383 L767.473513,200.484383 C771.878491,200.484383 775.464913,196.905058 775.464913,192.489736 L775.464913,136.011103 L796,100.484383 L775.464913,64.9576637 Z" id="path-2"></path>
-        <filter x="-3.0%" y="-10.8%" width="105.9%" height="123.5%" filterUnits="objectBoundingBox" id="filter-3">
+        <path d="M775.464913,64.9576637 L775.464913,8.47903035 C775.464913,4.06201171 771.887041,0.484383332 767.473513,0.484383332 L7.99139999,0.484383332 C3.58642138,0.484383332 0,4.06370872 0,8.47903035 L0,192.489736 C0,196.906755 3.57787165,200.484383 7.99139999,200.484383 L767.473513,200.484383 C771.878491,200.484383 775.464913,196.905058 775.464913,192.489736 L775.464913,136.011103 L796,100.484383 L775.464913,64.9576637 Z" id="path-1"></path>
+        <filter x="-7.3%" y="-28.0%" width="114.6%" height="158.0%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feGaussianBlur stdDeviation="19" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
     </defs>
     <g id="Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="ReadyRoll-Getting-started-graphic-Copy">
-            <rect id="Rectangle-5" fill="url(#radialGradient-1)" x="0" y="1" width="1170" height="658"></rect>
+            <rect id="Rectangle-5" fill="#EBEBEB" x="0" y="1" width="1170" height="658"></rect>
             <g id="Group-7" transform="translate(100.000000, 230.000000)">
                 <g id="Group-4" fill="#CC0000">
                     <path d="M120.777253,46.3235294 C98.9736513,46.3235294 78.4047707,54.8578431 62.8678673,70.3480392 C47.3505627,85.8186275 38.8055108,106.264706 38.8055108,127.916667 L38.8055108,162.916667 C38.8055108,168.333333 34.748571,172.573529 29.5696033,172.573529 C24.4788298,172.573529 20.3336957,168.431373 20.3336957,163.333333 L20.3336957,128.333333 C20.3336957,101.602941 30.8141234,76.4019608 49.839603,57.3627451 C68.8650826,38.3284314 94.0592665,27.8480392 120.777253,27.8480392 C125.868026,27.8480392 130.01316,31.9901961 130.01316,37.0833333 C130.01316,41.9215686 125.608343,46.3235294 120.777253,46.3235294 M120.777253,87.8921569 C98.7188677,87.8921569 80.7713189,105.848039 80.7713189,127.916667 L80.7713189,162.916667 C80.7713189,168.098039 76.3958996,172.47549 71.2169318,172.47549 C66.1800549,172.47549 62.0790179,168.377451 62.0790179,163.333333 L62.0790179,128.333333 C62.0790179,112.715686 68.2036251,97.9852941 79.3210119,86.8627451 C90.4383988,75.7352941 105.161954,69.6127451 120.777253,69.6127451 C125.81413,69.6127451 129.915167,73.7107843 129.915167,78.75 C129.915167,83.5343137 125.559346,87.8921569 120.777253,87.8921569 M74.9651913,0 C42.0638018,0 13.3271451,6.66666667 0,16.25 L0,183.75 C13.3271451,193.333333 42.0638018,200 74.9651913,200 C107.866581,200 136.603238,193.333333 149.930383,183.75 L149.930383,16.25 C136.603238,6.66666667 107.866581,0 74.9651913,0" id="Fill-17"></path>
                 </g>
                 <g id="Group-6" transform="translate(175.000000, 0.000000)">
                     <g id="Combined-Shape" transform="translate(398.000000, 100.484383) scale(-1, 1) translate(-398.000000, -100.484383) ">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
                     </g>
                     <g id="Group-5" transform="translate(106.000000, 52.000000)">
                         <g id="Group" transform="translate(270.758621, 0.000000)" fill="#B7B6B6">

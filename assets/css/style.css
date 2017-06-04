@@ -21,7 +21,7 @@ h2 {line-height: 2em;margin-top:60px;font-weight:600;}
 h1 {font-weight:400;}
 p, ul, ol {font-weight:400;line-height: 1.6em;max-width:800px; margin-bottom:30px;font-size:17px;}
 a {color: #767676;}
-a:hover {color: #c7254e;}
+a:hover {text-decoration:none; color: #c7254e; border-bottom: 1px dotted;}
 .page-header h1 a{color: #fff}
 .page-header h3 {color: #fff}
 
@@ -30,6 +30,10 @@ a
 
 .profileimage {margin-top:6vh;margin-bottom:3vh; }
 
+.tile h3 {font-size: 17px;}
+.tile a {color:#222;}
+.tile a:hover h3 {text-decoration:none; color:#c7254e;}
+
 .spacer {height:60px}
 
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
@@ -37,6 +41,11 @@ a
 .light-grey {background: #f4f4f4;}
 .dark-grey {background: #222; color:#fff;}
 .honeycomb-yellow {background: #fed333}
+
+
+/** Footer with contact details  **/
+
+.footer-line {height:10px;background:#22bee3;margin:60px 0 10px 0;}
 
 /** experiments page **/
 
