@@ -19,7 +19,7 @@ h2 {line-height: 2em;margin-top:60px;font-weight:600;}
     
     
 h1 {font-weight:400;}
-p, ul, ol {font-weight:400;line-height: 1.8em;margin-bottom: 30px;}
+p, ul, ol {font-weight:400;line-height: 1.8em;max-width:800px; margin-bottom:30px;}
 a {color: #22bee3;}
 a:hover {color: #c7254e;}
 .page-header h1 a{color: #fff}
