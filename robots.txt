@@ -1,4 +1,2 @@
 User-Agent: *
 Disallow: 
-Disallow: /portfolio.html
-Disallow: /3t-software-labs.html
