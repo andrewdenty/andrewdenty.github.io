@@ -23,7 +23,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicons.png" />
 
 
 
@@ -33,55 +33,21 @@
     <div class="page-header">
         <div class="container">
 
-            <h1><span style="font-weight:800;"><a href="index.html">AD</a></span> > <a href="portfolio.html">10% Time</a></h1>
+            <h1><span style="font-weight:800;"><a href="index.html">React</a></span> > <a href="portfolio.html">10% Time</a></h1>
 
             <h2>React</h2>
         </div>
     </div>
 
-    <div class="container" id="content">
-            
-            <script type="text/jsx">
-                React.render(<div>
-                    <AndrewsComponent user="David">Is a tech lead </AndrewsComponent>
-                    <AndrewsComponent user="Alex">Has the best commit comments</AndrewsComponent>
-                        </div>, document.getElementById('content'));
-
-    
-            </script>
-        <div class="spacer"></div>
-        
     <!--footer block-->
-    <div id="footer">
-        <div class="container">
-            <div class="footer-line" style="background:#f4f4f4"></div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>Find me here –</h3>
-                    <p><a href="http://andrewdenty.tumblr.com/" target="_blank">Thoughts on UX</a>
-                        <br/>
-                        <a href="http://www.parttimebackpacker.com/" target="_blank">Personal blog</a>
-                        <br/>
-                        <a href="https://twitter.com/andrewdenty" target="_blank">Twitter</a>
-                        <br/>
-                        <a href="https://uk.linkedin.com/in/andrewdenty/" target="_blank">Linkedin</a></p>
-                </div>
-                <div class="col-sm-6">
-                    <h3>Let's work together –</h3>
-                    <p>
-                        <a href="mailto:andrewdenty@gmail.com">andrewdenty@gmail.com</a>
-                    </p>
-                </div>
-
-            </div>
-            <div class="spacer"></div>
-            <p class="small">Copyright © 2017 Andrew Denty</p>
-            <div class="spacer"></div>
-        </div>
+    <div class="container" id="footer">
+        <script type="text/jsx">
+            React.render(<Footer page="Cake" />, document.getElementById('footer'));
+        </script>
     </div>
-
+        
+        
     <!--Google Analytics-->
-
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
