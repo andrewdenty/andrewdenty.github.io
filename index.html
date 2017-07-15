@@ -39,27 +39,6 @@
 
   </script>
   
-<!--Fix for font resizing in Chrome and Safari-->
-    
-  <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>
-
-    // Chrome 26 needs this
-    // Safari 6 needs this
-
-    // Firefox 19 doesn't need it
-    // IE 10 doesn't need it
-
-		$(function() {
-
-			causeRepaintsOn = $("body");
-
-			$(window).resize(function() {
-				causeRepaintsOn.css("z-index", 1);
-			});
-
-		});
-	</script>
 </body>
 
 </html>
