@@ -6,6 +6,7 @@
     <title>Honeycomb Design System - Andrew Denty</title>
     <meta name="author" content="Andrew Denty">
     <meta name="description" content="I have played a central role in the development of Redgate’s design system, Honeycomb. I work with a Web Developer and a Graphic Designer in order to design, document and share components.">
+
     <!-- Adobe Typekit script -->
     <script src="https://use.typekit.net/lik3cxs.js"></script>
     <script>
@@ -16,12 +17,17 @@
         } catch (e) {}
     </script>
 
+    <!-- React JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/jsx" src="/assets/js/shared.js"></script>
+
+    <!-- Styling -->
     <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-
-
 
 </head>
 
@@ -85,75 +91,38 @@
         </div>
         <div class="spacer"></div>
     </div>
-    <!-- other content -->
-    <div class="container">
-        <div class="spacer"></div>
-        <div class="footer-line" style="background:#f4f4f4"></div>
-        <h3>More work –</h3>
-        <div class="row">
-            <div class="col-xs-4 ">
-                <a href="readyroll-getting-started.html">
-                    <p class="small"><img src="assets/img/readyroll-getting-started-thumb.svg" class="img-responsive" alt="Redesigning the ReadyRoll set up experience">Redesigning the ReadyRoll set up process</p>
-                </a>
-            </div>
-            <div class="col-xs-4 ">
-                <a href="redgate-in-the-box.html">
-                    <p class="small"><img src="assets/img/in-the-box-thumb.svg" class="img-responsive" alt="Redgate in the Box with Visual Studio">Redgate in the Box with Visual Studio</p>
-                </a>
-            </div>
-            <div class="col-xs-4 ">
-                <a href="3t-software-labs.html">
-                    <p class="small"><img src="assets/img/3t-thumb.svg" class="img-responsive" alt="3T Software Labs icons ">3T Software Labs icons</p>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!--footer block-->
- <div id="footer">
-        <div class="container">
-            <div class="footer-line"></div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>Find me here –</h3>
-                    <p><a href="http://andrewdenty.tumblr.com/" target="_blank">Thoughts on UX</a>
-                        <br/>
-                        <a href="http://www.parttimebackpacker.com/" target="_blank">Personal blog</a>
-                        <br/>
-                        <a href="https://twitter.com/andrewdenty" target="_blank">Twitter</a>
-                        <br/>
-                        <a href="https://uk.linkedin.com/in/andrewdenty/" target="_blank">Linkedin</a></p>
-                </div>
-                <div class="col-sm-6">
-                    <h3>Let's work together –</h3>
-                    <p>
-                        <a href="mailto:andrewdenty@gmail.com">andrewdenty@gmail.com</a>
-                    </p>
-                </div>
-                
-            </div>
-            <div class="spacer"></div>
-            <p class="small">Copyright © 2017 Andrew Denty</p>
-            <div class="spacer"></div>
-        </div>
-    </div>
-    <!--Google Analytics-->
 
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    <!--More Work-->
+    <div class="container" id="MoreWork">
+        <script type="text/jsx">
+            React.render(
+            <MoreWork page="InTheBox" />, document.getElementById('MoreWork'));
+        </script>
+    </div>
 
-        ga('create', 'UA-47136738-1', 'andrewdenty.com');
-        ga('send', 'pageview');
-    </script>
+    <!--Footer-->
+    <div class="container" id="Footer">
+        <script type="text/jsx">
+            React.render(
+            <Footer/>, document.getElementById('Footer'));
+        </script>
+
+        <!--Google Analytics-->
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-47136738-1', 'andrewdenty.com');
+            ga('send', 'pageview');
+        </script>
 </body>
 
 </html>
