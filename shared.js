@@ -11,25 +11,25 @@
 */
 
 var links = {
-  Cake: {
-    href: '/cake.html',
-    imgsrc: 'https://unsplash.it/300/200/?random',
-    description: 'This is a cake'
+  InTheBox: {
+    href: '/redgate-in-the-box.html',
+    imgsrc: 'assets/img/in-the-box-thumb.svg',
+    description: 'Redgate in the Box with Visual Studio'
   },
-  Brownies: {
-    href: '/brownies.html',
-    imgsrc: 'https://unsplash.it/300/200/?random',
-    description: 'These are brownies'
+  Honeycomb: {
+    href: '/honeycomb-design-system.html',
+    imgsrc: 'assets/img/honeycomb-thumb.svg',
+    description: 'Redgate Honeycomb design system'
   },
-  Cookies: {
-    href: '/cookies.html',
-    imgsrc: 'https://unsplash.it/300/200/?random',
-    description: 'Here are some tasty cookies'
+  ThreeT: {
+    href: '/3t-software-labs.html',
+    imgsrc: 'assets/img/3t-thumb.svg',
+    description: '3T Software Labs icons'
   },
-  Flapjack: {
-    href: '/flapjack.html',
-    imgsrc: 'https://unsplash.it/300/200/?random',
-    description: 'Here is some stale flapjack'
+  ReadyRoll: {
+    href: '/readyroll-getting-started.html',
+    imgsrc: 'assets/img/readyroll-getting-started-thumb.svg',
+    description: 'Redesigning the ReadyRoll set up process'
   }
 };
 
@@ -38,7 +38,7 @@ var Footer = React.createClass({
         var page = this.props.page;
         return (
             <div>
-            <h3>Cake Menu-</h3>
+            <h3>More work –</h3>
                 <div className="row">
                     {Object.keys(links).map(function(name) {
                         if (page === name) {
@@ -48,7 +48,7 @@ var Footer = React.createClass({
                         return <div key={name} className="col-xs-4">
                                 <a href={links[name].href}>
                                     <img className="img-responsive" src={links[name].imgsrc} alt={links[name].description} />
-                                    <p>{links[name].description}</p>
+                                    <p className="small">{links[name].description}</p>
                                 </a>
                             </div>;
                     })}
