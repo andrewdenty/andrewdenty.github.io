@@ -30,7 +30,7 @@ a:hover {text-decoration:none; color: #c7254e; border-bottom: 1px dotted;}
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
 /** Page Header **/
-.page-header{background-color:#373737/**#22bee3**/;border:none;color:#fff;margin-top: 
+.page-header{background-color:#22bee3;border:none;color:#fff;margin-top: 
     0px;margin-bottom: 10px;padding-top:40px; padding-bottom: 15px;}
 
 .page-header .page-intro {max-width:800px;padding-top:15px; padding-bottom:15px;} 
