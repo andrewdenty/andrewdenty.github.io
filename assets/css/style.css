@@ -40,8 +40,8 @@ a:hover {text-decoration:none; color: #c7254e; border-bottom: 1px dotted;}
 .light-grey {background: #f4f4f4;}
 .dark-grey {background: #222; color:#fff;}
 .honeycomb-yellow {background: #fed333}
-.vs-purple {background-color: #865FC5; color:#fff;}
-.vs-purple a {color:#fff;}
+.vs-grey {background-color: #3c3c3c; color:#fff;}
+.vs-grey a {color:#fff;}
 
 /** Portfolio page **/
 .tag-line {margin-top:-20px;margin-bottom:80px;font-weight:300;max-width:550px;}
