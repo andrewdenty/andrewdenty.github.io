@@ -23,7 +23,7 @@ p, ul, ol {font-weight:400;line-height: 1.6em;max-width:800px; margin-bottom:30p
 a {color: #767676;}
 a:hover {text-decoration:none; color: #c7254e; border-bottom: 1px dotted;}
 .page-header a{color: #fff}
-.page-header h3 {color: #fff}
+.page-header h3 {color: #fff; line-height:1.5;}
 
 .spacer {height:60px}
 
