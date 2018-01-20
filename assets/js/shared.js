@@ -85,7 +85,7 @@ var Footer = React.createClass({
                 </div>
             </div>
             <div className="spacer"></div>
-            <p className="small">Copyright © 2017 Andrew Denty</p>
+            <p className="small">Copyright © 2018 Andrew Denty</p>
             <div className="spacer"></div>
             </div>
         );
