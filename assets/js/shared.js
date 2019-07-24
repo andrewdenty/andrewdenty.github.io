@@ -1,4 +1,36 @@
+/* Page footer */
+
+var Header = React.createClass({
+    render: function () {
+        return (
+            <div className="page-header">
+            <div className="container">
+            <div className="row">
+            <div className="col-sm-6">
+                    <p className="logo"><a href="index.html" target="_blank">Andrew Denty</a>
+                       </p>
+                </div>
+                <div className="col-sm-6">
+                    <span className="pull-right">
+                    <p>
+                       <a href="portfolio.html">Portfolio</a> {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="http://www.parttimebackpacker.com">Blog</a>
+                    </p></span>
+                </div>
+            </div>
+            
+            
+            </div>
+
+            </div>
+        );
+    }
+});
+
+
 /*
+
+
+<p><a href="index.html"><span style="font-weight:600; font-size: 24px; color: #222;">Andrew Denty</span></a><p/>
   ______
 < more work >
   ------

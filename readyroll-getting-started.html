@@ -7,22 +7,15 @@
     <meta name="author" content="Andrew Denty">
     <meta name="description" content="Redesigning the ReadyRoll set-up experience. On starting the project I ran a heuristic analysis session to identify the most obvious problems with the usability of ReadyRoll’s set-up process.">
 
-    <!-- Adobe Typekit script -->
-    <script src="https://use.typekit.net/lik3cxs.js"></script>
-    <script>
-        try {
-            Typekit.load({
-                async: true
-            });
-        } catch (e) {}
-    </script>
-
     <!-- React JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/jsx" src="/assets/js/shared.js"></script>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap" rel="stylesheet">
+    
     <!-- Styling -->
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,10 +25,17 @@
 </head>
 
 <body>
-    <div class="page-header" style="background:#222;margin-bottom:0;">
-        <div class="container">
+    <!--Header-->
+    <div id="Header">
+        <script type="text/jsx">
+            React.render(
+            <Header/>, document.getElementById('Header'));
+        </script>
+    </div>
 
-            <h1><span style="font-weight:800;"><a href="index.html">AD</a></span> > <a href="portfolio.html">Portfolio</a></h1>
+
+    <div class="page-header" style="background:#222;margin-bottom:0;color:#fff">
+        <div class="container">
             <h2>Redesigning the ReadyRoll set-up experience</h2>
             <p class="page-intro">ReadyRoll is a powerful, versatile tool for managing database development within Visual Studio. Although it had a loyal following of early adopter users, we were receiving regular feedback that new users were finding ReadyRoll difficult to set up.</p>
         </div>
@@ -102,24 +102,25 @@
             <Footer/>, document.getElementById('Footer'));
         </script>
 
-    <!--Google Analytics-->
+        <!--Google Analytics-->
 
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-47136738-1', 'andrewdenty.com');
-        ga('send', 'pageview');
-    </script>
-        
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-47136738-1', 'andrewdenty.com');
+            ga('send', 'pageview');
+
+        </script>
+
 </body>
 
 </html>
