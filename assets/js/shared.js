@@ -7,8 +7,7 @@ var Header = React.createClass({
             <div className="container">
             <div className="row">
             <div className="col-sm-6">
-                    <p className="logo"><a href="index.html" target="_blank">Andrew Denty</a>
-                       </p>
+                    <p className="logo"><a href="index.html">Andrew Denty</a></p>
                 </div>
                 <div className="col-sm-6">
                     <span className="pull-right">
@@ -17,10 +16,7 @@ var Header = React.createClass({
                     </p></span>
                 </div>
             </div>
-            
-            
             </div>
-
             </div>
         );
     }
