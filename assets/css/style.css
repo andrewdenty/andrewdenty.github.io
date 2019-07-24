@@ -29,9 +29,9 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
 /** Page Header **/
-.page-header .logo a {font-weight:600; font-size: 24px; color: #222;}
+.page-header .logo {font-weight:600; font-size: 24px; color: #222;}
 .page-header .logo a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
-.page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:50px; padding-bottom: 15px;}
+.page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:50px; padding-bottom: 40px;}
 .page-header a {color: #707070;font-size:18px;} 
 .page-header a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 

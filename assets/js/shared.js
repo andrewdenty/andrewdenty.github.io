@@ -5,16 +5,23 @@ var Header = React.createClass({
         return (
             <div className="page-header">
             <div className="container">
-            <div className="row">
-            <div className="col-md-4">
-                    <p className="logo"><a href="index.html">Andrew Denty</a></p>
+            <div className="d-flex flex-column flex-md-row align-items-center">
+            <div className="mr-md-auto">
+                    <a className="logo" href="index.html">Andrew Denty</a>
                 </div>
-                <div className="col-md-8">
-                    <span className="float-right">
-                    <p>
-                       <a href="portfolio.html">Portfolio</a> {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="http://www.parttimebackpacker.com">Personal blog</a>
-                    </p></span>
+            
+                <div className="col-auto p-2">
+                    <a className="" href="portfolio.html">Portfolio</a>  
                 </div>
+            
+                <div className="col-auto p-2">
+                    <a className="" href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  
+                </div>
+                
+                <div className="col-auto p-2">
+                    <a className="" href="http://www.parttimebackpacker.com">Personal blog</a>
+                </div>
+            
             </div>
             </div>
             </div>
