@@ -6,11 +6,11 @@ var Header = React.createClass({
             <div className="page-header">
             <div className="container">
             <div className="row">
-            <div className="col-sm-6">
+            <div className="col-md-6">
                     <p className="logo"><a href="index.html">Andrew Denty</a></p>
                 </div>
-                <div className="col-sm-6">
-                    <span className="pull-right">
+                <div className="col-md-6">
+                    <span className="float-right">
                     <p>
                        <a href="portfolio.html">Portfolio</a> {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="http://www.parttimebackpacker.com">Blog</a>
                     </p></span>
@@ -73,9 +73,9 @@ var MoreWork = React.createClass({
                             return null;
                         }
             
-                        return <div key={name} className="col-xs-4">
+                        return <div key={name} className="col-4">
                                 <a href={links[name].href}>
-                                    <img className="img-responsive light-grey" src={links[name].imgsrc} alt={links[name].description} />
+                                    <img className="img-fluid light-grey" src={links[name].imgsrc} alt={links[name].description} />
                                     <p className="small">{links[name].description}</p>
                                 </a>
                             </div>;
@@ -95,7 +95,7 @@ var Footer = React.createClass({
             <div>
              <div className="footer-line"></div>
             <div className="row">
-                <div className="col-sm-4">
+                <div className="col-md-4">
                     <h3>Find me here –</h3>
                     <p><a href="http://andrewdenty.tumblr.com/" target="_blank">Thoughts on UX</a>
                         <br/>
@@ -105,7 +105,7 @@ var Footer = React.createClass({
                         <br/>
                         <a href="https://uk.linkedin.com/in/andrewdenty/" target="_blank">Linkedin</a></p>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-md-6">
                     <h3>Let's work together –</h3>
                     <p>
                         <a href="mailto:andrewdenty@gmail.com">andrewdenty@gmail.com</a>
