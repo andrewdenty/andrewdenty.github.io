@@ -6,13 +6,13 @@ var Header = React.createClass({
             <div className="page-header">
             <div className="container">
             <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-4">
                     <p className="logo"><a href="index.html">Andrew Denty</a></p>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-8">
                     <span className="float-right">
                     <p>
-                       <a href="portfolio.html">Portfolio</a> {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="http://www.parttimebackpacker.com">Blog</a>
+                       <a href="portfolio.html">Portfolio</a> {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  {'\u00A0'}{'\u00A0'}{'\u00A0'}•{'\u00A0'}{'\u00A0'}{'\u00A0'}  <a href="http://www.parttimebackpacker.com">Personal blog</a>
                     </p></span>
                 </div>
             </div>
