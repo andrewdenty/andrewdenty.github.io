@@ -19,7 +19,12 @@ var Header = React.createClass({
                 </div>
                 
                 <div className="col-auto p-2">
-                    <a className="" href="http://www.parttimebackpacker.com">Personal blog</a>
+                    <a className="" href="https://www.parttimebackpacker.com">Personal blog</a>
+                </div>
+            
+             <div className="col-auto">
+                    <a className="p-1" href="https://instagram.com/andrewdenty"><img src="assets/img/instagram.svg" className ="social-icon" alt="Instagram"/></a>
+            <a className="p-1" href="https://www.linkedin.com/andrewdenty"><img src="assets/img/linkedin.svg" className ="social-icon" alt="Instagram"/></a>
                 </div>
             
             </div>
