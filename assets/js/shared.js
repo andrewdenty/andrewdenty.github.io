@@ -11,7 +11,7 @@ var Header = React.createClass({
                 </div>
             
                 <div className="col-auto p-2">
-                    <a className="" href="portfolio.html">Portfolio</a>  
+                    <a className="active-item" href="portfolio.html">Portfolio</a>  
                 </div>
             
                 <div className="col-auto p-2">
