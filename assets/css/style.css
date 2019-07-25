@@ -22,7 +22,7 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:80px; padding-bottom: 60px;}
 .page-header a {color: #707070;font-size:18px;font-weight: 500;} 
 .page-header a:hover {text-decoration:none; color: #F6714F; padding-bottom: 3px; border-bottom: 1px dotted;}
-.page-header .active-item {text-decoration:none; color:#222; border-bottom: #F6714F 2px solid}
+.page-header .active-item {text-decoration:none; color:#222;}
 .social-icon {color:#707070; width:20px; height: 20px;margin-bottom: 3px;}
 
 /** Page intro **/
