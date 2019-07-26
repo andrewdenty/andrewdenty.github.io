@@ -39,10 +39,9 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 /** Portfolio page **/
 .tag-line {margin-top:-20px;margin-bottom:80px;font-weight:300;max-width:550px;}
 
-.tile h3 {font-size: 17px;}
+.tile h3 {font-size: 17px;font-weight: 500;}
 .tile a {color:#222;}
 .tile a:hover h3 {text-decoration:none; color:#F6714F;}
-
 
 
 

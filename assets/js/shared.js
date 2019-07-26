@@ -10,15 +10,15 @@ var Header = React.createClass({
                     <a className="logo" href="index.html">Andrew Denty</a>
                 </div>
             
-                <div className="col-auto p-2">
+                <div className="col-auto p-3">
                     <a className="active-item" href="portfolio.html">Portfolio</a>  
                 </div>
             
-                <div className="col-auto p-2">
+                <div className="col-auto p-3">
                     <a className="" href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  
                 </div>
                 
-                <div className="col-auto p-2">
+                <div className="col-auto p-3">
                     <a className="" href="https://www.parttimebackpacker.com">Personal blog</a>
                 </div>
             
