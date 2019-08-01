@@ -17,7 +17,7 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
 /** Page Header **/
-.page-header .logo {font-weight:600; font-size: 24px; color: #222;}
+.page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;}
 .page-header .logo a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:80px; padding-bottom: 60px;}
 .page-header a {color: #707070;font-size:18px;font-weight: 500;} 
