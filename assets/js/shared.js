@@ -1,4 +1,4 @@
-/* Page footer */
+/* Header */
 
 var Header = React.createClass({
     render: function () {
@@ -15,18 +15,13 @@ var Header = React.createClass({
                 </div>
             
                 <div className="col-auto p-3">
-                    <a className="" href="https://andrewdenty.tumblr.com">Thoughts on UX</a>  
+                    <a className="" href="https://andrewdenty.tumblr.com">Thoughts on design</a>  
                 </div>
                 
                 <div className="col-auto p-3">
                     <a className="" href="https://www.parttimebackpacker.com">Personal blog</a>
                 </div>
-            
-             <div className="col-auto">
-                    <a className="p-1" href="https://instagram.com/andrewdenty"><img src="assets/img/instagram.svg" className ="social-icon" alt="Instagram"/></a>
-            <a className="p-1" href="https://www.linkedin.com/in/andrewdenty"><img src="assets/img/linkedin.svg" className ="social-icon" alt="Instagram"/></a>
-                </div>
-            
+    
             </div>
             </div>
             </div>
