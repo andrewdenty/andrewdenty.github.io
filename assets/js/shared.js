@@ -15,7 +15,7 @@ var Header = React.createClass({
                 </div>
             
                 <div className="col-auto p-3">
-                    <a className="" href="https://andrewdenty.tumblr.com">Thoughts on design</a>  
+                    <a className="" href="https://www.andrewdenty.com/blog">Thoughts on design</a>  
                 </div>
                 
                 <div className="col-auto p-3">
@@ -104,7 +104,7 @@ var Footer = React.createClass({
             <div className="row">
                 <div className="col-md-4">
                     <h3>Find me here –</h3>
-                    <p><a href="http://andrewdenty.tumblr.com/" target="_blank">Thoughts on UX</a>
+                    <p><a href="https://www.andrewdenty.com/blog">Thoughts on design</a>
                         <br/>
                         <a href="http://www.parttimebackpacker.com/" target="_blank">Personal blog</a>
                         <br/>
