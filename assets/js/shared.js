@@ -104,8 +104,7 @@ var Footer = React.createClass({
             <div className="row">
                 <div className="col-md-4">
                     <h3>Find me here –</h3>
-                    <p><a href="https://www.andrewdenty.com/blog">Thoughts on design</a>
-                        <br/>
+                    <p>
                         <a href="http://www.parttimebackpacker.com/" target="_blank">Personal blog</a>
                         <br/>
                         <a href="https://twitter.com/andrewdenty" target="_blank">Twitter</a>
