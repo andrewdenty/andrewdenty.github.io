@@ -1,7 +1,7 @@
 /** Sizing specific stuff **/
 
 @media (max-width: 967px) {
-body {font-size:28px;}
+body {font-size:22px;}
 .profileimage {max-width:170px; max-height:170px;}
 }  
   
