@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Airtame Homescreen - Andrew Denty</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description"
+        content=" I led the redesign of the Airtame Homescreen. I worked on this feature from it’s conception right through to helping launch it in mid 2019">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap" rel="stylesheet">
+
+    <!-- React JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/jsx" src="/assets/js/shared.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap" rel="stylesheet">
+
+    <!-- Styling -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+</head>
+
+<body>
+    <!--Header-->
+    <div id="Header">
+        <script type="text/jsx">
+            React.render(
+            <Header/>, document.getElementById('Header'));
+        </script>
+    </div>
+
+    <div class="page-intro light-grey" style="color:#222;padding-bottom:0px;">
+        <div class="container">
+            <div class="spacer"></div>
+            <h2>Airtame Homescreen</h2>
+            <p>Airtame is a device which lets people present wirelessly from any device.
+                I led the redesign of the Airtame Homescreen. I worked on this feature from it’s conception right
+                through to helping launch it in mid 2019
+                The Airtame homescreen is the first thing people see when they walk into a room with an Airtame
+                connected TV.
+            </p>
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <div class="container">
+
+        <img src="assets/img/airtame-homescreen.png" alt="Airtame Homescreen in action" class="img-fluid">
+
+        <h3>Identifying the opportunity</h3>
+        <p>The previous Airtame Homescreen was a simple screen which contains instructions about how to share to the
+            screen as well as a background image which can be specified by an IT administrator. It was typically found
+            in meeting rooms and classrooms and displaying all day while screens were not in use.</p>
+        <p>There was a feeling that this was a wasted opportunity. The current Homescreen did nothing to help the users
+            of a room other than provide connection instructions.</p>
+        <p>This was backed up by customer feedback asking for increased customisability and elements such as the time.
+        </p>
+        <p>My main contributions have been to design and build a flexible library of components and patterns to provide
+            Redgate's users with a coherent experience. This includes atomic elements including buttons, typography and
+            colour through to complex interaction patterns such as in product notifications and update mechanisms.
+        </p>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="light-grey">
+        <div class="container">
+            <div class="spacer"></div>
+            <h3>Scoping the project</h3>
+            <p>Working closely with our Product Manager, trawling through customer feedback I identified a number of goals for the redesign:</p>
+            <ul>
+                <li>Be more aware of its context and be useful in that context. In meeting rooms it needs to provide information about</li>
+                <li>It needs to clearly signpost how to share your screen to the TV</li>
+                <li>Needs to be flexible to our customers’ needs. For example, to support custom imagery and logos </li>
+                <li>It’s our end users’ first impression of Airtame and a desire within Airtame to create a design which was more easily recognisable as Airtame without being heavily branded</li>
+            </ul>
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="spacer"></div>
+        <h3>Validating the concept</h3>
+        <p>Given the vast variety of users that needed to be able to use Airtame, I carried out research whereby I invited the public in to our office directly from the street by offering free drinks and refreshments. (Our office is located centrally in Copenhagen by the harbour, and it was a very hot Summer!)</p>
+        <p> While testing usability was important it was also important to ensure the design met the needs of our customer organisations. I validated the designs with the help of our sales team who shared early previews of the design in exchange for feedback.</p>
+        <div class="spacer"></div>
+    </div>
+    <div class="light-grey">
+        <div class="container">
+            <div class="spacer"></div>
+            <h3>Build, release and validation:</h3>
+            <p>As changing the homescreen overnight could potentially have a significant effect on our customers, I pushed for a gradual, rollout.</p>
+            <ol>
+                <li>Internal testing – rolling out the new homescreen in all Airtame meeting rooms and subsequently listening to internal feedback</li>
+                <li>Sharing an initial version with select, close customers in exchange for feedback</li>
+                <li>Releasing the homescreen as an optional feature</li>
+                <li>Rolling out the homescreen as the default Airtame experience</li>
+            </ol>
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <!--More Work-->
+    <div class="container" id="MoreWork">
+        <script type="text/jsx">
+            React.render(
+            <MoreWork page="Honeycomb" />, document.getElementById('MoreWork'));
+        </script>
+    </div>
+
+    <!--Footer-->
+    <div class="container" id="Footer">
+        <script type="text/jsx">
+            React.render(
+            <Footer/>, document.getElementById('Footer'));
+        </script>
+
+        <!--Google Analytics-->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-47136738-1', 'andrewdenty.com');
+            ga('send', 'pageview');
+        </script>
+</body>
+
+</html>
