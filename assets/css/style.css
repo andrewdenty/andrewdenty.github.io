@@ -76,6 +76,7 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 /** Footer with contact details  **/
 
 .footer-line {height:10px;background:#f4f4f4;margin:60px 0 10px 0;}
+#Footer a{border-bottom:none;line-height: 1.8em}
 
 /** experiments page **/
 
