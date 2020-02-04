@@ -7,9 +7,9 @@ h2 {line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
 body {font-family:"DM Sans", sans-serif;font-size: 18px;font-weight:500;}    
     
 
-p, ul, ol {font-weight:400;line-height: 1.6em;max-width:800px; margin-bottom:20px;font-size:17px;}
-a {color: #707070;transition: 0.3s;}
-a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
+p, ul, ol {font-weight:500;line-height: 1.6em;max-width:800px; margin-bottom:20px;font-size:17px;}
+a {color: #707070;transition: 0.2s;border-bottom: #b6b6b6 1px solid;}
+a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 .page-header h3 {line-height:1.5;}
 
 .spacer {height:60px}
@@ -17,11 +17,11 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
 /** Page Header **/
-.page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;}
-.page-header .logo a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
+.page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;border-bottom:none;}
+.page-header .logo:hover {text-decoration:none; color: #22bee3; border-bottom: 1px solid;}
 .page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:60px; padding-bottom: 60px;}
-.page-header a {color: #707070;font-size:18px;font-weight: 500;} 
-.page-header a:hover {text-decoration:none; color: #F6714F; padding-bottom: 3px; border-bottom: 1px dotted;}
+.page-header a {color: #707070;font-size:18px;font-weight: 500;border-bottom:none;} 
+.page-header a:hover {text-decoration:none; color: #F6714F; padding-bottom: 2px; border-bottom: 1px solid;}
 .page-header .active-item {text-decoration:none; color:#222;}
 .social-icon {color:#707070; width:20px; height: 20px;margin-bottom: 3px;}
 
@@ -40,17 +40,17 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px dotted;}
 .airtame-section {background: #f4f4f4;padding-top:100px; padding-bottom: 100px;}
 .light-grey {background: #f4f4f4;}
 .dark-grey {background: #222; color:#fff;}
+.dark-grey a {color:#b6b6b6}
+.dark-grey a:hover {color: #F6714F;}
 .honeycomb-yellow {background: #fed333}
-.vs-grey {background-color: #3c3c3c; color:#fff;}
-.vs-grey a {color:#fff;}
 
 /** Portfolio page **/
 .tag-line {margin-top:-20px;margin-bottom:80px;font-weight:300;max-width:550px;}
 .tile h3 {font-size: 17px;font-weight: 500;}
 .tile a {color:#222;}
-.tile a:hover h3 {color:#F6714F;transition: 0.3s}
-#airtame-thumbnail {transition: 0.3s;}
-#airtame-thumbnail:hover {transition: 0.3s;border-bottom: none;}
+.tile a:hover h3 {color:#F6714F;transition: 0.2s}
+#airtame-thumbnail {border-bottom: none;}
+#airtame-thumbnail:hover {border-bottom: none;}
 
 /** Back to top **/
 #myBtn {
