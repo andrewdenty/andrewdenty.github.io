@@ -16,7 +16,7 @@ body {font-family: "DM Sans", sans-serif; font-weight: 500; color:#707070;backgr
 h2 {color:#22bee3;font-size: 110%;font-weight:700;margin-top:1vh; margin-bottom:7vh;max-width:740px;margin-left: auto;margin-right: auto}
 a {color:inherit; text-decoration:none;transition: 0.3s}
 p, ul, ol  {font-size: 67%;line-height:160%;font-weight:500;}
-a:hover {border-bottom: 1px dotted #F6714F;color:#F6714F;}
+a:hover {border-bottom: 1px solid;color:#F6714F;}
 
 
 /**profile image**/
