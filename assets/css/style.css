@@ -52,6 +52,8 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 #airtame-thumbnail {border-bottom: none;}
 #airtame-thumbnail:hover {border-bottom: none;}
 
+/** Airtame Homescreen **/
+.tv {border-radius:2px; border: solid 4px #222; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);margin-top:20px;margin-bottom: 20px;}
 /** Back to top **/
 #myBtn {
   display: none; /* Hidden by default */
