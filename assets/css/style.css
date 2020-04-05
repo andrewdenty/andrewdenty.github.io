@@ -16,6 +16,8 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
+.caption {font-size: 80%; color:#707070;}
+
 /** Page Header **/
 .page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;border-bottom:none;}
 .page-header .logo:hover {text-decoration:none; color: #22bee3; border-bottom: 1px solid;}
@@ -53,7 +55,7 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 #airtame-thumbnail:hover {border-bottom: none;}
 
 /** Airtame Homescreen **/
-.tv {border-radius:2px; border: solid 4px #222; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);margin-top:20px;margin-bottom: 20px;}
+.tv {border-radius:2px; border: solid 4px #222; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);margin-top:20px;margin-bottom: 30px;}
 /** Back to top **/
 #myBtn {
   display: none; /* Hidden by default */
