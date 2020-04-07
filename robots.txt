@@ -1,3 +1,2 @@
 User-Agent: *
-Disallow: /airtame-homescreen.html
 Disallow: /airtame-clock.html
