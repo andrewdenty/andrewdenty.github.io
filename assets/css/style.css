@@ -41,7 +41,7 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 .page-intro {margin-top: 0px;margin-bottom:50px;padding-top:50px; padding-bottom: 15px;}
 
 /** coloured sections **/
-.airtame-section {background: #f4f4f4;padding-top:100px; padding-bottom: 100px;}
+.airtame-section {background: #f4f4f4;padding-top:80px; padding-bottom: 80px;}
 .light-grey {background: #f4f4f4;}
 .dark-grey {background: #222; color:#fff;}
 .dark-grey a {color:#b6b6b6}
@@ -50,7 +50,8 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 
 /** Portfolio page **/
 .tag-line {margin-top:-20px;margin-bottom:80px;font-weight:300;max-width:550px;}
-.tile h3 {font-size: 18px;font-weight: 500;}
+.tile {margin-bottom: 40px;}
+.tile h3 {font-size: 18px;font-weight: 500;margin-top: 5px;}
 .tile a {color:#222;}
 .tile a:hover h3 {color:#F6714F;transition: 0.2s}
 #airtame-thumbnail {border-bottom: none;}
