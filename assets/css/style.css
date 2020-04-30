@@ -7,7 +7,8 @@ h2 {line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
 body {font-family:"DM Sans", sans-serif;font-size: 18px;font-weight:500;}    
     
 
-p, ul, ol {font-weight:400;line-height: 1.6em;max-width:800px; margin-bottom:20px;font-size:18px;}
+p, ul, ol {font-weight:400;line-height: 1.7em;max-width:800px; margin-bottom:30px;font-size:18px;}
+li {margin-bottom: 0.8em;}
 a {color: #707070;transition: 0.2s;border-bottom: #b6b6b6 1px solid;}
 a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 .page-header h3 {line-height:1.5;}
@@ -16,7 +17,8 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 
 .shadow {box-shadow: 0px 0px 20px #dcdcdc;}
 
-.caption {font-size: 80%; color:#707070;}
+.caption {margin-top: 5px;font-size: 80%; color:#707070;}
+.tight {margin-top: -25px;}
 
 /** Page Header **/
 .page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;border-bottom:none;}
