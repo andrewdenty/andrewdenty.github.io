@@ -46,20 +46,20 @@ var Header = React.createClass({
 */
 
 var links = {
-  InTheBox: {
-    href: '/redgate-in-the-box.html',
-    imgsrc: 'assets/img/in-the-box-thumb.svg',
-    description: 'Redgate in the Box with Visual Studio'
+  AirtameApp: {
+    href: '/airtame-desktop-app.html',
+    imgsrc: 'assets/img/airtame-desktop-app-thumb.png',
+    description: 'Making the Airtame app easier to use'
   },
   Honeycomb: {
     href: '/honeycomb-design-system.html',
     imgsrc: 'assets/img/honeycomb-thumb.svg',
     description: 'Redgate Honeycomb design system'
   },
-  ThreeT: {
-    href: '/3t-software-labs.html',
-    imgsrc: 'assets/img/3t-thumb.svg',
-    description: '3T Software Labs icons'
+  AirtameHomescreen: {
+    href: '/airtame-homescreen.html',
+    imgsrc: 'assets/img/airtame-homescreen-thumb.jpg',
+    description: 'Designing the Airtame home screen'
   },
   ReadyRoll: {
     href: '/readyroll-getting-started.html',
