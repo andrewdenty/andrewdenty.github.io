@@ -4,8 +4,7 @@
 h1 {font-weight:400;}
 h3 {line-height: 1.8em;margin:20px 0px 20px 0px; font-weight:700;font-size:24px;}
 h2 {line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
-body {font-family:"DM Sans", sans-serif;font-size: 18px;font-weight:500;}    
-    
+body {font-family:"DM Sans", sans-serif;font-size: 18px;font-weight:500;}     
 
 p, ul, ol {font-weight:400;line-height: 1.7em;max-width:800px; margin-bottom:30px;font-size:18px;}
 li {margin-bottom: 0.8em;}
@@ -20,14 +19,27 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 .caption {margin-top: 5px;font-size: 80%; color:#707070;}
 .tight {margin-top: -25px;}
 
-/** Page Header **/
-.page-header .logo {font-weight:600; font-size: 24px; color: #22bee3;border-bottom:none;}
-.page-header .logo:hover {text-decoration:none; color: #22bee3; border-bottom: 1px solid;}
+/** Page Header and Nav **/
 .page-header {background-color:#fafafa;border:none;color:#707070;margin-top: 0px;margin-bottom:0px;padding-top:60px; padding-bottom: 60px;}
-.page-header a {color: #707070;font-size:18px;font-weight: 500;border-bottom:none;} 
-.page-header a:hover {text-decoration:none; color: #F6714F; padding-bottom: 2px; border-bottom: 1px solid;}
-.page-header .active-item {text-decoration:none; color:#222;}
-.social-icon {color:#707070; width:20px; height: 20px;margin-bottom: 3px;}
+.navbar{padding:0rem;}
+.navbar-light .navbar-nav .nav-item {margin-bottom:5px; margin-top:5px;}
+
+/** Logo **/
+.navbar-light .navbar-brand {min-height:48px;font-weight:600; font-size: 24px; color: #22bee3;border-bottom: 1px solid transparent;}
+.navbar-light .navbar-brand:hover {color: #22bee3; border-bottom: 1px solid;transition: 0.2s;}
+
+/** Nav bar items **/
+.navbar-light .navbar-nav .nav-link{color: #707070;font-size:18px;font-weight: 500;border-bottom: 1px transparent;padding: 10px 0px 2px 0px;} 
+@media (min-width: 768px) {.navbar-light .navbar-nav .nav-link{padding-top:0px;margin:0px 20px 0px 20px;border-bottom: 1px transparent;}}
+
+.navbar-light .navbar-nav .nav-link:hover {color: #F6714F; padding-bottom: 2px;padding-left:0px;padding-right:0px;border-bottom: 1px transparent; }
+@media (min-width: 768px) {.navbar-light .navbar-nav .nav-link:hover{border-bottom: 1px solid;}}
+
+/** Burger **/
+.navbar-toggler {border:none;}
+.navbar-toggler-icon:hover {transition: 0.2s;}
+.navbar-toggler:focus {background-color:#f4f4f4;box-shadow:none;outline:none;}
+
 
 /*<!-- Navigation menu responsive tweaks -->*/
 @media (max-width: 769px) {

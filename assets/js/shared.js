@@ -1,4 +1,35 @@
-/* Header */
+/* New Header */
+var Header = React.createClass({
+    render: function () {
+        return (
+            <div className="page-header">
+ <div className="container">
+        <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <a className="navbar-brand" href="index.html">Andrew Denty</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item active">
+                  <a className="nav-link" href="portfolio.html">Portfolio <span className="sr-only">(current)</span></a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="https://www.andrewdenty.com/blog">Thoughts on design</a>
+                  </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="https://www.parttimebackpacker.com">Personal blog</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+    </div>
+        );
+    }
+});
+
+/* Old Header 
 
 var Header = React.createClass({
     render: function () {
@@ -9,7 +40,12 @@ var Header = React.createClass({
             <div className="mr-md-auto">
                     <a className="logo" href="index.html">Andrew Denty</a>
                 </div>
-            
+                <p>
+                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
+                <span className="navbar-toggler-icon"></span>
+  </button>
+          </p>
+            <div className="collapse" id="collapseNav">
                 <div className="col-auto p-3">
                     <a className="active-item" href="portfolio.html">Portfolio</a>  
                 </div>
@@ -21,6 +57,7 @@ var Header = React.createClass({
                 <div className="col-auto p-3">
                     <a className="" href="https://www.parttimebackpacker.com">Personal blog</a>
                 </div>
+                </div>
     
             </div>
             </div>
@@ -28,7 +65,7 @@ var Header = React.createClass({
         );
     }
 });
-
+*/
 
 /*
   ______
