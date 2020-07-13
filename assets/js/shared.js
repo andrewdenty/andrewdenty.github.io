@@ -31,9 +31,6 @@ var Header = React.createClass({
 
 
 /*
-
-
-<p><a href="index.html"><span style="font-weight:600; font-size: 24px; color: #222;">Andrew Denty</span></a><p/>
   ______
 < more work >
   ------
