@@ -1,4 +1,4 @@
-/* New Header */
+/* Header */
 var Header = React.createClass({
     render: function () {
         return (
@@ -28,44 +28,6 @@ var Header = React.createClass({
         );
     }
 });
-
-/* Old Header 
-
-var Header = React.createClass({
-    render: function () {
-        return (
-            <div className="page-header">
-            <div className="container">
-            <div className="d-flex flex-column flex-md-row align-items-center">
-            <div className="mr-md-auto">
-                    <a className="logo" href="index.html">Andrew Denty</a>
-                </div>
-                <p>
-                <button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseNav" aria-expanded="false" aria-controls="collapseNav">
-                <span className="navbar-toggler-icon"></span>
-  </button>
-          </p>
-            <div className="collapse" id="collapseNav">
-                <div className="col-auto p-3">
-                    <a className="active-item" href="portfolio.html">Portfolio</a>  
-                </div>
-            
-                <div className="col-auto p-3">
-                    <a className="" href="https://www.andrewdenty.com/blog">Thoughts on design</a>  
-                </div>
-                
-                <div className="col-auto p-3">
-                    <a className="" href="https://www.parttimebackpacker.com">Personal blog</a>
-                </div>
-                </div>
-    
-            </div>
-            </div>
-            </div>
-        );
-    }
-});
-*/
 
 /*
   ______
