@@ -29,7 +29,7 @@
 
 
     .navbar-light .navbar-brand {min-height:48px;font-weight:600; font-size: 24px; color: #22bee3;border-bottom: 1px solid transparent;}
-    .navbar-light .navbar-brand:hover {color: #22bee3; border-bottom: 1px solid;transition: 0.2s;border-bottom:}
+    .navbar-light .navbar-brand:hover {color: #22bee3; border-bottom: 1px solid;transition: 0.2s;}
     .navbar{padding:0rem;}
     .navbar-light .navbar-nav .nav-link{color: #707070;font-size:18px;font-weight: 500;border-bottom: 1px solid transparent;padding: 0px 0px 2px 0px;} 
     .navbar-light .navbar-nav .nav-link{margin:0px 20px 0px 20px;}
@@ -151,23 +151,16 @@
             <Footer/>, document.getElementById('Footer'));
         </script>
 
-        <!--Google Analytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47136738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-        <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-47136738-1', 'andrewdenty.com');
-            ga('send', 'pageview');
-        </script>
+        gtag('config', 'UA-47136738-1');
+    </script>
+
 
 </body>
 
