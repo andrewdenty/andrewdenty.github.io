@@ -103,8 +103,6 @@ var Footer = React.createClass({
                     <p>
                         <a href="http://www.parttimebackpacker.com/" target="_blank">Personal blog</a>
                         <br/>
-                        <a href="https://twitter.com/andrewdenty" target="_blank">Twitter</a>
-                        <br/>
                         <a href="https://uk.linkedin.com/in/andrewdenty/" target="_blank">Linkedin</a></p>
                 </div>
                 <div className="col-md-6">
@@ -115,7 +113,7 @@ var Footer = React.createClass({
                 </div>
             </div>
             <div className="spacer"></div>
-            <p className="small">Copyright © 2022 Andrew Denty</p>
+            <p className="small">Copyright © 2024 Andrew Denty</p>
             <div className="spacer"></div>
             </div>
         );
