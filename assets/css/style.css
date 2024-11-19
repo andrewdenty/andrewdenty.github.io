@@ -2,11 +2,11 @@
 
 /** Other Stuff **/
 h1 {font-weight:400;}
-h3 {line-height: 1.8em;margin:20px 0px 20px 0px; font-weight:700;font-size:24px;}
+h3 {line-height: 1.8em;margin:20px 0px 10px 0px; font-weight:700;font-size:24px;}
 h2 {line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
 body {font-family:"DM Sans", sans-serif;font-size: 18px;font-weight:500;}     
 
-p, ul, ol {font-weight:400;line-height: 1.7em;max-width:800px; margin-bottom:30px;font-size:18px;}
+p, ul, ol {font-weight:400;line-height: 1.7em;max-width:800px; margin-bottom:40px;font-size:18px;}
 li {margin-bottom: 0.8em;}
 a {color: #707070;transition: 0.2s;border-bottom: #b6b6b6 1px solid;}
 a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
