@@ -1,4 +1,4 @@
-/** Generally this CSS is super generic stuff which overrides Bootstrap. Not the custom stuff for the homepage**//
+/** Generally this CSS is super generic stuff which overrides Bootstrap. Not the custom stuff for the homepage**/
 
 /** Other Stuff **/
 h1 {font-weight:400;}
@@ -55,12 +55,14 @@ a:hover {text-decoration:none; color: #F6714F; border-bottom: 1px solid;}
 /** coloured sections **/
 .airtame-section {background: #f4f4f4;padding-top:80px; padding-bottom: 80px;}
 .light-grey {background: #f4f4f4;}
+.lg-divider {height: 8px;max-width: 64px;background: #f4f4f4;}
 .dark-grey {background: #222; color:#fff;}
 .dark-grey a {color:#b6b6b6}
 .dark-grey a:hover {color: #F6714F;}
 .honeycomb-yellow {background: #fed333}
 
 /** Portfolio page **/
+h3 a, h2 a {color:#222; border-bottom:none;}
 .tag-line {margin-top:-20px;margin-bottom:80px;font-weight:300;max-width:550px;}
 .tile {margin-bottom: 40px;}
 .tile h3 {font-size: 18px;font-weight: 500;margin-top: 5px;}

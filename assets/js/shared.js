@@ -57,10 +57,10 @@ var links = {
     imgsrc: 'assets/img/airtame-homescreen-thumb.jpg',
     description: 'Designing the Airtame home screen'
   },
-  ReadyRoll: {
-    href: '/readyroll-getting-started.html',
-    imgsrc: 'assets/img/readyroll-getting-started-thumb.svg',
-    description: 'Redesigning the ReadyRoll set up process'
+  Thingtesting: {
+    href: '/thingtesting-overview.html',
+    imgsrc: 'assets/img/thingtesting-thumb.png',
+    description: 'Thingtesting'
   }
 };
 
@@ -113,7 +113,7 @@ var Footer = React.createClass({
                 </div>
             </div>
             <div className="spacer"></div>
-            <p className="small">Copyright © 2024 Andrew Denty</p>
+            <p className="small">Copyright © 2025 Andrew Denty</p>
             <div className="spacer"></div>
             </div>
         );
