@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Thingtesting - Andrew Denty</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description"
+        content="Thingtesting is a product review and testing platform crafted to help consumers buy better. I'm the Head of Design at Thingtesting.">
+
+    <!-- React JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/jsx" src="/assets/js/shared.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Styling -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+</head>
+
+<body>
+    <!--Header-->
+    <div id="Header">
+        <script type="text/jsx">
+            React.render(
+            <Header/>, document.getElementById('Header'));
+        </script>
+    </div>
+
+    <div class="page-intro" style="color:#222;padding-bottom:0px;">
+        <div class="container">
+            <div class="spacer"></div>
+            <div class="row"></div>
+            <h2>Monetisation through product testing</h2>
+            <p class="caption tight"> 2023 - 2025 &nbsp; • &nbsp; <a href="https://thingtesting.com"
+                    target="_blank">thingtesting.com</a></p>
+            <p>As the Lead Designer for Thingtesting’s “Try It” product, I tackled the challenge of turning organic
+                growth into revenue by addressing brands’ most pressing pain points. By combining research, design, and
+                iteration, we built a product that helped brands drive in-store sales, gain insights, and expand their
+                retail presence—all while learning valuable lessons along the way.</p>
+
+            <div class="spacer"></div>
+        </div>
+        <img src="assets/img/try-it-branding-1.png" alt="Thingtesting 'Try It' product testing" class="img-fluid">
+    </div>
+
+    <div class="container">
+        <div class="spacer"></div>
+
+        <h3>Challenge</h3>
+        <p>Previous monetisation attempts had fallen short—primarily because Thingtesting hadn’t yet reached a
+            scale where brands saw it as an essential platform. However, with strong organic growth among end
+            users, the timing was right to explore a sustainable monetisation model that aligned with both brand
+            and user needs.</p>
+        <img src="assets/img/product-testing-experience.png" alt="The Thingtesting review reading experience"
+            class="img-fluid">
+    </div>
+
+
+    <div class="container">
+        <div class="spacer"></div>
+        <h3>Research</h3>
+        <p>We had a working assumption that Thingtesting’s most valuable proposition for brands would be data
+            insights. To test this assumption, I conducted a series of open-ended interviews with brands,
+            ensuring we avoided bias and uncovered genuine needs.</p>
+        <p>We identified a set of <a href="https://www.learnmorefaster.com/" target="_blank"> bullseye customers
+            </a> — emerging brands experiencing strong growth but not yet reaching a mainstream audience. To
+            accelerate learning, I developed a research plan and coached the team to conduct paired interviews,
+            allowing us to gather insights more efficiently.</p>
+        <h4>Key findings</h4>
+        <ul>
+            <li><strong>Brands weren’t willing to pay for data. </strong> While insights were useful, they were
+                seen as a “nice-to-have” rather than a critical investment.</li>
+            <li><strong>Driving sales volume was the top priority. </strong> Every brand we spoke to was
+                actively spending to increase sales.</li>
+            <li><strong>Retail expansion was a challenge. </strong>Many brands were shifting from
+                direct-to-consumer (DTC) to in-store retail due to rising online acquisition costs. However,
+                success depended on driving sales velocity.</li>
+            <li><strong>Lack of transparency in retail. </strong>Brands struggled to track where and why
+                customers were buying their products, leaving them with little visibility into the in-store
+                experience.</li>
+        </ul>
+
+        <p>These findings made it clear that a data-driven monetisation strategy wouldn’t work. Instead, we
+            needed to explore a model that directly supported brands’ sales and retail expansion efforts.
+        </p>
+        <img src="assets/img/product-testing-wireframes.png"
+            alt="We tested many iterations of early wireframes and prototypes with target customers" class="img-fluid">
+        <p class="caption">We tested many iterations of early wireframes and prototypes with brands who were target
+            customers</p>
+    </div>
+
+
+    <div class="container">
+        <div class="spacer"></div>
+        <h3>Ideation</h3>
+        <p>Based on our research, we concluded that our monetisation strategy needed to directly support brands
+            in driving sales, as this was their most pressing challenge. Rather than building a
+            one-size-fits-all solution, we decided to focus on a specific segment: brands expanding into retail.
+            This group faced a well-defined problem that we were uniquely positioned to solve—helping them drive
+            in-store sales and measure their retail performance.</p>
+        <img src="assets/img/product-testing-landing-page.png"
+            alt="We tested many iterations of early wireframes and prototypes with target customers" class="img-fluid">
+        <p class="caption">We tested simple landing pages with a sign up form that allowed consumers to register and
+            participate in offers </p>
+        <div class="spacer"></div>
+        <h3>Launch and Iteration</h3>
+        <p>I iterated from early prototypes to build the simplest possible version of the product, prioritizing the
+            end-user experience over brand-facing features. This initial version allowed users to discover offers on
+            Thingtesting, sign up, receive participation instructions, and upload a receipt as proof of
+            purchase—creating a seamless, low-friction way to validate purchases.
+        </p>
+        <p>To maximize learning and agility, I pushed for a concierge approach with brands. This allowed us to focus on
+            refining the user experience while working closely with early brand partners, gathering valuable insights to
+            inform future iterations.
+        </p>
+        <h4>Key iterations</h4>
+        <ul>
+            <li>Launched with a <strong>single landing page</strong> to validate demand.</li>
+            <li>Later integrated offers directly into <strong>Thingtesting’s product and review pages</strong> for a
+                more seamless user experience.</li>
+            <li>Built <strong>self-service tools for brands</strong>, enabling them to create and manage their own
+                campaigns as well as create custom landing pages and surveys.</li>
+            <li>Expanded the program to support <strong>direct online sales</strong>, designing and launching a shopping
+                cart and checkout flow.</li>
+            <li>Developed a <strong>refined brand identity for Try It</strong>, ensuring a consistent message for end
+                users. The focus was on positioning Try It as an <strong>exciting way to discover new products</strong>
+                rather than a traditional discount program.</li>
+        </ul>
+        <div class="spacer"></div>
+        <img src="assets/img/product-testing-iteration.png" alt="Shopping on Thingtesting" class="img-fluid">
+        <p class="caption">Customisable landing pages (left) &nbsp; •&nbsp; Consumer surveys (middle) &nbsp; •&nbsp;
+            Ability to purchase directly on Thingtresting (right) </p>
+        <img src="assets/img/thingtesting-shopping.png" alt="Shopping on Thingtesting" class="img-fluid">
+        <p class="caption">We later iterated to allow brands to list all of their products on Thingtesting and for
+            consumers to purchase directly on Thingtesting. </p>
+
+    </div>
+
+    <div class="container">
+        <img src="assets/img/try-it-branding-1.png" alt="Thingtesting 'Try It' product testing" class="img-fluid">
+        <img src="assets/img/try-it-branding-2.png" alt="Thingtesting 'Try It' product testing" class="img-fluid">
+        <p class="caption">Thingtesting 'Try It' branding used across product, across social media and in email
+            communications </p>
+
+        <h3>Branding</h3>
+        <p>We Launched with a simple branding, but later when we had more confidence in the approach spent time
+            developing a brand.
+            Important to position away from discounts even though that’s what we were essentially offering.
+            Thingtesting’s mission is to help people discover and try new exciting products, so a different approach was
+            required.
+            I landed on a concept of presenting products like they were in an art gallery - inspired by Art gallery
+            concepts
+            For this project, I thought about how museums and galleries design present their exhibitions in order to
+            elevate what we were offering.</p>
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+
+    </div>
+    <!--More Work-->
+    <div class="container" id="MoreWork">
+        <script type="text/jsx">
+            React.render(
+            <MoreWork page="Thingtesting" />, document.getElementById('MoreWork'));
+        </script>
+    </div>
+
+    <!--Footer-->
+    <div class="container" id="Footer">
+        <script type="text/jsx">
+            React.render(
+            <Footer/>, document.getElementById('Footer'));
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47136738-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-47136738-1');
+        </script>
+</body>
+
+</html>
