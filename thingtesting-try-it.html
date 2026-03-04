@@ -8,11 +8,9 @@
     <meta name="description"
         content="Thingtesting is a product review and testing platform crafted to help consumers buy better. I'm the Head of Design at Thingtesting.">
 
-    <!-- React JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <!-- jQuery and shared components -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/jsx" src="/assets/js/shared.js"></script>
+    <script src="/assets/js/shared.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,600,700&display=swap" rel="stylesheet">
@@ -28,12 +26,8 @@
 
 <body>
     <!--Header-->
-    <div id="Header">
-        <script type="text/jsx">
-            React.render(
-            <Header/>, document.getElementById('Header'));
-        </script>
-    </div>
+    <div id="Header"></div>
+    <script>renderHeader();</script>
 
     <div class="page-intro" style="color:#222;padding-bottom:0px;">
         <div class="container">
@@ -167,19 +161,12 @@
 
     </div>
     <!--More Work-->
-    <div class="container" id="MoreWork">
-        <script type="text/jsx">
-            React.render(
-            <MoreWork page="Thingtesting" />, document.getElementById('MoreWork'));
-        </script>
-    </div>
+    <div class="container" id="MoreWork"></div>
+    <script>renderMoreWork('Thingtesting');</script>
 
     <!--Footer-->
-    <div class="container" id="Footer">
-        <script type="text/jsx">
-            React.render(
-            <Footer/>, document.getElementById('Footer'));
-        </script>
+    <div class="container" id="Footer"></div>
+    <script>renderFooter();</script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47136738-1"></script>
