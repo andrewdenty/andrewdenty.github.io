@@ -8,11 +8,9 @@
     <meta name="description"
         content=" I led the redesign of the Airtame Homescreen. I worked on this feature from it’s conception right through to helping launch it in mid 2019">
 
-    <!-- React JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <!-- jQuery and shared components -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/jsx" src="/assets/js/shared.js"></script>
+    <script src="/assets/js/shared.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
@@ -25,28 +23,27 @@
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
 
     <!--Clock script-->
-    <script type="text/jsx" >
-    var inc = 1000;
-
-clock();
-
+    <script>
 function clock() {
   const date = new Date();
 
   const hours = ((date.getHours() + 11) % 12 + 1);
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
-  
+
   const hour = hours * 30;
   const minute = minutes * 6;
   const second = seconds * 6;
-  
+
   document.querySelector('.hour').style.transform = `rotate(${hour}deg)`
   document.querySelector('.minute').style.transform = `rotate(${minute}deg)`
   document.querySelector('.second').style.transform = `rotate(${second}deg)`
 }
 
-setInterval(clock, inc);
+document.addEventListener('DOMContentLoaded', function() {
+  clock();
+  setInterval(clock, 1000);
+});
 </script>
 
     <!-- Clock css -->
@@ -157,12 +154,8 @@ setInterval(clock, inc);
 
 <body>
     <!--Header-->
-    <div id="Header">
-        <script type="text/jsx">
-            React.render(
-            <Header/>, document.getElementById('Header'));
-        </script>
-    </div>
+    <div id="Header"></div>
+    <script>renderHeader();</script>
 
     <div class="page-intro" style="color:#222;padding-bottom:0px;">
         <div class="container">
@@ -202,19 +195,12 @@ setInterval(clock, inc);
 <div class="spacer"></div>
 <div class="spacer"></div>
     <!--More Work-->
-    <div class="container" id="MoreWork">
-        <script type="text/jsx">
-            React.render(
-            <MoreWork page="Honeycomb" />, document.getElementById('MoreWork'));
-        </script>
-    </div>
+    <div class="container" id="MoreWork"></div>
+    <script>renderMoreWork('Honeycomb');</script>
 
     <!--Footer-->
-    <div class="container" id="Footer">
-        <script type="text/jsx">
-            React.render(
-            <Footer/>, document.getElementById('Footer'));
-        </script>
+    <div class="container" id="Footer"></div>
+    <script>renderFooter();</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47136738-1"></script>
