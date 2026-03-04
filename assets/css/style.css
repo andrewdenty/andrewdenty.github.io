@@ -115,6 +115,110 @@ code {font-size:80%;}
 
 
 
+/** Lightbox **/
+img.lb-enabled { cursor: zoom-in; }
+
+#lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.95);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#lb-overlay.lb-open { display: flex; align-items: center; justify-content: center; }
+#lb-overlay.lb-visible { opacity: 1; }
+
+#lb-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  cursor: default;
+  pointer-events: none;
+}
+
+#lb-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  transition: opacity 0.15s ease;
+}
+#lb-img.lb-img-loading { opacity: 0; }
+
+#lb-caption {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b6b6b6;
+  text-align: center;
+  max-width: 90vw;
+  line-height: 1.5;
+  min-height: 1em;
+  pointer-events: auto;
+}
+
+#lb-close, #lb-prev, #lb-next {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+#lb-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 1060;
+  color: #b6b6b6;
+  font-size: 32px;
+  line-height: 1;
+  padding: 4px 8px;
+  font-weight: 300;
+}
+#lb-close:hover { color: #fff; }
+
+#lb-prev, #lb-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1060;
+  color: #707070;
+  font-size: 40px;
+  line-height: 1;
+  padding: 20px 18px;
+  font-weight: 300;
+  opacity: 0.5;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#lb-prev { left: 0; }
+#lb-next { right: 0; }
+#lb-prev:hover, #lb-next:hover { color: #fff; opacity: 1; }
+
+#lb-overlay.lb-single #lb-prev,
+#lb-overlay.lb-single #lb-next { display: none; }
+
+body.lb-scroll-lock { overflow: hidden; }
+
+@media (max-width: 576px) {
+  #lb-prev { padding: 16px 10px; }
+  #lb-next { padding: 16px 10px; }
+  #lb-close { top: 12px; right: 14px; }
+  #lb-caption { font-size: 13px; }
+}
+
 /** Animations **/
 
 .animated {
