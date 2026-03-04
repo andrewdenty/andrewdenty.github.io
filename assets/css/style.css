@@ -169,7 +169,6 @@ img.lb-enabled { cursor: zoom-in; }
 
 #lb-close, #lb-prev, #lb-next {
   background: none;
-  border: none;
   outline: none;
   cursor: pointer;
   font-family: "DM Sans", sans-serif;
@@ -181,6 +180,7 @@ img.lb-enabled { cursor: zoom-in; }
   top: 20px;
   right: 24px;
   z-index: 1060;
+  border: none;
   color: rgba(255,255,255,0.7);
   font-size: 15px;
   font-weight: 500;
@@ -194,21 +194,21 @@ img.lb-enabled { cursor: zoom-in; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 1060;
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.5);
+  border: 2px solid rgba(255,255,255,0.85) !important;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   -webkit-user-select: none;
 }
-#lb-prev { left: 24px; }
-#lb-next { right: 24px; }
+#lb-prev { left: 32px; }
+#lb-next { right: 32px; }
 #lb-prev:hover, #lb-next:hover {
-  border-color: rgba(255,255,255,0.9);
-  background: rgba(255,255,255,0.08);
+  border-color: #fff !important;
+  background: rgba(255,255,255,0.1);
 }
 
 #lb-overlay.lb-single #lb-prev,
@@ -217,8 +217,8 @@ img.lb-enabled { cursor: zoom-in; }
 body.lb-scroll-lock { overflow: hidden; }
 
 @media (max-width: 576px) {
-  #lb-prev { left: 12px; width: 44px; height: 44px; }
-  #lb-next { right: 12px; width: 44px; height: 44px; }
+  #lb-prev { left: 12px; width: 48px; height: 48px; }
+  #lb-next { right: 12px; width: 48px; height: 48px; }
   #lb-close { top: 12px; right: 14px; }
   #lb-caption { font-size: 13px; }
 }
