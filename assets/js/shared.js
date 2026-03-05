@@ -141,8 +141,8 @@ $(document).ready(function () {
     '<div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox" tabindex="-1">' +
       '<div id="lb-inner"><img id="lb-img" src="" alt=""><p id="lb-caption"></p></div>' +
       '<button id="lb-close" aria-label="Close lightbox">Close &times;</button>' +
-      '<button id="lb-prev" aria-label="Previous image"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9L9 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
-      '<button id="lb-next" aria-label="Next image"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+      '<button id="lb-prev" aria-label="Previous image"><svg width="12" height="21" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9L9 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+      '<button id="lb-next" aria-label="Next image"><svg width="12" height="21" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
     '</div>'
   );
 

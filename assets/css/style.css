@@ -182,7 +182,7 @@ img.lb-enabled { cursor: zoom-in; }
   z-index: 1060;
   border: none;
   color: rgba(255,255,255,0.7);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.04em;
   padding: 8px 4px;
@@ -194,10 +194,11 @@ img.lb-enabled { cursor: zoom-in; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 1060;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 2px solid rgba(255,255,255,0.85) !important;
+  background: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,8 +218,8 @@ img.lb-enabled { cursor: zoom-in; }
 body.lb-scroll-lock { overflow: hidden; }
 
 @media (max-width: 576px) {
-  #lb-prev { left: 12px; width: 48px; height: 48px; }
-  #lb-next { right: 12px; width: 48px; height: 48px; }
+  #lb-prev { left: 12px; width: 44px; height: 44px; }
+  #lb-next { right: 12px; width: 44px; height: 44px; }
   #lb-close { top: 12px; right: 14px; }
   #lb-caption { font-size: 13px; }
 }
