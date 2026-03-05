@@ -200,18 +200,19 @@ img.lb-enabled { cursor: zoom-in; }
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.85) !important;
+  border: 2px solid #fff !important;
   background: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
   -webkit-user-select: none;
+  opacity: 0.8;
 }
 #lb-prev { left: 32px; }
 #lb-next { right: 32px; }
 #lb-prev:hover, #lb-next:hover {
-  border-color: #fff !important;
+  opacity: 1;
   background: rgba(255,255,255,0.1);
 }
 
