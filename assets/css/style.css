@@ -115,6 +115,119 @@ code {font-size:80%;}
 
 
 
+/** Lightbox **/
+img.lb-enabled { cursor: zoom-in; }
+
+#lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.95);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#lb-overlay.lb-open { display: flex; align-items: center; justify-content: center; }
+#lb-overlay.lb-visible { opacity: 1; }
+
+#lb-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  cursor: default;
+  pointer-events: none;
+}
+
+#lb-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  transition: opacity 0.15s ease;
+}
+#lb-img.lb-img-loading { opacity: 0; }
+
+#lb-caption {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b6b6b6;
+  text-align: center;
+  max-width: 90vw;
+  line-height: 1.5;
+  min-height: 1em;
+  pointer-events: auto;
+}
+
+#lb-close, #lb-prev, #lb-next {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: color 0.15s, opacity 0.15s, border-color 0.15s, background 0.15s;
+}
+
+#lb-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 1060;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 8px 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+#lb-close:hover { color: #fff; }
+
+#lb-prev, #lb-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1060;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #fff !important;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: 0.8;
+}
+#lb-prev { left: 32px; }
+#lb-next { right: 32px; }
+#lb-prev:hover, #lb-next:hover {
+  opacity: 1;
+  background: rgba(0,0,0,0.6);
+}
+
+#lb-overlay.lb-single #lb-prev,
+#lb-overlay.lb-single #lb-next { display: none; }
+
+body.lb-scroll-lock { overflow: hidden; }
+
+@media (max-width: 576px) {
+  #lb-prev { left: 12px; width: 40px; height: 40px; }
+  #lb-next { right: 12px; width: 40px; height: 40px; }
+  #lb-close { top: 12px; right: 14px; }
+  #lb-caption { font-size: 13px; }
+}
+
 /** Animations **/
 
 .animated {

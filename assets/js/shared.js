@@ -94,3 +94,122 @@ function renderFooter() {
     '</div>'
   ].join('\n');
 }
+
+/* Lightbox */
+$(document).ready(function () {
+
+  // Collect eligible .img-fluid images, excluding structural sections,
+  // device-frame images (.tv), and images inside anchors that don't link to image files.
+  var $allImgs = $('img.img-fluid').filter(function () {
+    var $img = $(this);
+    if ($img.closest('#Header, #MoreWork, #Footer').length) return false;
+    if ($img.hasClass('tv')) return false;
+    var $a = $img.closest('a');
+    if ($a.length) {
+      var href = $a.attr('href') || '';
+      if (!/\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(href)) return false;
+    }
+    return true;
+  });
+
+  if ($allImgs.length === 0) return;
+
+  // Build index of { src, caption } for each eligible image.
+  var lbItems = [];
+  $allImgs.each(function () {
+    var $img = $(this);
+    var src = $img.attr('src') || '';
+    var $a = $img.closest('a');
+    // Pattern D: use the larger linked image as the lightbox src
+    if ($a.length) src = $a.attr('href') || src;
+    // Find caption: climb to nearest <p> or <a>, then look for next sibling p.caption
+    var $p = $img.closest('p');
+    var $from = $p.length ? $p : ($a.length ? $a : $img);
+    var $cap = $from.nextAll('p.caption').first();
+    var captionText = $cap.length ? $.trim($cap.text()) : ($img.attr('alt') || '');
+    lbItems.push({ src: src, caption: captionText });
+  });
+
+  $allImgs.addClass('lb-enabled');
+  $allImgs.on('click', function (e) {
+    if ($(this).closest('a').length) e.preventDefault();
+    lbOpen($allImgs.index(this));
+  });
+
+  // Inject lightbox DOM once into the page
+  $('body').append(
+    '<div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox" tabindex="-1">' +
+      '<div id="lb-inner"><img id="lb-img" src="" alt=""><p id="lb-caption"></p></div>' +
+      '<button id="lb-close" aria-label="Close lightbox">Close <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>' +
+      '<button id="lb-prev" aria-label="Previous image"><svg width="9" height="16" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9L9 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+      '<button id="lb-next" aria-label="Next image"><svg width="9" height="16" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L9 9L1 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '</div>'
+  );
+
+  var $ov  = $('#lb-overlay');
+  var $img = $('#lb-img');
+  var $cap = $('#lb-caption');
+  var cur  = 0;
+
+  function lbOpen(idx) {
+    cur = idx;
+    $ov.toggleClass('lb-single', lbItems.length <= 1);
+    lbShow(cur, false);
+    $ov.addClass('lb-open');
+    void $ov[0].offsetHeight; // force reflow so opacity transition fires
+    $ov.addClass('lb-visible');
+    $('body').addClass('lb-scroll-lock');
+    $ov.focus();
+  }
+
+  function lbClose() {
+    $ov.removeClass('lb-visible');
+    setTimeout(function () {
+      $ov.removeClass('lb-open');
+      $('body').removeClass('lb-scroll-lock');
+      $img.attr('src', '');
+    }, 200);
+  }
+
+  function lbShow(idx, fade) {
+    var item = lbItems[idx];
+    if (!item) return;
+    if (fade) $img.addClass('lb-img-loading');
+    var t = new Image();
+    t.onload = t.onerror = function () {
+      $img.attr({ src: item.src, alt: item.caption });
+      $cap.text(item.caption);
+      $img.removeClass('lb-img-loading');
+    };
+    t.src = item.src;
+  }
+
+  function lbPrev() { cur = (cur - 1 + lbItems.length) % lbItems.length; lbShow(cur, true); }
+  function lbNext() { cur = (cur + 1) % lbItems.length; lbShow(cur, true); }
+
+  $('#lb-close').on('click', function (e) { e.stopPropagation(); lbClose(); });
+  $('#lb-prev').on('click',  function (e) { e.stopPropagation(); lbPrev(); });
+  $('#lb-next').on('click',  function (e) { e.stopPropagation(); lbNext(); });
+  $ov.on('click', function (e) { if ($(e.target).is($ov)) lbClose(); });
+
+  $(document).on('keydown', function (e) {
+    if (!$ov.hasClass('lb-open')) return;
+    if (e.key === 'Escape')     lbClose();
+    if (e.key === 'ArrowLeft')  lbPrev();
+    if (e.key === 'ArrowRight') lbNext();
+  });
+
+  // Touch swipe: horizontal swipe navigates between images
+  var tx = 0, ty = 0;
+  $ov[0].addEventListener('touchstart', function (e) {
+    tx = e.changedTouches[0].clientX;
+    ty = e.changedTouches[0].clientY;
+  }, { passive: true });
+  $ov[0].addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - tx;
+    var dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) < 50 || Math.abs(dy) > Math.abs(dx)) return;
+    if (dx < 0) lbNext(); else lbPrev();
+  }, { passive: true });
+
+});
