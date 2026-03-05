@@ -197,10 +197,10 @@ img.lb-enabled { cursor: zoom-in; }
   top: 50%;
   transform: translateY(-50%);
   z-index: 1060;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.85) !important;
+  border: 1.5px solid rgba(255,255,255,0.85) !important;
   background: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
@@ -221,8 +221,8 @@ img.lb-enabled { cursor: zoom-in; }
 body.lb-scroll-lock { overflow: hidden; }
 
 @media (max-width: 576px) {
-  #lb-prev { left: 12px; width: 44px; height: 44px; }
-  #lb-next { right: 12px; width: 44px; height: 44px; }
+  #lb-prev { left: 12px; width: 40px; height: 40px; }
+  #lb-next { right: 12px; width: 40px; height: 40px; }
   #lb-close { top: 12px; right: 14px; }
   #lb-caption { font-size: 13px; }
 }
