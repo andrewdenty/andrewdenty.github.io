@@ -213,7 +213,7 @@ img.lb-enabled { cursor: zoom-in; }
 #lb-next { right: 32px; }
 #lb-prev:hover, #lb-next:hover {
   opacity: 1;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.6);
 }
 
 #lb-overlay.lb-single #lb-prev,
