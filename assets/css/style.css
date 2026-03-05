@@ -275,5 +275,72 @@ body.lb-scroll-lock { overflow: hidden; }
   animation-name: fadeInDown;
 }
 
+/** Scroll-reveal animation **/
 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
 
+.scroll-reveal.scroll-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal.scroll-revealed-instant {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+@media (max-width: 767px) {
+  .scroll-reveal {
+    transform: translateY(16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+
+/** Image hover zoom **/
+
+/* Clip the scaled image to its original bounds (zoom in, not grow) */
+.img-zoom-clip {
+  display: block;
+  overflow: hidden;
+}
+
+/* Remove inherited link border when an anchor directly wraps a clip container */
+a:has(> .img-zoom-clip) {
+  display: block;
+  border-bottom: none;
+}
+
+/* Once revealed, switch to a snappy transition ready for hover */
+img.img-fluid:not(.tv).scroll-revealed,
+img.img-fluid:not(.tv).scroll-revealed-instant {
+  transition: transform 0.4s ease;
+}
+
+@media (hover: hover) {
+  /* Zoom on hover for scroll-revealed images */
+  img.img-fluid:not(.tv):not(.no-zoom).scroll-revealed:hover,
+  img.img-fluid:not(.tv):not(.no-zoom).scroll-revealed-instant:hover {
+    transform: scale(1.01);
+  }
+
+  /* Fallback: images not using scroll-reveal (e.g. prefers-reduced-motion) */
+  img.img-fluid:not(.tv):not(.no-zoom):not(.scroll-reveal):hover {
+    transform: scale(1.01);
+    transition: transform 0.4s ease;
+  }
+}

@@ -89,7 +89,7 @@ function renderFooter() {
     '    </div>',
     '  </div>',
     '  <div class="spacer"></div>',
-    '  <p class="small">Copyright \u00a9 2025 Andrew Denty</p>',
+    '  <p class="small">Copyright \u00a9 2026 Andrew Denty</p>',
     '  <div class="spacer"></div>',
     '</div>'
   ].join('\n');
@@ -97,6 +97,79 @@ function renderFooter() {
 
 /* Lightbox */
 $(document).ready(function () {
+
+  // --- Scroll-reveal animation ---
+  (function initScrollReveal() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+
+    var images = document.querySelectorAll('img.img-fluid');
+    var targets = [];
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+      if (img.closest('#Header') || img.closest('#MoreWork') || img.closest('#Footer')) continue;
+      targets.push(img);
+    }
+    if (targets.length === 0) return;
+
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].classList.add('scroll-reveal');
+      // Wrap in a tight clip container so hover zoom is clipped at original bounds
+      var clip = document.createElement('span');
+      clip.className = 'img-zoom-clip';
+      targets[i].parentNode.insertBefore(clip, targets[i]);
+      clip.appendChild(targets[i]);
+    }
+
+    var isInitialCheck = true;
+
+    function revealImage(img, instant) {
+      var doReveal = function () {
+        if (instant) {
+          img.classList.add('scroll-revealed-instant');
+        } else {
+          img.classList.add('scroll-revealed');
+        }
+        if (!instant) {
+          img.addEventListener('transitionend', function handler() {
+            img.style.willChange = 'auto';
+            img.removeEventListener('transitionend', handler);
+          });
+        } else {
+          img.style.willChange = 'auto';
+        }
+      };
+
+      if (img.complete && img.naturalWidth > 0) {
+        doReveal();
+      } else {
+        img.addEventListener('load', doReveal, { once: true });
+        img.addEventListener('error', doReveal, { once: true });
+      }
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      var visible = [];
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) visible.push(entries[i].target);
+      }
+
+      for (var i = 0; i < visible.length; i++) {
+        var img = visible[i];
+        observer.unobserve(img);
+        revealImage(img, isInitialCheck);
+      }
+
+      if (isInitialCheck) isInitialCheck = false;
+    }, {
+      rootMargin: '0px 0px -60px 0px',
+      threshold: 0
+    });
+
+    for (var i = 0; i < targets.length; i++) {
+      observer.observe(targets[i]);
+    }
+  })();
 
   // Collect eligible .img-fluid images, excluding structural sections,
   // device-frame images (.tv), and images inside anchors that don't link to image files.
@@ -123,8 +196,10 @@ $(document).ready(function () {
     // Pattern D: use the larger linked image as the lightbox src
     if ($a.length) src = $a.attr('href') || src;
     // Find caption: climb to nearest <p> or <a>, then look for next sibling p.caption
+    // If image is wrapped in .img-zoom-clip span, use the span as fallback base
     var $p = $img.closest('p');
-    var $from = $p.length ? $p : ($a.length ? $a : $img);
+    var $clip = $img.parent('.img-zoom-clip');
+    var $from = $p.length ? $p : ($a.length ? $a : ($clip.length ? $clip : $img));
     var $cap = $from.nextAll('p.caption').first();
     var captionText = $cap.length ? $.trim($cap.text()) : ($img.attr('alt') || '');
     lbItems.push({ src: src, caption: captionText });
