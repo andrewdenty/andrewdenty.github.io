@@ -1,7 +1,7 @@
 /** Generally this CSS is super generic stuff which overrides Bootstrap. Not the custom stuff for the homepage**/
 
 /** Other Stuff **/
-h1 {font-weight:400;}
+h1 {font-size:2rem;line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
 h2 {line-height: 1.4em;margin:30px 0px 30px 0px;font-weight:700;}
 h3 {line-height: 1.8em;margin:20px 0px 10px 0px; font-weight:700;font-size:24px;}
 h4 {line-height: 1.8em;margin:20px 0px 10px 0px; font-weight:700;font-size:20px;}
