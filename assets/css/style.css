@@ -201,7 +201,7 @@ img.lb-enabled { cursor: zoom-in; }
   height: 48px;
   border-radius: 50%;
   border: 2px solid #fff !important;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +213,7 @@ img.lb-enabled { cursor: zoom-in; }
 #lb-next { right: 32px; }
 #lb-prev:hover, #lb-next:hover {
   opacity: 1;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.8);
 }
 
 #lb-overlay.lb-single #lb-prev,
