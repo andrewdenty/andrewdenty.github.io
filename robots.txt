@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow: /airtame-clock.html
+
+Sitemap: https://www.andrewdenty.com/sitemap.xml
