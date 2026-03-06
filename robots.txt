@@ -1,4 +1,5 @@
 User-Agent: *
 Disallow: /airtame-clock.html
+Disallow: /concept-portfolio.html
 
 Sitemap: https://www.andrewdenty.com/sitemap.xml

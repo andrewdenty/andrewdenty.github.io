@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Work - Andrew Denty</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description" content="Selected product design work by Andrew Denty.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.andrewdenty.com/concept-portfolio.html">
+    <meta property="og:title" content="Work - Andrew Denty">
+    <meta property="og:description" content="Selected product design work by Andrew Denty.">
+    <meta property="og:image" content="https://www.andrewdenty.com/assets/img/thingtesting-thumb.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@andrewdenty">
+
+    <!-- jQuery and shared components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/shared.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <style>
+        /* ── Projects container ─────────────────────────────────── */
+        .cp-projects {
+            padding-top: 56px;
+            padding-bottom: 0;
+        }
+
+        /* ── Individual project row ─────────────────────────────── */
+        .cp-project {
+            padding: 48px 0;
+            align-items: flex-start;
+        }
+
+        /* ── Left: meta column ──────────────────────────────────── */
+        .cp-meta {
+            padding-right: 52px;
+        }
+
+        .cp-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #222;
+            line-height: 1.2;
+            margin-bottom: 0;
+            transition: color 0.3s ease;
+        }
+
+        .cp-meta-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border-bottom: none;
+        }
+
+        .cp-meta-link:hover {
+            border-bottom: none;
+        }
+
+        .cp-project:hover .cp-title {
+            color: #F6714F;
+        }
+
+        .cp-meta-line {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #707070;
+            margin-top: 32px;
+            margin-bottom: 0;
+        }
+
+        .cp-desc {
+            font-size: 16px;
+            color: #707070;
+            line-height: 1.65;
+            margin-top: 6px;
+            margin-bottom: 0;
+            max-width: 320px;
+        }
+
+        /* ── Right: image column ────────────────────────────────── */
+        .cp-image a {
+            display: block;
+            overflow: hidden;
+        }
+
+        .cp-image img {
+            display: block;
+            width: 100%;
+            transition: transform 0.45s ease;
+        }
+
+        .cp-project:hover .cp-image img {
+            transform: scale(1.02);
+        }
+
+        /* ── Archive header ──────────────────────────────────────── */
+        .cp-archive-header {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
+        /* ── Archive trigger ────────────────────────────────────── */
+        .cp-archive-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 0;
+            background: none;
+            border: none;
+            outline: none;
+            user-select: none;
+        }
+
+        .cp-archive-trigger:focus-visible {
+            outline: 2px solid #22bee3;
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+        .cp-archive-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: #707070;
+            transition: color 0.2s;
+        }
+
+        .cp-archive-trigger:hover .cp-archive-label {
+            color: #222;
+        }
+
+        .cp-archive-chevron {
+            color: #707070;
+            transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s;
+            flex-shrink: 0;
+        }
+
+        .cp-archive-trigger:hover .cp-archive-chevron {
+            color: #222;
+        }
+
+        .cp-archive-trigger.is-open .cp-archive-chevron {
+            transform: rotate(180deg);
+        }
+
+        /* ── Archive accordion (CSS grid trick) ─────────────────── */
+        .cp-archive-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cp-archive-content.is-open {
+            grid-template-rows: 1fr;
+        }
+
+        .cp-archive-inner {
+            overflow: hidden;
+        }
+
+        /* ── Mobile ─────────────────────────────────────────────── */
+        @media (max-width: 991px) {
+            .cp-project {
+                padding: 36px 0;
+            }
+
+            .cp-meta {
+                padding-right: 0;
+                margin-bottom: 28px;
+            }
+
+            .cp-title {
+                font-size: 1.35rem;
+            }
+
+            .cp-desc {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="Header"></div>
+    <script>renderHeader();</script>
+
+    <!-- Projects -->
+    <div class="container cp-projects">
+
+        <!-- 1. Thingtesting -->
+        <div class="row cp-project">
+            <div class="col-lg-4 cp-meta">
+                <a href="thingtesting-overview.html" class="cp-meta-link">
+                    <h2 class="cp-title">Thingtesting</h2>
+                    <p class="cp-meta-line">Thingtesting&thinsp;•&thinsp;2022–present</p>
+                    <p class="cp-desc">A product review and discovery platform helping consumers buy better. I led design across the full product — from onboarding and discovery to community and brand.</p>
+                </a>
+            </div>
+            <div class="col-lg-8 cp-image">
+                <a href="thingtesting-overview.html">
+                    <img loading="lazy" src="assets/img/thingtesting.png" class="img-fluid" alt="Thingtesting">
+                </a>
+            </div>
+        </div>
+
+        <!-- 2. Airtame Home Screen -->
+        <div class="row cp-project">
+            <div class="col-lg-4 cp-meta">
+                <a href="airtame-homescreen.html" class="cp-meta-link">
+                    <h2 class="cp-title">Airtame Home Screen</h2>
+                    <p class="cp-meta-line">Airtame&thinsp;•&thinsp;2018–2020</p>
+                    <p class="cp-desc">Redesigning the home screen experience for Airtame's wireless screen sharing devices — making it more useful, more beautiful, and easier to manage at scale.</p>
+                </a>
+            </div>
+            <div class="col-lg-8 cp-image">
+                <a href="airtame-homescreen.html">
+                    <img loading="lazy" src="assets/img/airtame-homescreen-thumb.jpg" class="img-fluid" alt="Airtame Home Screen">
+                </a>
+            </div>
+        </div>
+
+        <!-- 3. Airtame Desktop App -->
+        <div class="row cp-project">
+            <div class="col-lg-4 cp-meta">
+                <a href="airtame-desktop-app.html" class="cp-meta-link">
+                    <h2 class="cp-title">The Airtame App</h2>
+                    <p class="cp-meta-line">Airtame&thinsp;•&thinsp;2018–2020</p>
+                    <p class="cp-desc">Making the Airtame app easier to use — simplifying the connection flow and reducing friction for the millions of people sharing screens every day.</p>
+                </a>
+            </div>
+            <div class="col-lg-8 cp-image">
+                <a href="airtame-desktop-app.html">
+                    <img loading="lazy" src="assets/img/airtame-desktop-app-thumb.png" class="img-fluid" alt="Airtame Desktop App">
+                </a>
+            </div>
+        </div>
+
+        <!-- Archive -->
+        <div class="cp-archive-header">
+            <button class="cp-archive-trigger" aria-expanded="false" aria-controls="cp-archive">
+                <span class="cp-archive-label">Archived Projects</span>
+                <svg class="cp-archive-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2.5 5l4.5 4.5L11.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="cp-archive-content" id="cp-archive">
+            <div class="cp-archive-inner">
+
+                <!-- 4. Honeycomb Design System -->
+                <div class="row cp-project">
+                    <div class="col-lg-4 cp-meta">
+                        <a href="honeycomb-design-system.html" class="cp-meta-link">
+                            <h2 class="cp-title">Honeycomb Design System</h2>
+                            <p class="cp-meta-line">Redgate&thinsp;•&thinsp;2015–2018</p>
+                            <p class="cp-desc">Building Redgate's first unified component library across a suite of developer tools — bringing consistency, speed, and shared language to a fragmented product family.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 cp-image">
+                        <a href="honeycomb-design-system.html">
+                            <img loading="lazy" src="assets/img/honeycomb-thumb.svg" class="img-fluid" alt="Redgate Honeycomb design system">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Redgate ReadyRoll -->
+                <div class="row cp-project">
+                    <div class="col-lg-4 cp-meta">
+                        <a href="readyroll-getting-started.html" class="cp-meta-link">
+                            <h2 class="cp-title">Redgate ReadyRoll</h2>
+                            <p class="cp-meta-line">Redgate&thinsp;•&thinsp;2017</p>
+                            <p class="cp-desc">Redesigning the first-run experience for ReadyRoll, a SQL Server database migration tool — turning a steep learning curve into a guided, confidence-building setup flow.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 cp-image">
+                        <a href="readyroll-getting-started.html">
+                            <img loading="lazy" src="assets/img/readyroll-getting-started-thumb.svg" class="img-fluid" alt="ReadyRoll Getting Started">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Redgate in the Box -->
+                <div class="row cp-project">
+                    <div class="col-lg-4 cp-meta">
+                        <a href="redgate-in-the-box.html" class="cp-meta-link">
+                            <h2 class="cp-title">Shipping Redgate as part of Visual Studio</h2>
+                            <p class="cp-meta-line">Redgate&thinsp;•&thinsp;2017</p>
+                            <p class="cp-desc">Designing the out-of-box setup experience for Redgate's bundle of developer tools inside Visual Studio — reducing time-to-value for thousands of new users.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 cp-image">
+                        <a href="redgate-in-the-box.html">
+                            <img loading="lazy" src="assets/img/in-the-box-thumb.svg" class="img-fluid" alt="Redgate in the Box with Visual Studio">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. UX Cambridge Talk -->
+                <div class="row cp-project">
+                    <div class="col-lg-4 cp-meta">
+                        <a href="honeycomb-design-system.html#uxcamtalk" class="cp-meta-link">
+                            <h2 class="cp-title">Talk: The Road to Faster Mock-ups</h2>
+                            <p class="cp-meta-line">UX Cambridge&thinsp;•&thinsp;2017</p>
+                            <p class="cp-desc">A talk on design systems and component libraries delivered at UX Cambridge 2017, exploring how shared patterns accelerate design at scale.</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-8 cp-image">
+                        <a href="honeycomb-design-system.html#uxcamtalk">
+                            <img loading="lazy" src="assets/img/ux-cambridge-talk-thumb.svg" class="img-fluid" alt="UX Cambridge Talk">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="container" id="Footer"></div>
+    <script>renderFooter();</script>
+
+    <!-- Archive accordion -->
+    <script>
+        (function () {
+            var trigger = document.querySelector('.cp-archive-trigger');
+            var content = document.querySelector('.cp-archive-content');
+            trigger.addEventListener('mousedown', function (e) {
+                e.preventDefault(); // Prevents focus being assigned on mouse click
+            });
+            trigger.addEventListener('click', function () {
+                var open = content.classList.toggle('is-open');
+                trigger.classList.toggle('is-open', open);
+                trigger.setAttribute('aria-expanded', open);
+            });
+        })();
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47136738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-47136738-1');
+    </script>
+
+</body>
+
+</html>
