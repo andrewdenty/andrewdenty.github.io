@@ -113,6 +113,9 @@ $(document).ready(function () {
     if (targets.length === 0) return;
 
     for (var i = 0; i < targets.length; i++) {
+      // Remove lazy loading: Safari 18 can refuse to load opacity:0 images tagged
+      // as lazy, creating a deadlock where images never load and never reveal.
+      targets[i].removeAttribute('loading');
       targets[i].classList.add('scroll-reveal');
       // Wrap in a tight clip container so hover zoom is clipped at original bounds
       var clip = document.createElement('span');
@@ -162,13 +165,22 @@ $(document).ready(function () {
 
       if (isInitialCheck) isInitialCheck = false;
     }, {
-      rootMargin: '0px 0px -60px 0px',
+      rootMargin: '0px 0px 100px 0px',
       threshold: 0
     });
 
     for (var i = 0; i < targets.length; i++) {
       observer.observe(targets[i]);
     }
+
+    // Safety net: after 3s reveal any images the observer may have missed
+    setTimeout(function () {
+      targets.forEach(function (img) {
+        if (!img.classList.contains('scroll-revealed') && !img.classList.contains('scroll-revealed-instant')) {
+          img.classList.add('scroll-revealed-instant');
+        }
+      });
+    }, 3000);
   })();
 
   // Collect eligible .img-fluid images, excluding structural sections,
