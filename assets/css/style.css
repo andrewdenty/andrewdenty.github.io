@@ -1,3 +1,26 @@
+/* Self-hosted DM Sans — avoids Google Fonts CDN / Safari ITP warning */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/dm-sans-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/dm-sans-500.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/dm-sans-700.woff2') format('woff2');
+}
+
 /** Generally this CSS is super generic stuff which overrides Bootstrap. Not the custom stuff for the homepage**/
 
 html {font-size: 16px;}
