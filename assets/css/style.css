@@ -126,19 +126,6 @@ h3 a, h2 a {color:#222; border-bottom:none;}
 .footer-line {height:10px;background:#f4f4f4;margin:60px 0 10px 0;}
 #Footer a{border-bottom:none;line-height: 1.8em}
 
-/** experiments page **/
-
-code {font-size:80%;}
-
-.livecode {background:#FFEE40;color:#2f2f2f; }
- 
-
-
-/** Petrol Calculator**/
-.petrolcalc {text-align: center;}
-
-
-
 
 /** Lightbox **/
 img.lb-enabled { cursor: zoom-in; }
