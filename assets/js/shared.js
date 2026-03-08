@@ -162,13 +162,22 @@ $(document).ready(function () {
 
       if (isInitialCheck) isInitialCheck = false;
     }, {
-      rootMargin: '0px 0px -60px 0px',
+      rootMargin: '0px 0px 100px 0px',
       threshold: 0
     });
 
     for (var i = 0; i < targets.length; i++) {
       observer.observe(targets[i]);
     }
+
+    // Fallback: after 3s reveal any images the observer may have missed
+    setTimeout(function() {
+      targets.forEach(function(img) {
+        if (!img.classList.contains('scroll-revealed') && !img.classList.contains('scroll-revealed-instant')) {
+          img.classList.add('scroll-revealed-instant');
+        }
+      });
+    }, 3000);
   })();
 
   // Collect eligible .img-fluid images, excluding structural sections,
