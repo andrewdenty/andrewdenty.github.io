@@ -96,7 +96,7 @@ function renderFooter() {
 }
 
 /* Lightbox */
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   // --- Scroll-reveal animation ---
   (function initScrollReveal() {
@@ -185,46 +185,54 @@ $(document).ready(function () {
 
   // Collect eligible .img-fluid images, excluding structural sections,
   // device-frame images (.tv), and images inside anchors that don't link to image files.
-  var $allImgs = $('img.img-fluid').filter(function () {
-    var $img = $(this);
-    if ($img.closest('#Header, #MoreWork, #Footer').length) return false;
-    if ($img.hasClass('tv')) return false;
-    var $a = $img.closest('a');
-    if ($a.length) {
-      var href = $a.attr('href') || '';
-      if (!/\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(href)) return false;
+  var allImgs = Array.prototype.filter.call(
+    document.querySelectorAll('img.img-fluid'),
+    function (img) {
+      if (img.closest('#Header, #MoreWork, #Footer')) return false;
+      if (img.classList.contains('tv')) return false;
+      var a = img.closest('a');
+      if (a) {
+        var href = a.getAttribute('href') || '';
+        if (!/\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(href)) return false;
+      }
+      return true;
     }
-    return true;
-  });
+  );
 
-  if ($allImgs.length === 0) return;
+  if (allImgs.length === 0) return;
 
   // Build index of { src, caption } for each eligible image.
   var lbItems = [];
-  $allImgs.each(function () {
-    var $img = $(this);
-    var src = $img.attr('src') || '';
-    var $a = $img.closest('a');
+  allImgs.forEach(function (img) {
+    var src = img.getAttribute('src') || '';
+    var a = img.closest('a');
     // Pattern D: use the larger linked image as the lightbox src
-    if ($a.length) src = $a.attr('href') || src;
+    if (a) src = a.getAttribute('href') || src;
     // Find caption: climb to nearest <p> or <a>, then look for next sibling p.caption
     // If image is wrapped in .img-zoom-clip span, use the span as fallback base
-    var $p = $img.closest('p');
-    var $clip = $img.parent('.img-zoom-clip');
-    var $from = $p.length ? $p : ($a.length ? $a : ($clip.length ? $clip : $img));
-    var $cap = $from.nextAll('p.caption').first();
-    var captionText = $cap.length ? $.trim($cap.text()) : ($img.attr('alt') || '');
+    var p = img.closest('p');
+    var clip = (img.parentElement && img.parentElement.classList.contains('img-zoom-clip')) ? img.parentElement : null;
+    var from = p || (a ? a : (clip || img));
+    var capEl = null;
+    var sib = from.nextElementSibling;
+    while (sib) {
+      if (sib.matches('p.caption')) { capEl = sib; break; }
+      sib = sib.nextElementSibling;
+    }
+    var captionText = capEl ? capEl.textContent.trim() : (img.getAttribute('alt') || '');
     lbItems.push({ src: src, caption: captionText });
   });
 
-  $allImgs.addClass('lb-enabled');
-  $allImgs.on('click', function (e) {
-    if ($(this).closest('a').length) e.preventDefault();
-    lbOpen($allImgs.index(this));
+  allImgs.forEach(function (img, i) {
+    img.classList.add('lb-enabled');
+    img.addEventListener('click', function (e) {
+      if (img.closest('a')) e.preventDefault();
+      lbOpen(i);
+    });
   });
 
   // Inject lightbox DOM once into the page
-  $('body').append(
+  document.body.insertAdjacentHTML('beforeend',
     '<div id="lb-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox" tabindex="-1">' +
       '<div id="lb-inner"><img id="lb-img" src="" alt=""><p id="lb-caption"></p></div>' +
       '<button id="lb-close" aria-label="Close lightbox">Close <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>' +
@@ -233,40 +241,41 @@ $(document).ready(function () {
     '</div>'
   );
 
-  var $ov  = $('#lb-overlay');
-  var $img = $('#lb-img');
-  var $cap = $('#lb-caption');
+  var ov   = document.getElementById('lb-overlay');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-caption');
   var cur  = 0;
 
   function lbOpen(idx) {
     cur = idx;
-    $ov.toggleClass('lb-single', lbItems.length <= 1);
+    ov.classList.toggle('lb-single', lbItems.length <= 1);
     lbShow(cur, false);
-    $ov.addClass('lb-open');
-    void $ov[0].offsetHeight; // force reflow so opacity transition fires
-    $ov.addClass('lb-visible');
-    $('body').addClass('lb-scroll-lock');
-    $ov.focus();
+    ov.classList.add('lb-open');
+    void ov.offsetHeight; // force reflow so opacity transition fires
+    ov.classList.add('lb-visible');
+    document.body.classList.add('lb-scroll-lock');
+    ov.focus();
   }
 
   function lbClose() {
-    $ov.removeClass('lb-visible');
+    ov.classList.remove('lb-visible');
     setTimeout(function () {
-      $ov.removeClass('lb-open');
-      $('body').removeClass('lb-scroll-lock');
-      $img.attr('src', '');
+      ov.classList.remove('lb-open');
+      document.body.classList.remove('lb-scroll-lock');
+      lbImg.setAttribute('src', '');
     }, 200);
   }
 
   function lbShow(idx, fade) {
     var item = lbItems[idx];
     if (!item) return;
-    if (fade) $img.addClass('lb-img-loading');
+    if (fade) lbImg.classList.add('lb-img-loading');
     var t = new Image();
     t.onload = t.onerror = function () {
-      $img.attr({ src: item.src, alt: item.caption });
-      $cap.text(item.caption);
-      $img.removeClass('lb-img-loading');
+      lbImg.setAttribute('src', item.src);
+      lbImg.setAttribute('alt', item.caption);
+      lbCap.textContent = item.caption;
+      lbImg.classList.remove('lb-img-loading');
     };
     t.src = item.src;
   }
@@ -274,13 +283,13 @@ $(document).ready(function () {
   function lbPrev() { cur = (cur - 1 + lbItems.length) % lbItems.length; lbShow(cur, true); }
   function lbNext() { cur = (cur + 1) % lbItems.length; lbShow(cur, true); }
 
-  $('#lb-close').on('click', function (e) { e.stopPropagation(); lbClose(); });
-  $('#lb-prev').on('click',  function (e) { e.stopPropagation(); lbPrev(); });
-  $('#lb-next').on('click',  function (e) { e.stopPropagation(); lbNext(); });
-  $ov.on('click', function (e) { if ($(e.target).is($ov)) lbClose(); });
+  document.getElementById('lb-close').addEventListener('click', function (e) { e.stopPropagation(); lbClose(); });
+  document.getElementById('lb-prev').addEventListener('click',  function (e) { e.stopPropagation(); lbPrev(); });
+  document.getElementById('lb-next').addEventListener('click',  function (e) { e.stopPropagation(); lbNext(); });
+  ov.addEventListener('click', function (e) { if (e.target === ov) lbClose(); });
 
-  $(document).on('keydown', function (e) {
-    if (!$ov.hasClass('lb-open')) return;
+  document.addEventListener('keydown', function (e) {
+    if (!ov.classList.contains('lb-open')) return;
     if (e.key === 'Escape')     lbClose();
     if (e.key === 'ArrowLeft')  lbPrev();
     if (e.key === 'ArrowRight') lbNext();
@@ -288,11 +297,11 @@ $(document).ready(function () {
 
   // Touch swipe: horizontal swipe navigates between images
   var tx = 0, ty = 0;
-  $ov[0].addEventListener('touchstart', function (e) {
+  ov.addEventListener('touchstart', function (e) {
     tx = e.changedTouches[0].clientX;
     ty = e.changedTouches[0].clientY;
   }, { passive: true });
-  $ov[0].addEventListener('touchend', function (e) {
+  ov.addEventListener('touchend', function (e) {
     var dx = e.changedTouches[0].clientX - tx;
     var dy = e.changedTouches[0].clientY - ty;
     if (Math.abs(dx) < 50 || Math.abs(dy) > Math.abs(dx)) return;

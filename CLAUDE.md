@@ -11,10 +11,11 @@ Static HTML site — no build process, no templating engine, no package manager.
 - **`assets/js/shared.js`** — loaded on every page; injects header, nav, footer, and the lightbox
 - **`assets/img/`** — all images (PNG, JPG, SVG, GIF)
 
-External dependencies loaded from CDN on every page:
-- jQuery 3.2.1
-- Bootstrap 4.5 (CSS + JS)
-- DM Sans (Google Fonts, weights 400/500/700)
+All dependencies are self-hosted (no CDN):
+- Bootstrap 5.3.3 — `assets/css/bootstrap.min.css` + `assets/js/bootstrap.bundle.min.js`
+- DM Sans — `assets/fonts/dm-sans-{400,500,700}.woff2` (declared in `style.css`)
+
+Analytics: Google Analytics 4 (`G-NEJHC6WCBP`) loaded from `googletagmanager.com` on every page.
 
 ## Shared Components
 
@@ -26,7 +27,7 @@ External dependencies loaded from CDN on every page:
 <div id="Footer"></div>   <script>renderFooter();</script>
 ```
 
-**To add JS that runs on every page:** add it to `shared.js` inside `$(document).ready()`.
+**To add JS that runs on every page:** add it to `shared.js` inside the `document.addEventListener('DOMContentLoaded', ...)` callback.
 
 ## Styles
 
