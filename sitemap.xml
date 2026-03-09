@@ -31,11 +31,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.andrewdenty.com/airtame-clock.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.andrewdenty.com/honeycomb-design-system.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
