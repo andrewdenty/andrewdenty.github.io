@@ -1,7 +1,7 @@
 var links = {
   AirtameApp: {
     href: '/airtame-desktop-app.html',
-    imgsrc: 'assets/img/airtame-desktop-app-thumb.png',
+    imgsrc: 'assets/img/airtame-desktop-app-thumb.webp',
     description: 'Making the Airtame app easier to use'
   },
   Honeycomb: {
@@ -11,12 +11,12 @@ var links = {
   },
   AirtameHomescreen: {
     href: '/airtame-homescreen.html',
-    imgsrc: 'assets/img/airtame-homescreen-thumb.jpg',
+    imgsrc: 'assets/img/airtame-homescreen-thumb.webp',
     description: 'Designing the Airtame home screen'
   },
   Thingtesting: {
     href: '/thingtesting-overview.html',
-    imgsrc: 'assets/img/thingtesting-thumb.png',
+    imgsrc: 'assets/img/thingtesting-thumb.webp',
     description: 'Thingtesting'
   }
 };

@@ -18,6 +18,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8002"],
       "port": 8002
+    },
+    {
+      "name": "Main site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8003"],
+      "port": 8003
     }
   ]
 }
