@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page not found - Andrew Denty</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description" content="Page not found.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+
+    <!-- Shared components -->
+    <script src="/assets/js/shared.js"></script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+
+    <style>
+        .not-found {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 0 160px;
+            text-align: center;
+        }
+
+        .not-found-code {
+            font-size: 136px;
+            font-weight: 700;
+            line-height: 1;
+            color: #222;
+            margin-bottom: 24px;
+        }
+
+        .not-found-home {
+            color: #707070;
+            text-decoration: underline;
+            border-bottom: none;
+        }
+
+        .not-found-home:hover {
+            color: #F6714F;
+            border-bottom: none;
+        }
+
+        .not-found p {
+            margin-bottom: 4px;
+        }
+
+</style>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJHC6WCBP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-NEJHC6WCBP');
+    </script>
+</head>
+
+<body>
+    <div id="Header"></div>
+    <script>renderHeader();</script>
+
+    <main>
+        <div class="container">
+            <div class="not-found">
+                <div class="not-found-code">404</div>
+                <p>This page isn't in the design system.</p>
+                <p><a class="not-found-home" href="/">Take me home</a></p>
+            </div>
+        </div>
+    </main>
+
+    <div class="container" id="Footer"></div>
+    <script>renderFooter();</script>
+</body>
+
+</html>
