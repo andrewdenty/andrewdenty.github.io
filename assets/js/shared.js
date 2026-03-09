@@ -35,7 +35,7 @@ function renderHeader() {
     '      <div class="collapse navbar-collapse" id="navbarSupportedContent">',
     '        <ul class="navbar-nav ms-auto">',
     '          <li class="nav-item active">',
-    '            <a class="nav-link" href="portfolio.html">Portfolio <span class="visually-hidden">(current)</span></a>',
+    '            <a class="nav-link" href="work.html">Work <span class="visually-hidden">(current)</span></a>',
     '          </li>',
     '          <li class="nav-item">',
     '            <a class="nav-link" href="https://www.andrewdenty.com/blog">Thoughts on design</a>',
