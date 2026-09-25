@@ -4,30 +4,24 @@
    (homepage) or renderMoreWork('Key') (case studies).
    ========================================================================== */
 
-/* Projects, in display order. `featured` projects are shown as cards on the
-   homepage; the rest appear in the "Earlier work" list. */
+/* Projects, in display order. Only `featured` projects are shown, as
+   thumbnails on the homepage and in "More work" on case studies. */
 var projects = [
   {
     key: 'Thingtesting',
     featured: true,
     title: 'Thingtesting',
-    company: 'Thingtesting',
     years: '2022–Now',
     href: '/thingtesting-overview.html',
-    img: '/assets/img/thingtesting-thumb.webp',
-    alt: 'The Thingtesting homepage',
-    desc: 'Leading design for a platform that helps people discover and review new brands.'
+    img: '/assets/img/thingtesting-thumb.webp'
   },
   {
     key: 'TryIt',
     featured: true,
     title: 'Try It by Thingtesting',
-    company: 'Thingtesting',
     years: '2023–2025',
     href: '/thingtesting-try-it.html',
     img: '/assets/img/try-it-branding-1.webp',
-    alt: 'Try It campaign artwork',
-    desc: 'Turning product testing into a revenue stream that helps brands grow in retail.',
     contain: true,
     well: '#f3f3f3'
   },
@@ -35,54 +29,50 @@ var projects = [
     key: 'AirtameHomescreen',
     featured: true,
     title: 'Airtame home screen',
-    company: 'Airtame',
     years: '2018–2019',
     href: '/airtame-homescreen.html',
-    img: '/assets/img/airtame-homescreen-thumb.webp',
-    alt: 'The Airtame home screen in a meeting room',
-    desc: 'Redesigning the screen people see when they walk into a room with an Airtame.'
+    img: '/assets/img/airtame-homescreen-thumb.webp'
   },
   {
     key: 'AirtameApp',
     featured: true,
     title: 'Airtame app',
-    company: 'Airtame',
     years: '2019–2020',
     href: '/airtame-desktop-app.html',
-    img: '/assets/img/airtame-desktop-app-thumb.webp',
-    alt: 'The Airtame desktop app',
-    desc: 'Making screen sharing easier for first-time users, from finding the app to presenting.'
+    img: '/assets/img/airtame-desktop-app-thumb.webp'
   },
   {
     key: 'Honeycomb',
     title: 'Honeycomb design system',
-    company: 'Redgate',
     years: '2015–2018',
     href: '/honeycomb-design-system.html',
-    img: '/assets/img/honeycomb-thumb.svg',
-    alt: 'Components from the Honeycomb design system',
-    desc: 'Building Redgate’s first shared component library across a suite of developer tools.'
+    img: '/assets/img/honeycomb-thumb.svg'
   },
   {
     key: 'ReadyRoll',
     title: 'ReadyRoll set-up experience',
-    company: 'Redgate',
     years: '2017',
     href: '/readyroll-getting-started.html',
-    img: '/assets/img/readyroll-getting-started-thumb.svg',
-    alt: 'The ReadyRoll set-up flow',
-    desc: 'Turning a steep learning curve into a guided, three-step set-up.'
+    img: '/assets/img/readyroll-getting-started-thumb.svg'
   },
   {
     key: 'InTheBox',
     title: 'Redgate in Visual Studio',
-    company: 'Redgate',
     years: '2017',
     href: '/redgate-in-the-box.html',
-    img: '/assets/img/in-the-box-thumb.svg',
-    alt: 'Visual Studio and Redgate logos',
-    desc: 'A joined-up experience for the Redgate tools shipped with Visual Studio.'
+    img: '/assets/img/in-the-box-thumb.svg'
   }
+];
+
+/* Sections in the fixed nav. Each id matches a section on the homepage. */
+var sections = [
+  ['intro', 'Intro'],
+  ['work', 'Work'],
+  ['approach', 'Approach'],
+  ['background', 'Background'],
+  ['writing', 'Writing'],
+  ['about', 'About'],
+  ['contact', 'Contact']
 ];
 
 var contact = {
@@ -96,16 +86,6 @@ var contact = {
 };
 
 /* Helpers ------------------------------------------------------------------ */
-
-var icons = {
-  arrow: '<path d="M3.5 8h9M8.5 4l4 4-4 4"/>',
-  external: '<path d="M5 11l6-6M6 5h5v5"/>',
-  up: '<path d="M8 12.5v-9M4 7.5l4-4 4 4"/>'
-};
-
-function icon(name) {
-  return '<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">' + icons[name] + '</svg>';
-}
 
 function isHome() {
   var path = window.location.pathname;
@@ -124,125 +104,94 @@ function copenhagenTime() {
   }
 }
 
-function cardHTML(p) {
-  var style = p.well ? ' style="--well:' + p.well + '"' : '';
-  return '<a class="card' + (p.contain ? ' card--contain' : '') + '" href="' + p.href + '"' + style + '>' +
-    '<div class="card-media"><img src="' + p.img + '" alt="' + p.alt + '" loading="lazy" decoding="async"></div>' +
-    '<div class="card-head">' +
-      '<h3 class="card-title">' + p.title + icon('arrow') + '</h3>' +
-      '<span class="card-year">' + p.years + '</span>' +
-    '</div>' +
-    '<p class="card-desc">' + p.desc + '</p>' +
-  '</a>';
+// Two staggered columns of thumbnails. --i keeps the original order when
+// the columns collapse into one on small screens.
+function thumbsHTML(list) {
+  var cols = ['', ''];
+  list.forEach(function (p, i) {
+    var style = '--i:' + i + (p.well ? ';--thumb-well:' + p.well : '');
+    cols[i % 2] +=
+      '<a class="thumb' + (p.contain ? ' thumb--contain' : '') + '" href="' + p.href + '" style="' + style + '">' +
+        '<span class="thumb-media"><img src="' + p.img + '" alt="' + p.title + '" loading="lazy" decoding="async"></span>' +
+        '<span class="thumb-caption" aria-hidden="true"><span>' + p.title + '</span><span class="thumb-year">' + p.years + '</span></span>' +
+      '</a>';
+  });
+  return '<div class="thumbs"><div class="thumbs-col">' + cols[0] + '</div><div class="thumbs-col">' + cols[1] + '</div></div>';
 }
 
-/* Header ------------------------------------------------------------------- */
+/* Monogram and section nav --------------------------------------------------- */
 
-function renderHeader() {
+// On the homepage the current section is tracked as you scroll (initScrollSpy).
+// Elsewhere pass the section to mark as current; case studies default to Work.
+function renderHeader(current) {
   var el = document.getElementById('Header');
   if (!el) return;
-  var base = isHome() ? '' : '/';
+  var home = isHome();
+  if (current === undefined) current = home ? '' : 'work';
+  var links = sections.map(function (s) {
+    var href = s[0] === 'contact' ? '#contact' : (home ? '' : '/') + '#' + s[0];
+    var attr = s[0] === current ? ' aria-current="true"' : '';
+    return '<a href="' + href + '" data-section="' + s[0] + '"' + attr + '>' + s[1] + '</a>';
+  }).join('');
   el.innerHTML =
-    '<header class="site-header" id="top">' +
-      '<div class="wrap grid">' +
-        '<a class="site-name" href="/">Andrew Denty</a>' +
-        '<p class="site-role">Product designer</p>' +
-        '<p class="site-place">Copenhagen, <span data-clock>' + copenhagenTime() + '</span></p>' +
-        '<nav class="site-nav" aria-label="Sections">' +
-          '<a href="' + base + '#work">Work</a>' +
-          '<a href="' + base + '#experience">Experience</a>' +
-          '<a href="' + base + '#writing">Writing</a>' +
-          '<a href="#contact">Contact</a>' +
-        '</nav>' +
-      '</div>' +
+    '<header class="site-header">' +
+      '<a class="site-mark" href="/" aria-label="Andrew Denty, home">A</a>' +
+      '<nav class="site-nav" aria-label="Sections">' + links + '</nav>' +
     '</header>';
 }
 
-/* Homepage work ------------------------------------------------------------ */
+/* Homepage work -------------------------------------------------------------- */
 
 function renderWork() {
   var el = document.getElementById('Work');
   if (!el) return;
-  var featured = projects.filter(function (p) { return p.featured; });
-  var earlier = projects.filter(function (p) { return !p.featured; });
-
-  var html = '<div class="work-grid">' + featured.map(cardHTML).join('') + '</div>';
-
-  if (earlier.length) {
-    html +=
-      '<div class="grid section-grid section-sub">' +
-        '<h3 class="section-label">Earlier work</h3>' +
-        '<ul class="list section-body">' +
-          earlier.map(function (p) {
-            return '<li><a class="entry" href="' + p.href + '" data-preview="' + p.img + '">' +
-              '<span class="entry-title">' + p.title + icon('arrow') + '</span>' +
-              '<span class="entry-meta">' + p.company + '</span>' +
-              '<span class="entry-year">' + p.years + '</span>' +
-            '</a></li>';
-          }).join('') +
-        '</ul>' +
-      '</div>';
-  }
-
-  el.innerHTML = html;
+  el.innerHTML = thumbsHTML(projects.filter(function (p) { return p.featured; }));
 }
 
-/* Case studies: the next three projects after this one --------------------- */
+/* Case studies: the other featured projects ----------------------------------- */
 
 function renderMoreWork(page) {
   var el = document.getElementById('MoreWork');
   if (!el) return;
-  var start = 0;
-  for (var i = 0; i < projects.length; i++) {
-    if (projects[i].key === page) { start = i + 1; break; }
-  }
-  var picks = [];
-  for (var j = 0; picks.length < 3 && j < projects.length; j++) {
-    var p = projects[(start + j) % projects.length];
-    if (p.key !== page) picks.push(p);
-  }
+  var others = projects.filter(function (p) { return p.featured && p.key !== page; });
   el.className = '';
   el.innerHTML =
-    '<section class="section" aria-labelledby="more-work-title">' +
-      '<div class="wrap">' +
-        '<div class="grid section-grid">' +
-          '<h2 class="section-label" id="more-work-title">More work</h2>' +
-        '</div>' +
-        '<div class="work-grid work-grid--three">' + picks.map(cardHTML).join('') + '</div>' +
+    '<section class="room" aria-labelledby="more-work-title">' +
+      '<div class="frame grid">' +
+        '<h2 class="c-main meta more-work-label" id="more-work-title">More work</h2>' +
+        '<div class="c-main">' + thumbsHTML(others) + '</div>' +
       '</div>' +
     '</section>';
 }
 
-/* Footer ------------------------------------------------------------------- */
+/* Contact -------------------------------------------------------------------- */
 
 function renderFooter() {
   var el = document.getElementById('Footer');
   if (!el) return;
   el.className = '';
   el.innerHTML =
-    '<footer class="site-footer" id="contact">' +
-      '<div class="wrap">' +
-        '<div class="grid section-grid">' +
-          '<h2 class="section-label">Contact</h2>' +
-          '<div class="section-body contact">' +
-            '<p class="contact-lead">Always happy to talk about design, products and teams.</p>' +
-            '<div class="contact-email">' +
-              '<a class="u" href="mailto:' + contact.email + '">' + contact.email + '</a>' +
-              '<button class="copy-btn" type="button" data-copy="' + contact.email + '" aria-live="polite" hidden>Copy</button>' +
-            '</div>' +
-            '<ul class="contact-links">' +
-              contact.links.map(function (l) {
-                var attrs = l.external ? ' target="_blank" rel="noopener"' : '';
-                return '<li><a href="' + l.href + '"' + attrs + '>' + l.label + icon('external') + '</a></li>';
-              }).join('') +
-            '</ul>' +
-          '</div>' +
+    '<footer class="room contact" id="contact">' +
+      '<div class="frame grid">' +
+        '<h2 class="room-label">Contact</h2>' +
+        '<p class="display c-wide">Say hello.</p>' +
+        '<div class="c-main">' +
+          '<p class="contact-email title">' +
+            '<a class="u" href="mailto:' + contact.email + '">' + contact.email + '</a>' +
+            '<button class="copy-btn" type="button" data-copy="' + contact.email + '" aria-live="polite" hidden>Copy</button>' +
+          '</p>' +
+          '<ul class="contact-links">' +
+            contact.links.map(function (l) {
+              var attrs = l.external ? ' target="_blank" rel="noopener"' : '';
+              return '<li><a href="' + l.href + '"' + attrs + '>' + l.label + '</a></li>';
+            }).join('') +
+          '</ul>' +
         '</div>' +
-        '<div class="grid footer-bar">' +
-          '<p>© ' + new Date().getFullYear() + ' Andrew Denty</p>' +
-          '<p>Set in Inter</p>' +
-          '<a class="footer-top" href="#top">Back to top' + icon('up') + '</a>' +
-        '</div>' +
+        '<p class="c-main colophon">' +
+          '<span>© ' + new Date().getFullYear() + ' Andrew Denty</span>' +
+          '<span>Set in Inter</span>' +
+          '<span>Copenhagen, <span data-clock>' + copenhagenTime() + '</span></span>' +
+        '</p>' +
       '</div>' +
     '</footer>';
 }
@@ -250,15 +199,70 @@ function renderFooter() {
 /* Behaviour ---------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', function () {
+  initScrollSpy();
+  initAudiences();
   initClock();
   initCopy();
   initReveal();
-  initPreview();
   initScrollReveal();
   initLightbox();
 });
 
-// Live Copenhagen time in the header
+// Homepage: highlight the section in the middle of the viewport
+function initScrollSpy() {
+  if (!isHome() || !('IntersectionObserver' in window)) return;
+  var links = document.querySelectorAll('.site-nav a[data-section]');
+  var targets = [];
+  Array.prototype.forEach.call(links, function (a) {
+    var section = document.getElementById(a.getAttribute('data-section'));
+    if (section) targets.push(section);
+  });
+  if (!targets.length) return;
+
+  function setCurrent(id) {
+    Array.prototype.forEach.call(links, function (a) {
+      if (a.getAttribute('data-section') === id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) setCurrent(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -54% 0px' });
+
+  targets.forEach(function (t) { observer.observe(t); });
+  setCurrent(targets[0].id);
+}
+
+// Homepage: the audience buttons swap the intro headline
+function initAudiences() {
+  var title = document.querySelector('[data-audience-title]');
+  var buttons = document.querySelectorAll('[data-line]');
+  if (!title || !buttons.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timer;
+
+  Array.prototype.forEach.call(buttons, function (btn) {
+    btn.addEventListener('click', function () {
+      if (btn.getAttribute('aria-pressed') === 'true') return;
+      Array.prototype.forEach.call(buttons, function (b) {
+        b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+      });
+      var swap = function () {
+        title.textContent = btn.getAttribute('data-line');
+        title.classList.remove('is-switching');
+      };
+      clearTimeout(timer);
+      if (reduce) { swap(); return; }
+      title.classList.add('is-switching');
+      timer = setTimeout(swap, 250);
+    });
+  });
+}
+
+// Live Copenhagen time in the footer
 function initClock() {
   var els = document.querySelectorAll('[data-clock]');
   if (!els.length) return;
@@ -303,59 +307,6 @@ function initReveal() {
     });
   }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
   Array.prototype.forEach.call(els, function (el) { observer.observe(el); });
-}
-
-// Floating image preview when hovering "Earlier work" rows (fine pointers only)
-function initPreview() {
-  if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  var rows = document.querySelectorAll('[data-preview]');
-  if (!rows.length) return;
-
-  var box = document.createElement('div');
-  box.className = 'preview';
-  box.setAttribute('aria-hidden', 'true');
-  var img = document.createElement('img');
-  img.alt = '';
-  box.appendChild(img);
-  document.body.appendChild(box);
-
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var w = 300, h = w * 9 / 16;
-  var x = 0, y = 0, tx = 0, ty = 0, raf = 0, active = false;
-
-  function aim(e) {
-    tx = e.clientX + 28;
-    if (tx + w > window.innerWidth - 16) tx = e.clientX - 28 - w;
-    ty = Math.max(16, Math.min(e.clientY - h / 2, window.innerHeight - h - 16));
-  }
-
-  function frame() {
-    var k = reduce ? 1 : 0.2;
-    x += (tx - x) * k;
-    y += (ty - y) * k;
-    box.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
-    raf = (active || Math.abs(tx - x) + Math.abs(ty - y) > 0.5) ? requestAnimationFrame(frame) : 0;
-  }
-
-  function hide() {
-    active = false;
-    box.classList.remove('is-visible');
-  }
-
-  Array.prototype.forEach.call(rows, function (row) {
-    row.addEventListener('mouseenter', function (e) {
-      img.src = row.getAttribute('data-preview');
-      aim(e);
-      if (!box.classList.contains('is-visible')) { x = tx; y = ty; }
-      active = true;
-      box.classList.add('is-visible');
-      if (!raf) raf = requestAnimationFrame(frame);
-    });
-    row.addEventListener('mousemove', aim);
-    row.addEventListener('mouseleave', hide);
-  });
-
-  window.addEventListener('scroll', function () { if (active) hide(); }, { passive: true });
 }
 
 // Case studies: reveal images as they scroll into view

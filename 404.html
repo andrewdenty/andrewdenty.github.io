@@ -9,8 +9,8 @@
     <meta name="description" content="Page not found.">
     <meta name="robots" content="noindex">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
     <!-- Styling -->
@@ -32,11 +32,13 @@
 
 <body>
     <div id="Header"></div>
-    <script>renderHeader();</script>
+    <script>renderHeader('');</script>
 
-    <main class="wrap notfound">
-        <h1 class="notfound-code">404</h1>
-        <p>This page isn’t in the design system. <a href="/">Take me home</a></p>
+    <main class="room intro notfound">
+        <div class="frame grid">
+            <h1 class="c-wide display">404</h1>
+            <p class="c-left body">This page isn’t in the design system. <a href="/">Take me home</a></p>
+        </div>
     </main>
 
     <div id="Footer"></div>

@@ -4,12 +4,12 @@
 
 Static HTML site. No build process, templating engine or package manager.
 
-- **`index.html`**: one-page homepage (intro, about, work, experience, writing). Contact lives in the shared footer.
+- **`index.html`**: one-page homepage. Sections, in nav order: Intro, Work, Approach, Background, Writing, About, and Contact (the shared footer).
 - **Case studies**: one `.html` file per project in the root (`thingtesting-overview.html`, `airtame-homescreen.html`, …)
 - **`work.html`, `portfolio.html`**: redirects to `/#work`
 - **`404.html`**: GitHub Pages not-found page
 - **`assets/css/style.css`**: the only stylesheet
-- **`assets/js/shared.js`**: loaded on every page; renders the header, footer, work cards and "More work", plus the lightbox and small interactions
+- **`assets/js/shared.js`**: loaded on every page; renders the monogram and section nav, work thumbnails, "More work" and the contact footer, plus the interactions and the lightbox
 - **`assets/img/`**: all images
 - **`assets/fonts/`**: Inter 4 variable font (weight + optical size, Latin subset) and its OFL licence
 
@@ -20,46 +20,50 @@ Use root-relative paths (`/assets/...`, `/page.html`) so pages also work when se
 ## Shared components
 
 ```html
-<div id="Header"></div>   <script>renderHeader();</script>
-<div id="Work"></div>     <script>renderWork();</script>           <!-- homepage only -->
-<div id="MoreWork"></div> <script>renderMoreWork('Key');</script>  <!-- case studies -->
+<div id="Header"></div>   <script>renderHeader();</script>             <!-- '' on 404 for no current section -->
+<div id="Work"></div>     <script>renderWork();</script>               <!-- homepage only -->
+<div id="MoreWork"></div> <script>renderMoreWork('Key');</script>      <!-- case studies -->
 <div id="Footer"></div>   <script>renderFooter();</script>
 ```
 
-- **Projects** are defined once in the `projects` array at the top of `shared.js`. `featured: true` projects appear as cards on the homepage; the rest appear in the "Earlier work" list. `renderMoreWork('Key')` shows the next three projects after `Key`.
-- **Contact details and footer links** live in the `contact` object in `shared.js`.
-- **Experience and writing** are plain HTML in `index.html`.
+- **Nav sections** are the `sections` array in `shared.js`; each id must match a section on the homepage. On the homepage the current section follows the scroll; case studies mark Work as current.
+- **Projects** are the `projects` array. Only `featured: true` projects are shown: as thumbnails on the homepage and in "More work" on case studies. The Redgate projects are kept but not featured.
+- **Contact details and footer links** live in the `contact` object.
+- **Intro headlines** for each audience button are the `data-line` attributes in `index.html`.
+- **Experience roles** are plain HTML in `index.html`. The circle shows an initial; to use a logo, replace the letter with an `<img>` (it is sized to half the circle).
 - **To add JS that runs on every page:** add an `init…` function to `shared.js` and call it from the `DOMContentLoaded` handler.
 
 ## Design system
 
-Minimal, resumé-style layout on a 12-column grid (`.wrap` + `.grid`). From 900px up, section labels sit on columns 1–3 and content on 4–12; below that everything stacks.
+Modelled on billysweeney.com: a calm, exhibition-like page on a 12-column grid (`.frame` + `.grid`).
+
+- From 900px up the monogram and nav are fixed on column 1 and all content starts at column 5. Content sits in deliberate blocks: `.c-main` (5–12), `.c-wide` (5–10, headlines), `.c-left` (5–8) and `.c-right` (9–12).
+- Below 900px the nav is hidden, everything stacks, and each section shows a small `.room-label`.
+- Each homepage section is a `.room` with generous vertical padding. The intro fills the first screen.
+- **No rules, borders or rounded corners.** Whitespace separates things. Circles (role marks) are the only curves.
 
 **Themes:** light and dark follow `prefers-color-scheme`; there is no toggle. Every colour is a custom property on `:root`, redefined in the dark media query. Don't hard-code colours in HTML.
 
 | Token | Light | Dark | Usage |
 |-------|-------|------|-------|
-| `--bg` | `#fafafa` | `#0e0e0e` | Page background |
-| `--surface` | `#f0f0ef` | `#191919` | Image wells, `.light-grey` bands |
-| `--text` | `#141414` | `#ededed` | Headings, primary text |
-| `--text-body` | `#3b3b3b` | `#c4c4c4` | Case study paragraphs |
-| `--text-2` | `#6b6b6b` | `#8f8f8f` | Labels, meta, captions |
-| `--line` | 10% black | 10% white | Hairlines |
-| `--band` | `#161616` | `#191919` | `.dark-grey` bands |
-| `--accent` | `#22bee3` | same | Brand cyan, used only for text selection |
+| `--bg` | `#ffffff` | `#0b0b0b` | Page background |
+| `--text` | `#0a0a0a` | `#f2f2f2` | Almost all text |
+| `--text-2` | `#767676` | `#8c8c8c` | Inactive nav and buttons, meta, descriptions (lightest grey that passes WCAG AA) |
+| `--well` | `#f2f2f2` | `#1c1c1c` | Role circles, image wells |
 
-**Typography:** Inter Variable. Optical sizing is automatic, so large text gets Inter's display cut. Sizes are `--fs-*` tokens: 14px labels and meta, 16px lists, 18–22px lead text, 24–36px contact email, 34–68px page titles. Weights 400, 450 and 500, with negative tracking on large sizes.
+**Typography:** Inter Variable; optical sizing gives large text Inter's display cut. One display size (`--display`, about 5.3vw, weight 450, line-height 0.96) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (22–30px), `--body` (16–17px, line-height 1.22), `--read` (case study reading text) or `--meta` (16px).
 
-**Motion:** homepage sections fade in (`[data-reveal]`), case study images reveal on scroll, and all of it is skipped with `prefers-reduced-motion`.
+**Motion:** the intro fades up on load, homepage sections and roles fade in as they scroll into view (`[data-reveal]`), case study images reveal on scroll, and all of it is skipped with `prefers-reduced-motion`.
 
 ## Case study markup
 
-Case studies keep their original markup and `style.css` maps it onto the grid:
+Case studies keep their original markup and `style.css` maps it onto the frame:
 
-- Text (`h3`, `h4`, `p`, lists, captions) sits on columns 4–10; bare images, `.row`s and bands run full width. Images wrapped in `<p>` stay in the text column.
-- `.page-intro` holds the title, meta caption and intro. Add `dark-grey` or `page-intro--honeycomb` for a coloured opening band; the header joins the band automatically.
+- The title (`.page-intro h1`) uses the display size on columns 5–10, with the meta caption beneath and intro copy as a block on 5–8.
+- Body text (`h3`, `h4`, `p`, lists, captions) sits on columns 5–10; bare images and `.row`s run 5–12. Images wrapped in `<p>` stay in the text column.
+- The old `.light-grey`, `.dark-grey` and `.page-intro--honeycomb` bands render as plain page.
 - `.row` / `.col-md-{3,4,5,6,7,9}` are a small replacement for the Bootstrap grid.
-- Utility classes: `.caption`, `.tight`, `.small`, `.spacer`, `.light-grey`, `.dark-grey`, `.lg-divider`, `.shadow`, `.tv`, `.img-fluid`.
+- Utility classes: `.caption`, `.tight`, `.small`, `.spacer`, `.shadow`, `.tv`, `.img-fluid`.
 
 ## Image patterns on case studies
 

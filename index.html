@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Andrew Denty, Product Designer</title>
     <meta name="author" content="Andrew Denty">
-    <meta name="description" content="Andrew Denty is a product designer in Copenhagen and Director of Design at ShopMy. Selected work, experience and writing.">
+    <meta name="description" content="Andrew Denty is a product designer in Copenhagen and Director of Design at ShopMy. Selected work, approach, background and writing.">
     <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0b" media="(prefers-color-scheme: dark)">
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andrewdenty.com/">
     <meta property="og:title" content="Andrew Denty, Product Designer">
-    <meta property="og:description" content="Product designer in Copenhagen and Director of Design at ShopMy. Selected work, experience and writing.">
+    <meta property="og:description" content="Product designer in Copenhagen and Director of Design at ShopMy.">
     <meta property="og:image" content="https://www.andrewdenty.com/assets/img/thingtesting-thumb.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@andrewdenty">
@@ -35,147 +35,142 @@
     <script>renderHeader();</script>
 
     <main>
-        <!-- Intro -->
-        <section class="intro wrap" aria-label="Introduction">
-            <h1 class="intro-title">I’m Andrew, and I turn complicated problems into simple, useful products.</h1>
-            <dl class="facts grid">
-                <div class="fact">
-                    <dt>Currently</dt>
-                    <dd>Director of Design at <a href="https://shopmy.us/" target="_blank" rel="noopener">ShopMy</a></dd>
+        <!-- Intro: the buttons swap the headline for different readers -->
+        <section class="room intro" id="intro">
+            <div class="frame grid">
+                <div class="c-main audiences" role="group" aria-label="Tailor this introduction">
+                    <button type="button" aria-pressed="true" data-line="Hi, I’m Andrew. I turn complicated problems into simple, useful products.">For anyone</button>
+                    <button type="button" aria-pressed="false" data-line="I’m Director of Design at ShopMy, with over a decade of product design behind me.">Recruiters</button>
+                    <button type="button" aria-pressed="false" data-line="I care about craft, and about the research and rigour that make it count.">Designers</button>
+                    <button type="button" aria-pressed="false" data-line="I start with the problem, test ideas early and help teams ship in small steps.">Product managers</button>
+                    <button type="button" aria-pressed="false" data-line="I design with the build in mind, and I’m happiest working side by side with engineers.">Engineers</button>
                 </div>
-                <div class="fact">
-                    <dt>Previously</dt>
-                    <dd>Thingtesting, The Org, Airtame and Redgate</dd>
-                </div>
-                <div class="fact">
-                    <dt>Writing</dt>
-                    <dd><a href="https://www.andrewdenty.com/blog/">Thoughts on design</a> and <a class="nowrap" href="https://www.parttimebackpacker.com/">The Part-Time Backpacker</a></dd>
-                </div>
-                <div class="fact">
-                    <dt>Say hello</dt>
-                    <dd><a href="mailto:andrewdenty@gmail.com">andrewdenty@gmail.com</a></dd>
-                </div>
-            </dl>
-        </section>
-
-        <!-- About -->
-        <section class="section" id="about" data-reveal>
-            <div class="wrap">
-                <div class="grid section-grid">
-                    <h2 class="section-label">About</h2>
-                    <div class="section-body prose">
-                        <p>I started out in product marketing at Redgate before moving into design, so I think about how a product is sold as much as how it’s used.</p>
-                        <p>Since then I’ve designed developer tools, screen sharing software and consumer marketplaces. Today I’m Director of Design at ShopMy, a fast-growing creator commerce platform, where I also lead design for Thingtesting.</p>
-                        <p>I do my best work close to research and engineering: shipping small, testing early and learning fast. Away from work I travel as much as I can, and once set out to <a href="https://www.parttimebackpacker.com/">write about every country in the world</a>.</p>
-                    </div>
-                </div>
+                <h1 class="c-wide display intro-title" data-audience-title aria-live="polite">Hi, I’m Andrew. I turn complicated problems into simple, useful products.</h1>
             </div>
         </section>
 
-        <!-- Work: rendered from the projects list in shared.js -->
-        <section class="section" id="work" data-reveal>
-            <div class="wrap">
-                <div class="grid section-grid">
-                    <h2 class="section-label">Selected work</h2>
-                </div>
-                <div id="Work"></div>
+        <!-- Work: thumbnails rendered from the projects list in shared.js -->
+        <section class="room" id="work" aria-labelledby="work-title" data-reveal>
+            <div class="frame grid">
+                <h2 class="room-label" id="work-title">Work</h2>
+                <div class="c-main" id="Work"></div>
                 <script>renderWork();</script>
             </div>
         </section>
 
-        <!-- Experience -->
-        <section class="section" id="experience" data-reveal>
-            <div class="wrap">
-                <div class="grid section-grid">
-                    <h2 class="section-label">Experience</h2>
-                    <ol class="list list--xp section-body">
-                        <li class="entry">
-                            <span class="entry-title">ShopMy</span>
-                            <span class="entry-meta">Director of Design</span>
-                            <span class="entry-year">2025–Now</span>
-                            <p class="entry-desc">Leading design at a fast-growing creator commerce platform, including Thingtesting since ShopMy acquired it.</p>
-                        </li>
-                        <li class="entry">
-                            <span class="entry-title">Thingtesting</span>
-                            <span class="entry-meta">Head of Design</span>
-                            <span class="entry-year">2022–2025</span>
-                            <p class="entry-desc">Led design for a platform that helps people discover and review new brands, from reviews and community to a product testing business.</p>
-                        </li>
-                        <li class="entry">
-                            <span class="entry-title">The Org</span>
-                            <span class="entry-meta">Senior Product Designer</span>
-                            <span class="entry-year">2020–2022</span>
-                            <p class="entry-desc">Designed a platform where companies share their org charts, teams and open roles.</p>
-                        </li>
-                        <li class="entry">
-                            <span class="entry-title">Airtame</span>
-                            <span class="entry-meta">Senior Product Designer</span>
-                            <span class="entry-year">2018–2020</span>
-                            <p class="entry-desc">Designed the desktop app, home screen and digital signage for Airtame’s wireless screen sharing devices.</p>
-                        </li>
-                        <li class="entry">
-                            <span class="entry-title">Redgate</span>
-                            <span class="entry-meta">UX Designer</span>
-                            <span class="entry-year">2016–2018</span>
-                            <p class="entry-desc">Designed database tools for SQL Server developers and led Honeycomb, Redgate’s design system.</p>
-                        </li>
-                        <li class="entry">
-                            <span class="entry-title">Redgate</span>
-                            <span class="entry-meta">Product Marketing Manager</span>
-                            <span class="entry-year">2011–2016</span>
-                            <p class="entry-desc">Marketed developer tools including SQL Compare and SQL Source Control, and helped an internal start-up test new product ideas.</p>
-                        </li>
-                    </ol>
-                </div>
+        <!-- Approach -->
+        <section class="room" id="approach" aria-labelledby="approach-title" data-reveal>
+            <div class="frame grid">
+                <h2 class="room-label" id="approach-title">Approach</h2>
+                <ul class="c-main display values">
+                    <li>Simple</li>
+                    <li>Honest</li>
+                    <li>Tested</li>
+                    <li>Shipped</li>
+                </ul>
+                <p class="c-right body after-display">These are the standards I hold my work to. Simple, because products get harder to use as they grow, and someone has to push back. Honest, because good design never oversells or hides what matters. Tested, because I’d rather learn from real people than win an argument about opinions. And shipped, because work only counts once it’s in people’s hands, so I stay close to engineering and release in small steps.</p>
+            </div>
+        </section>
+
+        <!-- Background -->
+        <section class="room" id="background" aria-labelledby="background-title">
+            <div class="frame grid">
+                <h2 class="room-label" id="background-title">Background</h2>
+                <p class="c-left body" data-reveal>I started out in product marketing at Redgate before moving into design, so I think about how a product is sold as much as how it’s used. Over the last decade I’ve designed developer tools, a design system, software for wireless screen sharing, a public org chart platform and consumer marketplaces, at established software companies and early-stage start-ups. Along the way I’ve led research, grown a design team and learned that the best work comes from designers, product managers and engineers who share the problem.</p>
+                <ol class="c-main roles">
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">S</span>
+                        <p class="title">ShopMy</p>
+                        <h3 class="display role-title">Director of Design</h3>
+                        <p class="role-meta"><span>2025–Now</span><span>Copenhagen</span></p>
+                        <p class="meta role-desc">Leading design at a fast-growing creator commerce platform, including Thingtesting.</p>
+                    </li>
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">T</span>
+                        <p class="title">Thingtesting</p>
+                        <h3 class="display role-title">Head of Design</h3>
+                        <p class="role-meta"><span>2022–2025</span><span>Copenhagen</span></p>
+                        <p class="meta role-desc">Led design for a platform that helps people discover and review new brands, from reviews and community to a product testing business.</p>
+                    </li>
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">O</span>
+                        <p class="title">The Org</p>
+                        <h3 class="display role-title">Senior Product Designer</h3>
+                        <p class="role-meta"><span>2020–2022</span><span>Copenhagen</span></p>
+                        <p class="meta role-desc">Designed a platform where companies share their org charts, teams and open roles.</p>
+                    </li>
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">A</span>
+                        <p class="title">Airtame</p>
+                        <h3 class="display role-title">Senior Product Designer</h3>
+                        <p class="role-meta"><span>2018–2020</span><span>Copenhagen</span></p>
+                        <p class="meta role-desc">Designed the desktop app, home screen and digital signage for wireless screen sharing devices.</p>
+                    </li>
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">R</span>
+                        <p class="title">Redgate</p>
+                        <h3 class="display role-title">UX Designer</h3>
+                        <p class="role-meta"><span>2016–2018</span><span>Cambridge</span></p>
+                        <p class="meta role-desc">Designed database tools for SQL Server developers and led Honeycomb, Redgate’s design system.</p>
+                    </li>
+                    <li data-reveal>
+                        <span class="role-mark" aria-hidden="true">R</span>
+                        <p class="title">Redgate</p>
+                        <h3 class="display role-title">Product Marketing Manager</h3>
+                        <p class="role-meta"><span>2011–2016</span><span>Cambridge</span></p>
+                        <p class="meta role-desc">Marketed developer tools including SQL Compare and SQL Source Control, and helped an internal start-up test new product ideas.</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
         <!-- Writing -->
-        <section class="section" id="writing" data-reveal>
-            <div class="wrap">
-                <div class="grid section-grid">
-                    <h2 class="section-label">Writing</h2>
-                    <div class="section-body">
-                        <ul class="list">
-                            <li>
-                                <a class="entry" href="https://www.andrewdenty.com/blog/2020/10/29/how-transparency-helps-us-become-better-designers.html">
-                                    <span class="entry-title">How transparency helps us become better designers<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
-                                    <span class="entry-meta">Post</span>
-                                    <span class="entry-year">2020</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="entry" href="https://www.andrewdenty.com/blog/2020/08/02/how-to-design-for-the-almost-offline-edge-case.html">
-                                    <span class="entry-title">How to design for the almost offline edge case<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
-                                    <span class="entry-meta">Post</span>
-                                    <span class="entry-year">2020</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="entry" href="https://www.andrewdenty.com/blog/2019/08/08/do-you-want-your-user-experience-shaken.html">
-                                    <span class="entry-title">Do you want your user experience shaken or stirred?<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
-                                    <span class="entry-meta">Post</span>
-                                    <span class="entry-year">2019</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="entry" href="https://www.andrewdenty.com/blog/2017/11/08/the-iphone-is-a-user-experience-nightmare.html">
-                                    <span class="entry-title">Is the iPhone X a user experience nightmare?<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
-                                    <span class="entry-meta">Post</span>
-                                    <span class="entry-year">2017</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="entry" href="/honeycomb-design-system.html#uxcamtalk">
-                                    <span class="entry-title">The road to faster mock-ups<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
-                                    <span class="entry-meta">Talk</span>
-                                    <span class="entry-year">2017</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <a class="more-link" href="https://www.andrewdenty.com/blog/">All posts on Thoughts on design<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></a>
-                    </div>
-                </div>
+        <section class="room" id="writing" aria-labelledby="writing-title" data-reveal>
+            <div class="frame grid">
+                <h2 class="room-label" id="writing-title">Writing</h2>
+                <p class="c-left body">Every so often I write about design, research and building products at <a href="https://www.andrewdenty.com/blog/">Thoughts on design</a>.</p>
+                <ul class="c-main posts">
+                    <li>
+                        <a href="https://www.andrewdenty.com/blog/2020/10/29/how-transparency-helps-us-become-better-designers.html">
+                            <span class="title">How transparency helps us become better designers</span>
+                            <span class="meta">2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.andrewdenty.com/blog/2020/08/02/how-to-design-for-the-almost-offline-edge-case.html">
+                            <span class="title">How to design for the almost offline edge case</span>
+                            <span class="meta">2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.andrewdenty.com/blog/2019/08/08/do-you-want-your-user-experience-shaken.html">
+                            <span class="title">Do you want your user experience shaken or stirred?</span>
+                            <span class="meta">2019</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.andrewdenty.com/blog/2017/11/08/the-iphone-is-a-user-experience-nightmare.html">
+                            <span class="title">Is the iPhone X a user experience nightmare?</span>
+                            <span class="meta">2017</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/honeycomb-design-system.html#uxcamtalk">
+                            <span class="title">The road to faster mock-ups</span>
+                            <span class="meta">Talk at UX Cambridge, 2017</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="c-main"><a class="more-link" href="https://www.andrewdenty.com/blog/">All posts</a></p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="room" id="about" aria-labelledby="about-title" data-reveal>
+            <div class="frame grid">
+                <h2 class="room-label" id="about-title">About</h2>
+                <p class="c-wide display">A Brit in Copenhagen.</p>
+                <p class="c-right body after-display">I’m British, and Copenhagen has been home since 2018. Away from work I travel as much as I can, and I once set out to write about every country in the world at <a class="nowrap" href="https://www.parttimebackpacker.com/">The Part-Time Backpacker</a>.</p>
             </div>
         </section>
     </main>
