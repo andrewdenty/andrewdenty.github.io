@@ -18,11 +18,14 @@
     <meta name="twitter:creator" content="@andrewdenty">
 
     <!-- Styling -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- Scripts -->    <script src="/assets/js/shared.js"></script>
-    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="preload" href="/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Scripts -->
+    <script src="/assets/js/shared.js"></script>
 
     <!--Clock script-->
     <script>
@@ -63,7 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
   border: none;
 }
 
-.wrap {
+@media (max-width: 400px) {
+  .clock { zoom: 0.8; }
+}
+.clock-wrap {
   overflow: hidden;
   position: relative;
   width: 350px;
@@ -160,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <script>renderHeader();</script>
 
     <main>
-    <div class="page-intro" style="color:#222;padding-bottom:0px;">
+    <div class="page-intro">
         <div class="container">
             <div class="spacer"></div>
             <h1>Airtame Clocks</h1>
@@ -174,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         <div class="clock-body">
         <div class="clock">
-            <div class="wrap">
+            <div class="clock-wrap">
                 <span class="hour"></span>
                 <span class="minute"></span>
 
@@ -200,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </main>
     <!--More Work-->
     <div class="container" id="MoreWork"></div>
-    <script>renderMoreWork('Honeycomb');</script>
+    <script>renderMoreWork('AirtameClock');</script>
 
     <!--Footer-->
     <div class="container" id="Footer"></div>

@@ -19,11 +19,14 @@
 
     <link rel="canonical" href="https://www.andrewdenty.com/thingtesting-try-it.html">
     <!-- Styling -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- Scripts -->    <script src="/assets/js/shared.js"></script>
-    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="preload" href="/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Scripts -->
+    <script src="/assets/js/shared.js"></script>
 
 </head>
 
@@ -33,7 +36,7 @@
     <script>renderHeader();</script>
 
     <main>
-    <div class="page-intro" style="color:#222;padding-bottom:0px;">
+    <div class="page-intro">
         <div class="container">
             <div class="spacer"></div>
             <div class="row"></div>
@@ -167,7 +170,7 @@
     </main>
     <!--More Work-->
     <div class="container" id="MoreWork"></div>
-    <script>renderMoreWork('Thingtesting');</script>
+    <script>renderMoreWork('TryIt');</script>
 
     <!--Footer-->
     <div class="container" id="Footer"></div>

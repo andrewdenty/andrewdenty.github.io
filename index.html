@@ -1,127 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
     <meta charset="utf-8">
-    <title>Andrew Denty - Director of Design at ShopMy</title>
-    <meta name="author" content="Andrew Denty">
-    <meta name="description" content="I’m Andrew Denty, Director of Design at ShopMy, based in Copenhagen. A selection of product design work and writing.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andrew Denty, Product Designer</title>
+    <meta name="author" content="Andrew Denty">
+    <meta name="description" content="Andrew Denty is a product designer in Copenhagen and Director of Design at ShopMy. Selected work, experience and writing.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.andrewdenty.com/">
-    <meta property="og:title" content="Andrew Denty - Director of Design at ShopMy">
-    <meta property="og:description" content="I’m Andrew Denty, Director of Design at ShopMy, based in Copenhagen. A selection of product design work and writing.">
+    <meta property="og:title" content="Andrew Denty, Product Designer">
+    <meta property="og:description" content="Product designer in Copenhagen and Director of Design at ShopMy. Selected work, experience and writing.">
     <meta property="og:image" content="https://www.andrewdenty.com/assets/img/thingtesting-thumb.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@andrewdenty">
     <link rel="canonical" href="https://www.andrewdenty.com/">
-    <!-- Fonts -->
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 
     <!-- Styling -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="preload" href="/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-    <style>
-        /** Sizing specific stuff **/
-
-        @media (max-width: 967px) {
-        body {font-size:28px;}
-        }  
-        
-        @media (min-width: 967px) {
-        body {font-size:34px;}
-        }
-
-        /** Main Styles **/
-
-        body {font-family: "DM Sans", sans-serif; font-weight: 500;background:#FAFAFA;}
-        h1 {color:#22bee3;font-weight:700;font-size: 130%;;margin-top:16vh;margin-bottom:4vh}
-        a {color:inherit;transition: 0.2s;text-decoration: none;}
-        p, ul, ol  {color:#343b42;font-size: 67%;line-height:160%;font-weight:500;max-width:580px}
-        a:hover {border-bottom: 1px solid;}
-
-        /** SVG Social icons**/
-        
-        svg { fill:#343b42; margin-right:8px;width: 24px; height: 24px; }
-        svg:hover { fill: #F6714F; }
-        .icon {border-bottom:none;}
-        .icon:hover {border-bottom:none;}
-
-
-        /** Animations **/
-
-        .animated {
-        -webkit-animation-duration: 2s;
-        animation-duration: 2s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        }
-
-
-        /** Fadeindown **/ 
-
-        @-webkit-keyframes fadeInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-        }
-
-        @keyframes fadeInDown {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(-5px);
-            -ms-transform: translateY(-5px);
-            transform: translateY(-5px);
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0);
-        }
-        }
-
-        .fadeInDown {
-        -webkit-animation-name: fadeInDown;
-        animation-name: fadeInDown;
-        }
-    </style>
-
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-   
-
-
-    <!-- preloading elements -->
-    <link rel="dns-prefetch" href="https://www.parttimebackpacker.com">
-
-
+    <!-- Shared components -->
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="/assets/js/shared.js"></script>
 </head>
 
 <body>
+    <div id="Header"></div>
+    <script>renderHeader();</script>
+
     <main>
-        <div class="container">
-            <div class="content animated fadeInDown">
-                <h1>Andrew Denty</h1>
-               <p>Hi, I’m Andrew, Director of Design at <a href="https://shopmy.us/" target="_blank" rel="noopener">ShopMy</a>, based in Copenhagen. I also lead design for <a href="https://thingtesting.com/" target="_blank" rel="noopener">Thingtesting</a>.</p>
-                <p>Here's a <a  href="work.html">selection of my work</a>. I also occasionally enjoy <a  href="https://www.andrewdenty.com/blog/">writing about design</a>.</p>
-                <p>I was previously on a quest to write about every country in the world at <a href="https://www.parttimebackpacker.com/">the part-time backpacker</a>.</p>
-                <p>
-                    <a class="icon" href="https://uk.linkedin.com/in/andrewdenty/" target="_blank" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg></a>
-                     <a class="icon" href="https://www.instagram.com/andrewdenty/" target="_blank" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/></svg></a></p>
-        </div>
+        <!-- Intro -->
+        <section class="intro wrap" aria-label="Introduction">
+            <h1 class="intro-title">I’m Andrew, and I turn complicated problems into simple, useful products.</h1>
+            <dl class="facts grid">
+                <div class="fact">
+                    <dt>Currently</dt>
+                    <dd>Director of Design at <a href="https://shopmy.us/" target="_blank" rel="noopener">ShopMy</a></dd>
+                </div>
+                <div class="fact">
+                    <dt>Previously</dt>
+                    <dd>Thingtesting, The Org, Airtame and Redgate</dd>
+                </div>
+                <div class="fact">
+                    <dt>Writing</dt>
+                    <dd><a href="https://www.andrewdenty.com/blog/">Thoughts on design</a> and <a class="nowrap" href="https://www.parttimebackpacker.com/">The Part-Time Backpacker</a></dd>
+                </div>
+                <div class="fact">
+                    <dt>Say hello</dt>
+                    <dd><a href="mailto:andrewdenty@gmail.com">andrewdenty@gmail.com</a></dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about" data-reveal>
+            <div class="wrap">
+                <div class="grid section-grid">
+                    <h2 class="section-label">About</h2>
+                    <div class="section-body prose">
+                        <p>I started out in product marketing at Redgate before moving into design, so I think about how a product is sold as much as how it’s used.</p>
+                        <p>Since then I’ve designed developer tools, screen sharing software and consumer marketplaces. Today I’m Director of Design at ShopMy, a fast-growing creator commerce platform, where I also lead design for Thingtesting.</p>
+                        <p>I do my best work close to research and engineering: shipping small, testing early and learning fast. Away from work I travel as much as I can, and once set out to <a href="https://www.parttimebackpacker.com/">write about every country in the world</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work: rendered from the projects list in shared.js -->
+        <section class="section" id="work" data-reveal>
+            <div class="wrap">
+                <div class="grid section-grid">
+                    <h2 class="section-label">Selected work</h2>
+                </div>
+                <div id="Work"></div>
+                <script>renderWork();</script>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section" id="experience" data-reveal>
+            <div class="wrap">
+                <div class="grid section-grid">
+                    <h2 class="section-label">Experience</h2>
+                    <ol class="list list--xp section-body">
+                        <li class="entry">
+                            <span class="entry-title">ShopMy</span>
+                            <span class="entry-meta">Director of Design</span>
+                            <span class="entry-year">2025–Now</span>
+                            <p class="entry-desc">Leading design at a fast-growing creator commerce platform, including Thingtesting since ShopMy acquired it.</p>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">Thingtesting</span>
+                            <span class="entry-meta">Head of Design</span>
+                            <span class="entry-year">2022–2025</span>
+                            <p class="entry-desc">Led design for a platform that helps people discover and review new brands, from reviews and community to a product testing business.</p>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">The Org</span>
+                            <span class="entry-meta">Senior Product Designer</span>
+                            <span class="entry-year">2020–2022</span>
+                            <p class="entry-desc">Designed a platform where companies share their org charts, teams and open roles.</p>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">Airtame</span>
+                            <span class="entry-meta">Senior Product Designer</span>
+                            <span class="entry-year">2018–2020</span>
+                            <p class="entry-desc">Designed the desktop app, home screen and digital signage for Airtame’s wireless screen sharing devices.</p>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">Redgate</span>
+                            <span class="entry-meta">UX Designer</span>
+                            <span class="entry-year">2016–2018</span>
+                            <p class="entry-desc">Designed database tools for SQL Server developers and led Honeycomb, Redgate’s design system.</p>
+                        </li>
+                        <li class="entry">
+                            <span class="entry-title">Redgate</span>
+                            <span class="entry-meta">Product Marketing Manager</span>
+                            <span class="entry-year">2011–2016</span>
+                            <p class="entry-desc">Marketed developer tools including SQL Compare and SQL Source Control, and helped an internal start-up test new product ideas.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing -->
+        <section class="section" id="writing" data-reveal>
+            <div class="wrap">
+                <div class="grid section-grid">
+                    <h2 class="section-label">Writing</h2>
+                    <div class="section-body">
+                        <ul class="list">
+                            <li>
+                                <a class="entry" href="https://www.andrewdenty.com/blog/2020/10/29/how-transparency-helps-us-become-better-designers.html">
+                                    <span class="entry-title">How transparency helps us become better designers<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
+                                    <span class="entry-meta">Post</span>
+                                    <span class="entry-year">2020</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="entry" href="https://www.andrewdenty.com/blog/2020/08/02/how-to-design-for-the-almost-offline-edge-case.html">
+                                    <span class="entry-title">How to design for the almost offline edge case<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
+                                    <span class="entry-meta">Post</span>
+                                    <span class="entry-year">2020</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="entry" href="https://www.andrewdenty.com/blog/2019/08/08/do-you-want-your-user-experience-shaken.html">
+                                    <span class="entry-title">Do you want your user experience shaken or stirred?<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
+                                    <span class="entry-meta">Post</span>
+                                    <span class="entry-year">2019</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="entry" href="https://www.andrewdenty.com/blog/2017/11/08/the-iphone-is-a-user-experience-nightmare.html">
+                                    <span class="entry-title">Is the iPhone X a user experience nightmare?<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
+                                    <span class="entry-meta">Post</span>
+                                    <span class="entry-year">2017</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="entry" href="/honeycomb-design-system.html#uxcamtalk">
+                                    <span class="entry-title">The road to faster mock-ups<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></span>
+                                    <span class="entry-meta">Talk</span>
+                                    <span class="entry-year">2017</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="more-link" href="https://www.andrewdenty.com/blog/">All posts on Thoughts on design<svg class="icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.5 8h9M8.5 4l4 4-4 4"/></svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <div id="Footer"></div>
+    <script>renderFooter();</script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJHC6WCBP"></script>
     <script>
@@ -130,7 +191,6 @@
         gtag('js', new Date());
         gtag('config', 'G-NEJHC6WCBP');
     </script>
-
 </body>
 
 </html>

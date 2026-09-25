@@ -18,11 +18,14 @@
 
     <link rel="canonical" href="https://www.andrewdenty.com/redgate-in-the-box.html">
     <!-- Styling -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!-- Scripts -->    <script src="/assets/js/shared.js"></script>
-    <script defer src="assets/js/bootstrap.bundle.min.js"></script>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e0e0e" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="preload" href="/assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Scripts -->
+    <script src="/assets/js/shared.js"></script>
 
 </head>
 
@@ -32,11 +35,11 @@
     <script>renderHeader();</script>
 
     <main>
-    <div class="page-intro dark-grey" style="margin-bottom:0px">
+    <div class="page-intro dark-grey">
         <div class="container">
             <div class="spacer"></div>
             <h1>Redgate in the box with Visual Studio</h1>
-            <p class="caption tight" style="color: #b6b6b6;">2017  &nbsp; • &nbsp; <a href="https://red-gate.com" target="_blank">red-gate.com</a></p>
+            <p class="caption tight">2017  &nbsp; • &nbsp; <a href="https://red-gate.com" target="_blank">red-gate.com</a></p>
             <p>In 2017 Redgate partnered with Microsoft to ship three Redgate products with Visual Studio. The aim was to expand Visual Studio’s database development functionality and widen Redgate’s reach. My job was to design a joined-up Redgate experience within Visual Studio.</p>
         </div>
     </div>
@@ -132,7 +135,7 @@
     </main>
     <!--More Work-->
     <div class="container" id="MoreWork"></div>
-    <script>renderMoreWork('AirtameHomescreen');</script>
+    <script>renderMoreWork('InTheBox');</script>
 
     <!--Footer-->
     <div class="container" id="Footer"></div>
