@@ -34,19 +34,18 @@
   --selection: rgba(34, 190, 227, 0.25);
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 
-  /* Satoshi's lowercase is smaller than most sans serifs' for its size, so text
-     sizes run a step larger than usual. Display text doesn't need the boost:
-     its wider letters already give it presence, and 5.15vw keeps the longest
-     role title ("Product Marketing Manager") on one line. */
+  /* Satoshi's lowercase is small for its size, so text runs slightly larger
+     and heavier than it would in most sans serifs. The display size keeps the
+     longest role title ("Product Marketing Manager") on one line. */
   --font: "Satoshi", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --display: clamp(2.5rem, 5.15vw, 6.25rem);            /* 40–100px, 74px at 1440 */
-  --title: clamp(1.4375rem, 1.15rem + 0.62vw, 2rem);    /* 23–32px */
-  --body: clamp(1.0625rem, 1rem + 0.1vw, 1.125rem);     /* 17–18px: short blocks, nav */
-  --read: clamp(1.0625rem, 1rem + 0.22vw, 1.25rem);     /* 17–20px: case study reading */
-  --meta: 1.0625rem;                                    /* 17px */
+  --display: clamp(2.375rem, 4.95vw, 6rem);                /* 38–96px, 71px at 1440 */
+  --title: clamp(1.375rem, 1.1rem + 0.6vw, 1.9375rem);     /* 22–31px */
+  --body: clamp(1.03125rem, 0.96rem + 0.1vw, 1.09375rem);  /* 16.5–17.5px: short blocks, nav */
+  --read: clamp(1.03125rem, 0.96rem + 0.21vw, 1.1875rem);  /* 16.5–19px: case study reading */
+  --meta: 1.03125rem;                                      /* 16.5px */
 
-  --weight-text: 450;              /* matches the stroke of a typical regular */
-  --weight-display: 500;
+  --weight-text: 480;
+  --weight-display: 540;
   --weight-strong: 700;
   --track-display: -0.025em;
 

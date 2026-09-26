@@ -52,9 +52,9 @@ Modelled on billysweeney.com: a calm, exhibition-like page on a 12-column grid (
 | `--well` | `#f2f2f2` | `#1c1c1c` | Role circles, image wells |
 | `--brand` | `#22bee3` | `#22bee3` | The name only: the signature blue from the old site. It's a logotype, so it's exempt from contrast minimums; don't use it for other text |
 
-**Typography:** Satoshi. One display size (`--display`, about 5.15vw, weight 500, line-height 0.98, tracking -0.025em) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (23–32px), `--body` (17–18px, line-height 1.22), `--read` (case study reading text) or `--meta` (17px).
+**Typography:** Satoshi. One display size (`--display`, about 4.95vw, weight 540, line-height 0.98, tracking -0.025em) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (22–31px), `--body` (16.5–17.5px, line-height 1.22), `--read` (case study reading text) or `--meta` (16.5px).
 
-- Satoshi's lowercase is small for its size, so text sizes run a step larger than usual. Text is weight 450 (`--weight-text`), which matches the stroke of a typical regular; Satoshi's own 400 looks thin, especially in grey. Bold is 700 (`--weight-strong`); the name is 600.
+- Satoshi's lowercase is small for its size, so text runs slightly larger and heavier than usual. Text is weight 480 (`--weight-text`); Satoshi's own 400 looks thin, especially in grey. Bold is 700 (`--weight-strong`); the name is 600.
 - Satoshi's en dash is as long as an em dash, so date ranges use a hyphen: `2022-2025`, `2025-Now`.
 - The display size is set so the longest role title, "Product Marketing Manager", fits on one line in `.c-main`. Check it if you change `--display` or `--track-display`.
 
