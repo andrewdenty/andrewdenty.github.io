@@ -11,7 +11,7 @@ var projects = [
     key: 'Thingtesting',
     featured: true,
     title: 'Thingtesting',
-    years: '2022–Now',
+    years: '2022-Now',
     href: '/thingtesting-overview.html',
     img: '/assets/img/thingtesting-thumb.webp'
   },
@@ -19,7 +19,7 @@ var projects = [
     key: 'TryIt',
     featured: true,
     title: 'Try It by Thingtesting',
-    years: '2023–2025',
+    years: '2023-2025',
     href: '/thingtesting-try-it.html',
     img: '/assets/img/try-it-branding-1.webp',
     contain: true,
@@ -29,7 +29,7 @@ var projects = [
     key: 'AirtameHomescreen',
     featured: true,
     title: 'Airtame home screen',
-    years: '2018–2019',
+    years: '2018-2019',
     href: '/airtame-homescreen.html',
     img: '/assets/img/airtame-homescreen-thumb.webp'
   },
@@ -37,14 +37,14 @@ var projects = [
     key: 'AirtameApp',
     featured: true,
     title: 'Airtame app',
-    years: '2019–2020',
+    years: '2019-2020',
     href: '/airtame-desktop-app.html',
     img: '/assets/img/airtame-desktop-app-thumb.webp'
   },
   {
     key: 'Honeycomb',
     title: 'Honeycomb design system',
-    years: '2015–2018',
+    years: '2015-2018',
     href: '/honeycomb-design-system.html',
     img: '/assets/img/honeycomb-thumb.svg'
   },
@@ -203,7 +203,7 @@ function renderFooter() {
         '</div>' +
         '<p class="c-main colophon">' +
           '<span>© ' + new Date().getFullYear() + ' Andrew Denty</span>' +
-          '<span>Set in Inter</span>' +
+          '<span>Set in Satoshi by Indian Type Foundry</span>' +
           '<span>Copenhagen, <span data-clock>' + copenhagenTime() + '</span></span>' +
         '</p>' +
       '</div>' +

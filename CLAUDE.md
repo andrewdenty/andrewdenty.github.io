@@ -11,7 +11,7 @@ Static HTML site. No build process, templating engine or package manager.
 - **`assets/css/style.css`**: the only stylesheet
 - **`assets/js/shared.js`**: loaded on every page; renders the monogram and section nav, work thumbnails, "More work" and the contact footer, plus the interactions and the lightbox
 - **`assets/img/`**: all images
-- **`assets/fonts/`**: Inter 4 variable font (weight + optical size, Latin subset) and its OFL licence
+- **`assets/fonts/`**: Satoshi variable font (weight 300–900) by Indian Type Foundry, from Fontshare. Free for personal and commercial use under the ITF Free Font License (fontshare.com/terms); the footer credits ITF as the licence asks. Don't modify or subset the file
 
 No third-party CSS or JS. Analytics: Google Analytics 4 (`G-NEJHC6WCBP`) on every page.
 
@@ -29,7 +29,7 @@ Use root-relative paths (`/assets/...`, `/page.html`) so pages also work when se
 - **Nav sections** are the `sections` array in `shared.js`; each id must match a section on the homepage. On the homepage the current section follows the scroll; case studies mark Work as current.
 - **Projects** are the `projects` array. Only `featured: true` projects are shown: as thumbnails on the homepage and in "More work" on case studies. The Redgate projects are kept but not featured.
 - **Contact details and footer links** live in the `contact` object.
-- **Intro headlines** for each audience button are the `data-line` attributes in `index.html`.
+- **Intro headlines** for each audience button are the `data-line` attributes in `index.html`. Write `&#10;` for a deliberate line break (the headline uses `white-space: pre-line`) and `&nbsp;` to keep words together.
 - **Experience roles** are plain HTML in `index.html`. The circle shows an initial; to use a logo, replace the letter with an `<img>` (it is sized to half the circle).
 - **To add JS that runs on every page:** add an `init…` function to `shared.js` and call it from the `DOMContentLoaded` handler.
 
@@ -52,7 +52,11 @@ Modelled on billysweeney.com: a calm, exhibition-like page on a 12-column grid (
 | `--well` | `#f2f2f2` | `#1c1c1c` | Role circles, image wells |
 | `--brand` | `#22bee3` | `#22bee3` | The name only: the signature blue from the old site. It's a logotype, so it's exempt from contrast minimums; don't use it for other text |
 
-**Typography:** Inter Variable; optical sizing gives large text Inter's display cut. One display size (`--display`, about 5.3vw, weight 450, line-height 0.96) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (22–30px), `--body` (16–17px, line-height 1.22), `--read` (case study reading text) or `--meta` (16px).
+**Typography:** Satoshi. One display size (`--display`, about 5.15vw, weight 500, line-height 0.98, tracking -0.025em) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (23–32px), `--body` (17–18px, line-height 1.22), `--read` (case study reading text) or `--meta` (17px).
+
+- Satoshi's lowercase is small for its size, so text sizes run a step larger than usual. Text is weight 450 (`--weight-text`), which matches the stroke of a typical regular; Satoshi's own 400 looks thin, especially in grey. Bold is 700 (`--weight-strong`); the name is 600.
+- Satoshi's en dash is as long as an em dash, so date ranges use a hyphen: `2022-2025`, `2025-Now`.
+- The display size is set so the longest role title, "Product Marketing Manager", fits on one line in `.c-main`. Check it if you change `--display` or `--track-display`.
 
 **Motion:** the intro fades up on load, homepage sections and roles fade in as they scroll into view (`[data-reveal]`), case study images reveal on scroll, and all of it is skipped with `prefers-reduced-motion`.
 
@@ -88,4 +92,4 @@ Implemented in `shared.js` + `style.css`. No external library.
 - Captions pulled from adjacent `<p class="caption">` sibling, fallback to `alt` text
 - Keyboard: `Esc` closes, `←`/`→` navigate
 - Mobile: swipe left/right to navigate, tap backdrop to close
-- Dark overlay `rgba(0,0,0,0.95)`, Inter captions in `#b6b6b6`
+- Dark overlay `rgba(0,0,0,0.95)`, captions in `#b6b6b6`
