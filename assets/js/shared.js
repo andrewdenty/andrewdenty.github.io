@@ -121,6 +121,20 @@ function thumbsHTML(list) {
 
 /* Monogram and section nav --------------------------------------------------- */
 
+// The initial unfolds into the full name on hover or focus. Each letter is its
+// own span so the letters can stream out one after another: --i orders them
+// on the way out and --r on the way back in.
+function markHTML() {
+  var rest = 'ndrew Denty'.split('');
+  var letters = rest.map(function (ch, i) {
+    return '<span style="--i:' + i + ';--r:' + (rest.length - 1 - i) + '">' + (ch === ' ' ? '&nbsp;' : ch) + '</span>';
+  }).join('');
+  return '<a class="site-mark" href="/" aria-label="Andrew Denty, home">' +
+      '<span class="mark-initial" aria-hidden="true">A</span>' +
+      '<span class="mark-rest" aria-hidden="true"><span>' + letters + '</span></span>' +
+    '</a>';
+}
+
 // On the homepage the current section is tracked as you scroll (initScrollSpy).
 // Elsewhere pass the section to mark as current; case studies default to Work.
 function renderHeader(current) {
@@ -135,7 +149,7 @@ function renderHeader(current) {
   }).join('');
   el.innerHTML =
     '<header class="site-header">' +
-      '<a class="site-mark" href="/" aria-label="Andrew Denty, home">A</a>' +
+      markHTML() +
       '<nav class="site-nav" aria-label="Sections">' + links + '</nav>' +
     '</header>';
 }

@@ -29,6 +29,7 @@
   --text: #0a0a0a;
   --text-2: #767676;               /* lightest grey that meets WCAG AA on white */
   --well: #f2f2f2;                 /* role circles, image wells */
+  --brand: #22bee3;                /* signature blue, carried over from the old site; the name only */
   --underline: rgba(10, 10, 10, 0.3);
   --selection: rgba(34, 190, 227, 0.25);
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
@@ -188,10 +189,62 @@ main .container :is(p, li) a:hover { text-decoration-color: currentColor; }
   top: var(--margin);
   left: var(--margin);
   z-index: 20;
+  display: flex;
+  align-items: baseline;
   font-size: 1.625rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  color: var(--brand);
+}
+
+/* The rest of the name sits in a track that grows from nothing, so the link
+   (and its focus ring) is only as wide as what you can see. Letters are
+   clipped at the initial's edge and stream out from behind it. */
+.mark-rest {
+  display: grid;
+  grid-template-columns: 0fr;
+  transition: grid-template-columns 0.4s var(--ease);
+}
+
+.mark-rest > span {
+  min-width: 0;
+  clip-path: inset(-0.5em -100vw -0.5em 0);
+}
+
+/* Closing: the last letter goes first and they tuck back in quickly */
+.mark-rest > span > span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-0.5em);
+  transition:
+    transform 0.3s cubic-bezier(0.5, 0, 0.75, 0) calc(var(--r) * 12ms),
+    opacity 0.2s ease calc(var(--r) * 12ms + 40ms);
+}
+
+/* Opening: letters stream out in order and settle with a slight spring.
+   Keyboard focus opens it anywhere; hover only where there's a real pointer. */
+.site-mark:focus-visible .mark-rest { grid-template-columns: 1fr; transition-duration: 0.45s; }
+
+.site-mark:focus-visible .mark-rest > span > span {
+  opacity: 1;
+  transform: none;
+  transition:
+    transform 0.6s cubic-bezier(0.2, 1.3, 0.3, 1) calc(var(--i) * 20ms),
+    opacity 0.3s ease-out calc(var(--i) * 20ms);
+}
+
+@media (hover: hover) {
+  .site-mark:hover .mark-rest { grid-template-columns: 1fr; transition-duration: 0.45s; }
+
+  .site-mark:hover .mark-rest > span > span {
+    opacity: 1;
+    transform: none;
+    transition:
+      transform 0.6s cubic-bezier(0.2, 1.3, 0.3, 1) calc(var(--i) * 20ms),
+      opacity 0.3s ease-out calc(var(--i) * 20ms);
+  }
 }
 
 .site-nav { display: none; }
@@ -207,6 +260,7 @@ main .container :is(p, li) a:hover { text-decoration-color: currentColor; }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    row-gap: 4px;                  /* 24px from line to line */
     font-size: var(--body);
     line-height: 1.2;
   }
@@ -511,6 +565,13 @@ main .container :is(p, li) a:hover { text-decoration-color: currentColor; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .intro-title { transition: none; }
+
+  /* The name fades in where it stands */
+  .site-mark .mark-rest,
+  .site-mark:is(:hover, :focus-visible) .mark-rest { transition: none; }
+
+  .site-mark .mark-rest > span > span,
+  .site-mark:is(:hover, :focus-visible) .mark-rest > span > span { transform: none; transition: opacity 0.2s ease; }
 }
 
 @media print {

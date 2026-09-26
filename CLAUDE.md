@@ -50,10 +50,13 @@ Modelled on billysweeney.com: a calm, exhibition-like page on a 12-column grid (
 | `--text` | `#0a0a0a` | `#f2f2f2` | Almost all text |
 | `--text-2` | `#767676` | `#8c8c8c` | Inactive nav and buttons, meta, descriptions (lightest grey that passes WCAG AA) |
 | `--well` | `#f2f2f2` | `#1c1c1c` | Role circles, image wells |
+| `--brand` | `#22bee3` | `#22bee3` | The name only: the signature blue from the old site. It's a logotype, so it's exempt from contrast minimums; don't use it for other text |
 
 **Typography:** Inter Variable; optical sizing gives large text Inter's display cut. One display size (`--display`, about 5.3vw, weight 450, line-height 0.96) is used for every big statement: the intro, values, role titles, about, contact and case study titles. Everything else is `--title` (22–30px), `--body` (16–17px, line-height 1.22), `--read` (case study reading text) or `--meta` (16px).
 
 **Motion:** the intro fades up on load, homepage sections and roles fade in as they scroll into view (`[data-reveal]`), case study images reveal on scroll, and all of it is skipped with `prefers-reduced-motion`.
+
+**Monogram:** `markHTML()` in `shared.js` renders the initial plus each remaining letter of the name as its own span (`--i` sets the order out, `--r` the order back in). On hover (pointer devices only) or keyboard focus the letters stream out from behind the initial and settle with a slight spring; the rest of the name sits in a `0fr` → `1fr` grid track so the link and its focus ring grow with it. With reduced motion the name simply fades in.
 
 ## Case study markup
 
